@@ -25,6 +25,6 @@ public class GameManager : MonoBehaviour {
  
     }
 
-    public PlayerController Player;
+    //public PlayerController Player;
     
 }
