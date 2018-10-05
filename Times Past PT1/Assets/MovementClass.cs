@@ -80,7 +80,7 @@ public class MovementClass : MonoBehaviour {
         //rotation transformation
         transform.forward = heading;
 
-        print("MOVEMENR"+rightMovement);
+        //print("MOVEMENR"+rightMovement);
         //movement transformation
         transform.position += rightMovement;
         transform.position += upMovement;
