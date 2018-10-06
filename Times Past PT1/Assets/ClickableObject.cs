@@ -7,12 +7,24 @@ public class ClickableObject : MonoBehaviour {
     public string objectName;
     public string objectNameInOtherTime;
 
-    GameObject otherObject;
+    GameObject otherObject, basil;
+
+    Vector3 targetPosition;
+    Vector3 lookAtTarget;
+    Vector3 offsetCharacter;
+    Quaternion playerRot;
+
+    float rotSpeed = 5;
+    float speed = 5;
 
 	// Use this for initialization
 	void Start () {
 
         otherObject = GameObject.Find(objectNameInOtherTime);
+
+        basil = GameObject.Find("Basil");
+
+        offsetCharacter = new Vector3 (-20, 10, 0);
 
     }
 
@@ -20,10 +32,14 @@ public class ClickableObject : MonoBehaviour {
     void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
 
+            RaycastHit hit;
             //turn screenpoint into ray, from the camera into mouse position
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            RaycastHit hitBasil;
+            Ray rayBasil = Camera.main.ScreenPointToRay(Input.mousePosition);
+
 
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
@@ -42,10 +58,11 @@ public class ClickableObject : MonoBehaviour {
                         Destroy(cc.gameObject);
                     }
                     */
-
+                    SetTargetPosition();
 
                     CapsuleCollider cc;
                     if (cc = hit.transform.GetComponent<CapsuleCollider>()){
+                        Move();
                         transform.position = new Vector3(41, -6, 28);
                         DestroyOtherObject(gameObject);
                     }
@@ -54,6 +71,24 @@ public class ClickableObject : MonoBehaviour {
             }
         }
 	}
+
+    private void SetTargetPosition() {
+        RaycastHit hitBasil;
+        Ray rayBasil = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(rayBasil, out hitBasil, 1000))
+        {
+            targetPosition = hitBasil.point - offsetCharacter;
+
+            lookAtTarget = new Vector3(targetPosition.x - transform.position.x, transform.position.y, targetPosition.z - transform.position.z);
+            playerRot = Quaternion.LookRotation(lookAtTarget);
+        }
+    }
+
+    private void Move(){
+        basil.transform.rotation = Quaternion.Slerp(transform.rotation, playerRot, rotSpeed * Time.deltaTime);
+        basil.transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+    }
 
     private void DestroyOtherObject(GameObject go) {
         if (objectNameInOtherTime != "") {
