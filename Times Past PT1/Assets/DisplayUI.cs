@@ -24,14 +24,13 @@ public class DisplayUI : MonoBehaviour {
 
         //lock cursor to center of screen
         //Screen.lockCursor = true;
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
         FadeText();
-
         /*
         if (Input.GetKeyDown)
         */

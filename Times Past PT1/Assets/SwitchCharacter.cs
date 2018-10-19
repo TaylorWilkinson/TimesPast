@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchCharacter : MonoBehaviour {
+public class SwitchCharacter : MonoBehaviour 
+{
 
     GameObject harriet, basil;
     int characterSelect;
+    public CameraController cameraController;
 
     // Use this for initialization
     void Start () {
@@ -25,6 +27,7 @@ public class SwitchCharacter : MonoBehaviour {
             //update characterSelect value
             if (characterSelect == 1) {
 
+                
                 characterSelect = 2;
 
             } else if (characterSelect == 2) {
@@ -33,12 +36,15 @@ public class SwitchCharacter : MonoBehaviour {
             }
         }
 
-        if (characterSelect == 1) {
+        if (characterSelect == 1) 
+        {
             //Enable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
             {
                 //harriet.GetComponent<CharacterController>().enabled = true;
                 harriet.GetComponent<MovementClass>().enabled = true;
+                cameraController.target = harriet.transform;
+                //currentPlayerTransform = harriet.transform;
             }
             //Disable Basil's Character Controller
             if (basil.GetComponent<CharacterController>())
@@ -59,6 +65,8 @@ public class SwitchCharacter : MonoBehaviour {
             {
                 //basil.GetComponent<CharacterController>().enabled = true;
                 basil.GetComponent<MovementClass>().enabled = true;
+                cameraController.target = basil.transform;
+
             }
 
             /*
