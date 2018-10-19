@@ -2,25 +2,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementClass : MonoBehaviour {
+public class MovementClass : MonoBehaviour
+{
+    //1. 8-directional movement
+    //2. stop and face current direction when input is absent
+
+    public float velocity = 5;
+    public float turnSpeed = 10;
+    Vector2 input;
+    float angle;
+    Quaternion targetRotation;
+    Transform cam;
+
+    void Start()
+    {
+        cam = Camera.main.transform;
+    }
+
+    void Update() {
+        GetInput();
+
+        if (Mathf.Abs(input.x) < 1 && Mathf.Abs(input.y) < 1) return;
+
+        CalculateDirection();
+        Rotate();
+        Move();
+    }
+
+    void GetInput() {
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+    }
+
+    void CalculateDirection() {
+        angle = Mathf.Atan2(input.x, input.y);
+        angle = Mathf.Rad2Deg * angle;
+        angle += cam.eulerAngles.y;
+    }
+
+    void Rotate() {
+        targetRotation = Quaternion.Euler(0, angle, 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+    }
+
+    void Move() {
+        transform.position += transform.forward * velocity * Time.deltaTime;
+    }
 
 
+    /*
     [SerializeField]
 
     float moveSpeed = 5.0f;
-    Vector3 forward, right, heading; //will dictate forward and right vectors that will differ from the world axes
-
-    /*
-     * Old Code
-     * 
-    public CharacterController characterController;
-
-    public float speed = 6.0f;
-    public float gravity = 20.0f;
-    public float rotSpeed = 6.0f;
-
-    private Vector3 moveDirection = Vector3.zero;
-    */
+    Vector3 forward, right, heading;
+    //will dictate forward and right vectors that will differ from the world axes
 
     void Start()
     {
@@ -29,13 +64,8 @@ public class MovementClass : MonoBehaviour {
         forward = Vector3.Normalize(forward);
 
         right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
-
-
-        /*
-         * Old Code
-         * 
-        characterController = GetComponent<CharacterController>();
-        */
+        //creating a rotation for the right vector, telling it to be moved 90 degrees around the x-axis
+        //times that by the forward vector, which gives a right vector roughly facing -45 degrees from the world x-axis
     }
 
     void Update()
@@ -44,34 +74,13 @@ public class MovementClass : MonoBehaviour {
         {
             Move();
         }
-
-
-        /*
-         * Old Code
-         * 
-        if (characterController.isGrounded)
-        {
-            // We are grounded, so recalculate
-            // move direction directly from axes
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-            moveDirection *= speed;
-        }
-
-        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-        // as an acceleration (ms^-2)
-
-        moveDirection.y -= gravity * Time.deltaTime;
-
-        // Move the controller
-        characterController.Move(moveDirection * Time.deltaTime);
-        */
-
     }
 
     void Move()
     {
         Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //new direction is equal to the value of X and Y input at any given time
+
         Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
         Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
 
@@ -80,9 +89,9 @@ public class MovementClass : MonoBehaviour {
         //rotation transformation
         transform.forward = heading;
 
-        //print("MOVEMENR"+rightMovement);
         //movement transformation
         transform.position += rightMovement;
         transform.position += upMovement;
     }
+    */
 }

@@ -2,22 +2,63 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMove : MonoBehaviour {
+public class CameraController : MonoBehaviour {
 
-    GameObject playerObj;
-    Vector3 cameraOffset;
+    //1. follow on player's X/Z plane
+    //2. Smooth rotation around the player in 45 degree increments
 
-	// Use this for initialization
-	void Start () {
-        playerObj = GameObject.Find("Harriet");
+    public Transform target;
+    public Vector3 offsetPos;
+    public float moveSpeed = 5;
+    public float turnSpeed = 10;
+    public float smoothSpeed = 0.5f;
 
-        cameraOffset = new Vector3(0, 1, -3);
+
+    Quaternion targetRotation;
+    Vector3 targetPos;
+    bool smoothRotating = false; //determine if we're trying to move to new rotation
+
+    void Update () 
+    {
+        MoveWithTarget();
+        LookAtTarget();
+
+        if (Input.GetKeyDown(KeyCode.Q) && !smoothRotating) {
+            //left rotation
+            StartCoroutine("RotateAroundTarget", 45);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && !smoothRotating) {
+            //right rotation
+            StartCoroutine("RotateAroundTarget", -45);
+        }
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
-        transform.position = playerObj.transform.position + cameraOffset;
-		
-	}
+    void MoveWithTarget() {
+        targetPos = target.position + offsetPos;
+        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+    }
+
+    void LookAtTarget() {
+        targetRotation = Quaternion.LookRotation(target.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+    }
+
+    IEnumerator RotateAroundTarget(float angle) {
+        Vector3 vel = Vector3.zero;
+        Vector3 targetOffsetPos = Quaternion.Euler(0, angle, 0) * offsetPos;
+        float dist = Vector3.Distance(offsetPos, targetOffsetPos);
+
+        smoothRotating = true;
+
+        while(dist > 0.02f) {
+            offsetPos = Vector3.SmoothDamp(offsetPos, targetOffsetPos, ref vel, smoothSpeed);
+            dist = Vector3.Distance(offsetPos, targetOffsetPos);
+
+            yield return null;
+        }
+
+        smoothRotating = false;
+        offsetPos = targetOffsetPos;
+    }
 }
