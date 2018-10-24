@@ -13,9 +13,9 @@ public class CameraController : MonoBehaviour {
     public float turnSpeed = 10;
     public float smoothSpeed = 0.5f;
 
-
     Quaternion targetRotation;
     Vector3 targetPos;
+
     bool smoothRotating = false; //determine if we're trying to move to new rotation
 
     void Update () 

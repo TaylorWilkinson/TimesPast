@@ -1,53 +1,70 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using UnityEngine;
 
 public class EnvironmentSwitch : MonoBehaviour
 {
-
+    /*
     GameObject sprout, tree, rocks;
     int pastObject;
+    */
+    GameObject[] pastObjectArray;
+    GameObject[] presentObjectArray;
+
+    int objectStatus;
 
     // Use this for initialization
-    void Start()
-    {
-        sprout = GameObject.Find("Sprout");
-        tree = GameObject.Find("Tree");
-        rocks = GameObject.Find("Rocks");
+    void Start() {
+        pastObjectArray = GameObject.FindGameObjectsWithTag("Past");
+        presentObjectArray = GameObject.FindGameObjectsWithTag("Present");
 
-        pastObject = 0;
+        objectStatus = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //change character when pressing space bar
-        if (Input.GetKeyDown("space"))
-        {
+        if (Input.GetKeyDown("space")) {
             //update the status of whether pastObject is active
-            if (pastObject == 0)
+            if (objectStatus == 0)
             {
-                pastObject = 1;
+                objectStatus = 1;
             }
-            else if (pastObject == 1)
+            else if (objectStatus == 1)
             {
-                pastObject = 0;
+                objectStatus = 0;
             }
         }
 
-        if (pastObject == 0)
-        {
-            //ensure that past objects are not visible or active
-            sprout.SetActive(false);
-            tree.SetActive(true);
-            rocks.SetActive(true);
+        if (objectStatus == 0) {
+            //past objects are inactive
+            foreach (GameObject pastObj in pastObjectArray) {
+                if (pastObj != null) {
+                    pastObj.SetActive(false);
+                }
+            }
+
+            //present objects are active
+            foreach (GameObject presentObj in presentObjectArray) {
+                if (presentObj != null) {
+                    presentObj.SetActive(true);
+                }
+            }
         }
-        else if (pastObject == 1)
-        {
-            //ensure that past objects are active while present objects aren't visible or active
-            sprout.SetActive(true);
-            tree.SetActive(false);
-            rocks.SetActive(false);
+        else if (objectStatus == 1) {
+            //past objects are active
+            foreach (GameObject pastObj in pastObjectArray) {
+                if (pastObj != null) {
+                    pastObj.SetActive(true);
+                }
+            }
+
+            //present objects are inactive
+            foreach (GameObject presentObj in presentObjectArray) {
+                if (presentObj != null) {
+                    presentObj.SetActive(false);
+                }
+            }
         }
     }
 }

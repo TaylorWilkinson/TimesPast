@@ -4,6 +4,112 @@ using UnityEngine;
 
 public class MovementClass : MonoBehaviour
 {
+    //Animator anim;
+    public float speed = 5f;
+    private Vector3 movement;
+
+    public float turnSpeed = 10;
+    Vector2 input;
+    float angle;
+    Quaternion targetRotation;
+    Transform cam;
+
+    // Use this for initialization
+    void Start() {
+        /*
+        anim = GetComponent<Animator>();
+        //GetComponent<Rigidbody2D>().velocity = movement;
+        */
+
+        cam = Camera.main.transform;
+    }
+
+    void Update() {
+        float inputX = Input.GetAxisRaw("Horizontal");
+        float inputY = Input.GetAxisRaw("Vertical");
+
+        movement = new Vector3(inputX, 0, inputY);
+
+        //Diagonals
+
+        if (inputX != 0 && inputY != 0)
+        {
+            if (movement.z == 1 && movement.x == -1)
+            {
+                //anim.SetTrigger("move_up_left");
+            }
+
+            if (movement.z == 1 && movement.x == 1)
+            {
+                //anim.SetTrigger("move_up_right");
+            }
+
+            if (movement.z == -1 && movement.x == -1)
+            {
+                //anim.SetTrigger("move_down_left");
+            }
+
+            if (movement.z == -1 && movement.x == 1)
+            {
+                //anim.SetTrigger("move_down_right");
+            }
+        }
+
+        else
+        {
+            //left/right/up/down
+            if (movement.x == -1)
+            {
+                //anim.SetTrigger("move_left");
+            }
+
+            if (movement.x == 1)
+            {
+                //anim.SetTrigger("move_right");
+            }
+
+
+            if (movement.z == 1)
+            {
+                //anim.SetTrigger("move_up");
+            }
+
+
+            if (movement.z == -1)
+            {
+                //anim.SetTrigger("move_down");
+            }
+        }
+
+        transform.Translate(movement * speed * Time.deltaTime);
+        CalculateDirection();
+        Rotate();
+    }
+
+    void GetInput()
+    {
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+    }
+
+    void CalculateDirection()
+    {
+        angle = Mathf.Atan2(input.x, input.y);
+        angle = Mathf.Rad2Deg * angle;
+        angle += cam.eulerAngles.y;
+    }
+
+    void Rotate()
+    {
+        targetRotation = Quaternion.Euler(0, angle, 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+    }
+
+
+
+    //OLD CODE: 
+    /* 8 direction with 3d character
+     * 
     //1. 8-directional movement
     //2. stop and face current direction when input is absent
 

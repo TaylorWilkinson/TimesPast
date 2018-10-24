@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchCharacter : MonoBehaviour 
-{
+public class SwitchCharacter : MonoBehaviour {
 
     GameObject harriet, basil;
-    int characterSelect;
+
+    public int characterSelect;
+
     public CameraController cameraController;
+
 
     // Use this for initialization
     void Start () {
-        characterSelect = 1;
+        characterSelect = 0;
 
         harriet = GameObject.Find("Harriet");
         basil = GameObject.Find("Basil");
@@ -25,18 +27,17 @@ public class SwitchCharacter : MonoBehaviour
             //Debug.Log("Space bar pressed");
 
             //update characterSelect value
-            if (characterSelect == 1) {
-
-                
-                characterSelect = 2;
-
-            } else if (characterSelect == 2) {
+            if (characterSelect == 0) {
 
                 characterSelect = 1;
+
+            } else if (characterSelect == 1) {
+
+                characterSelect = 0;
             }
         }
 
-        if (characterSelect == 1) 
+        if (characterSelect == 0) 
         {
             //Enable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
@@ -53,7 +54,7 @@ public class SwitchCharacter : MonoBehaviour
                 basil.GetComponent<MovementClass>().enabled = false;
             }
         }
-        else if (characterSelect == 2) {
+        else if (characterSelect == 1) {
             //Disable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
             {
@@ -68,13 +69,6 @@ public class SwitchCharacter : MonoBehaviour
                 cameraController.target = basil.transform;
 
             }
-
-            /*
-             * player.SetActive(t/f); doesn't work because toggles visability
-             * try this with toggling environment items
-            harriet.SetActive(false);
-            basil.SetActive(true);
-            */
         }
     }
 }

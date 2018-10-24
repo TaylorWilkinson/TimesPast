@@ -62,8 +62,9 @@ public class ClickableObject : MonoBehaviour {
 
                     CapsuleCollider cc;
                     if (cc = hit.transform.GetComponent<CapsuleCollider>()){
-                        Move();
-                        transform.position = new Vector3(41, -6, 28);
+                        //Move();
+                        //transform.position = new Vector3(41, -6, 28);
+                        Destroy(gameObject);
                         DestroyOtherObject(gameObject);
                     }
                 }
@@ -92,8 +93,8 @@ public class ClickableObject : MonoBehaviour {
 
     private void DestroyOtherObject(GameObject go) {
         if (objectNameInOtherTime != "") {
-            //Destroy(otherObject.gameObject);
-            otherObject.transform.position = new Vector3(41, -6, 28);
+            Destroy(otherObject.gameObject);
+            //otherObject.transform.position = new Vector3(41, -6, 28);
         }
     }
 
