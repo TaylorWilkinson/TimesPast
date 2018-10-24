@@ -61,11 +61,20 @@ public class ClickableObject : MonoBehaviour {
                     SetTargetPosition();
 
                     CapsuleCollider cc;
-                    if (cc = hit.transform.GetComponent<CapsuleCollider>()){
+                    BoxCollider bc;
+                    if ( (cc = hit.transform.GetComponent<CapsuleCollider>()) || (bc = hit.transform.GetComponent<BoxCollider>())){
                         //Move();
                         //transform.position = new Vector3(41, -6, 28);
-                        Destroy(gameObject);
-                        DestroyOtherObject(gameObject);
+
+
+                        if (gameObject.name == "Sprout") {
+                            Destroy(gameObject);
+                            DestroyOtherObject(gameObject);
+                        }
+
+                        if ((gameObject.name == "MirrorLeft") || (gameObject.name == "MirrorRight")) {
+                            gameObject.transform.Rotate(new Vector3(0, 90, 0));
+                        }
                     }
                 }
 

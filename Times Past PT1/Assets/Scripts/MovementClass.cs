@@ -106,8 +106,6 @@ public class MovementClass : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
-
-
     //OLD CODE: 
     /* 8 direction with 3d character
      * 
