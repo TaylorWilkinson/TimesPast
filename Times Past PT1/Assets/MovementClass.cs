@@ -25,6 +25,7 @@ public class MovementClass : MonoBehaviour
     }
 
     void Update() {
+        //updated movement: https://forum.unity.com/threads/2d-8-directional-movement-and-animation.455217/
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputY = Input.GetAxisRaw("Vertical");
 
