@@ -63,13 +63,13 @@ public class ClickableObject : MonoBehaviour {
                         //print(bc.name);
 
                         //Click mirrors to rotate them 45 degrees
-                        if (bc.name == "MirrorLeft") {
+                        /*if (bc.name == "MirrorLeft") {
                             //print("CLICK L MIRROR");
                             bc.transform.Rotate(new Vector3(0, 45, 0));
                         } else if (bc.name == "MirrorRight") {
                             //print("CLICK R MIRROR");
                             bc.transform.Rotate(new Vector3(0, 45, 0));
-                        }
+                        }*/
                     }
                 }
 
