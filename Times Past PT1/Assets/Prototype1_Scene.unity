@@ -584,6 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3778a32eb5cc640bb9c8fc4613e8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesOfRotation: 0
 --- !u!1001 &219545412
 Prefab:
   m_ObjectHideFlags: 0
@@ -1601,7 +1602,6 @@ GameObject:
   m_Component:
   - component: {fileID: 938223964}
   - component: {fileID: 938223963}
-  - component: {fileID: 938223965}
   - component: {fileID: 938223966}
   m_Layer: 0
   m_Name: MirrorLeft
@@ -1637,19 +1637,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &938223965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 938223962}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414596196700844689f96b56d0052197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectName: 
-  objectNameInOtherTime: 
 --- !u!114 &938223966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1661,6 +1648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3778a32eb5cc640bb9c8fc4613e8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesOfRotation: 45
 --- !u!1001 &956890525
 Prefab:
   m_ObjectHideFlags: 0
