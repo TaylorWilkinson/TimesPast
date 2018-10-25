@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 217695100}
   - component: {fileID: 217695101}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MirrorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
