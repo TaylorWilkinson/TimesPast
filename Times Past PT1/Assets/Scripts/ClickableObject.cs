@@ -43,37 +43,32 @@ public class ClickableObject : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                if (hit.transform != null)
-                {
+                if (hit.transform != null) {
                     //PrintName(hit.transform.gameObject);
 
-                    /*
-                    BoxCollider bc = hit.collider as BoxCollider;
-                    if (bc != null) {
-                        Destroy(bc.gameObject);
-                    }
-
-                    CapsuleCollider cc = hit.collider as CapsuleCollider;
-                    if (cc != null) {
-                        Destroy(cc.gameObject);
-                    }
-                    */
                     SetTargetPosition();
 
                     CapsuleCollider cc;
-                    BoxCollider bc;
-                    if ( (cc = hit.transform.GetComponent<CapsuleCollider>()) || (bc = hit.transform.GetComponent<BoxCollider>())){
-                        //Move();
-                        //transform.position = new Vector3(41, -6, 28);
-
-
-                        if (gameObject.name == "Sprout") {
+                    if (cc = hit.transform.GetComponent<CapsuleCollider>()) {
+                        if (gameObject.name == "Sprout")
+                        {
                             Destroy(gameObject);
                             DestroyOtherObject(gameObject);
                         }
+                    }
 
-                        if ((gameObject.name == "MirrorLeft") || (gameObject.name == "MirrorRight")) {
-                            gameObject.transform.Rotate(new Vector3(0, 90, 0));
+                    BoxCollider bc;
+                    if (bc = hit.transform.GetComponent<BoxCollider>()) {
+
+                        //print(bc.name);
+
+                        //Click mirrors to rotate them 45 degrees
+                        if (bc.name == "MirrorLeft") {
+                            //print("CLICK L MIRROR");
+                            bc.transform.Rotate(new Vector3(0, 45, 0));
+                        } else if (bc.name == "MirrorRight") {
+                            //print("CLICK R MIRROR");
+                            bc.transform.Rotate(new Vector3(0, 45, 0));
                         }
                     }
                 }
