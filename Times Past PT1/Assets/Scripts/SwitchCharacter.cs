@@ -24,15 +24,10 @@ public class SwitchCharacter : MonoBehaviour {
         //change character when pressing space bar
         if (Input.GetKeyDown("space"))
         {
-            //Debug.Log("Space bar pressed");
-
             //update characterSelect value
             if (characterSelect == 0) {
-
                 characterSelect = 1;
-
             } else if (characterSelect == 1) {
-
                 characterSelect = 0;
             }
         }
@@ -42,10 +37,8 @@ public class SwitchCharacter : MonoBehaviour {
             //Enable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
             {
-                //harriet.GetComponent<CharacterController>().enabled = true;
                 harriet.GetComponent<MovementClass>().enabled = true;
                 cameraController.target = harriet.transform;
-                //currentPlayerTransform = harriet.transform;
             }
             //Disable Basil's Character Controller
             if (basil.GetComponent<CharacterController>())
@@ -58,16 +51,13 @@ public class SwitchCharacter : MonoBehaviour {
             //Disable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
             {
-                //harriet.GetComponent<CharacterController>().enabled = false;
                 harriet.GetComponent<MovementClass>().enabled = false;
             }
             //Enable Basil's Character Controller
             if (basil.GetComponent<CharacterController>())
             {
-                //basil.GetComponent<CharacterController>().enabled = true;
                 basil.GetComponent<MovementClass>().enabled = true;
                 cameraController.target = basil.transform;
-
             }
         }
     }
