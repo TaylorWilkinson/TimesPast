@@ -48,16 +48,16 @@ public class showLight : MonoBehaviour {
 
         if (roMiddle.getFace() == 1 || roMiddle.getFace() == 2 || roMiddle.getFace() == 3)
         {
-            if (lit == true)
-            {
+            //if (lit == true)
+            //{
                 //middle.SetActive(true);
                 lrMiddle.enabled = true;
-            }
-            else if (lit == false)
-            {
+            //}
+            //else if (lit == false)
+            //{
                 //middle.SetActive(false);
-                lrMiddle.enabled = false;
-            }
+                //lrMiddle.enabled = false;
+            //}
            
         } else if (roMiddle.getFace() == 5 || roMiddle.getFace() == 6 || roMiddle.getFace() == 7
             || roMiddle.getFace() == 0 || roMiddle.getFace() == 4)

@@ -27,6 +27,8 @@ public class RaycastReflection : MonoBehaviour
     Vector3 temp;
     Vector3 idk;
     int y;
+    GameObject mirror;
+    rotateObject roMirror;
 
     void Awake()
     {
@@ -51,7 +53,8 @@ public class RaycastReflection : MonoBehaviour
             y = -120;
         }
 
-       
+        mirror = GameObject.Find("MirrorMiddle");
+        roMirror = mirror.GetComponent<rotateObject>();
     }
     void Update ()
     {
@@ -77,6 +80,7 @@ public class RaycastReflection : MonoBehaviour
                 // break loop if we don't hit a Mirror
                 if (hit.collider.tag != "Mirror")
                     break;
+                if (roMirror.getFace() != 6) break;
             } else {
                 // We didn't hit anything, draw line to end of ramainingLength
                 lineRenderer.positionCount += 1;
