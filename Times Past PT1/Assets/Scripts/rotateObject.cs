@@ -11,13 +11,17 @@ public class rotateObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        faceValue = ((360 / degreesOfRotation) - 1);
+        degreesOfRotation = 90;
+        faceValue = 3;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("FACE VALUE = " + faceValue);
         //if (face > 3) face = 0;
+
+        //Debug.Log("FACE VALUE = " + faceValue);
+        faceValue = ((360 / degreesOfRotation) - 1);
+
         if (face > faceValue) face = 0;
     }
 

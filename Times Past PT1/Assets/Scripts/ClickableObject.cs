@@ -50,26 +50,38 @@ public class ClickableObject : MonoBehaviour {
 
                     CapsuleCollider cc;
                     if (cc = hit.transform.GetComponent<CapsuleCollider>()) {
+                        /*
                         if (gameObject.name == "Sprout")
                         {
                             Destroy(gameObject);
                             DestroyOtherObject(gameObject);
                         }
+                        */
                     }
 
                     BoxCollider bc;
                     if (bc = hit.transform.GetComponent<BoxCollider>()) {
-
                         //print(bc.name);
 
+                        //Basil: Remove the tapestries
+                        if (bc.name == "Tapestry_Kah") {
+                            //print(bc.gameObject);
+                            Destroy(bc.gameObject);
+                        } else if (bc.name == "Tapestry_Time") {
+                            //print(bc.gameObject);
+                            Destroy(bc.gameObject);
+                        }
+
+
+
                         //Click mirrors to rotate them 45 degrees
+                        /*
                         if (bc.name == "MirrorLeft") {
-                            //print("CLICK L MIRROR");
                             bc.transform.Rotate(new Vector3(0, 45, 0));
                         } else if (bc.name == "MirrorRight") {
-                            //print("CLICK R MIRROR");
                             bc.transform.Rotate(new Vector3(0, 45, 0));
                         }
+                        */
                     }
                 }
 
