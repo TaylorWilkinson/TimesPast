@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MovementClass : MonoBehaviour
 {
-    //Animator anim;
+    Animator anim;
+
     public float speed = 5f;
     private Vector3 movement;
 
@@ -16,71 +17,20 @@ public class MovementClass : MonoBehaviour
 
     // Use this for initialization
     void Start() {
-        /*
+
         anim = GetComponent<Animator>();
         //GetComponent<Rigidbody2D>().velocity = movement;
-        */
+
 
         cam = Camera.main.transform;
     }
 
     void Update() {
-        //updated movement: https://forum.unity.com/threads/2d-8-directional-movement-and-animation.455217/
+        //updated movement code reference: https://forum.unity.com/threads/2d-8-directional-movement-and-animation.455217/
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputY = Input.GetAxisRaw("Vertical");
 
         movement = new Vector3(inputX, 0, inputY);
-
-        //Diagonals
-
-        if (inputX != 0 && inputY != 0)
-        {
-            if (movement.z == 1 && movement.x == -1)
-            {
-                //anim.SetTrigger("move_up_left");
-            }
-
-            if (movement.z == 1 && movement.x == 1)
-            {
-                //anim.SetTrigger("move_up_right");
-            }
-
-            if (movement.z == -1 && movement.x == -1)
-            {
-                //anim.SetTrigger("move_down_left");
-            }
-
-            if (movement.z == -1 && movement.x == 1)
-            {
-                //anim.SetTrigger("move_down_right");
-            }
-        }
-
-        else
-        {
-            //left/right/up/down
-            if (movement.x == -1)
-            {
-                //anim.SetTrigger("move_left");
-            }
-
-            if (movement.x == 1)
-            {
-                //anim.SetTrigger("move_right");
-            }
-
-
-            if (movement.z == 1)
-            {
-                //anim.SetTrigger("move_up");
-            }
-
-
-            if (movement.z == -1)
-            {
-                //anim.SetTrigger("move_down");
-            }
-        }
 
         transform.Translate(movement * speed * Time.deltaTime);
         CalculateDirection();

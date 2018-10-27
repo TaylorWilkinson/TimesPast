@@ -13,9 +13,11 @@ public class CameraController : MonoBehaviour
     public float moveSpeed = 5;
     public float turnSpeed = 10;
     public float smoothSpeed = 0.5f;
+    public float maxDistance = 5;
 
     Quaternion targetRotation;
     Vector3 targetPos;
+    bool didHitWall = false;
 
     bool smoothRotating = false; //determine if we're trying to move to new rotation
 
@@ -41,17 +43,25 @@ public class CameraController : MonoBehaviour
             //right rotation
             StartCoroutine("RotateAroundTarget", -45);
         }
+
+        if ((transform.position - target.position).magnitude > maxDistance)
+        {
+            didHitWall = false;
+        }
     }
 
     void MoveWithTarget()
     {
-        targetPos = target.position + offsetPos;
-        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+        if (!didHitWall)
+        {
+            targetPos = target.position + offsetPos;
+            transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+        }
     }
 
     void LookAtTarget()
     {
-        targetRotation = Quaternion.LookRotation(target.position - transform.position);
+        targetRotation = Quaternion.LookRotation((target.position + new Vector3(0, 3f, 0)) - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
@@ -77,8 +87,12 @@ public class CameraController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.transform.tag == "Wall")
         {
-            Debug.Log("collision detected");
+            //Vector3 distanceFromWall = transform.position - other.transform.position;
+            //offsetPos.z = -distanceFromWall.z / 3;
+            didHitWall = true;
+            //Debug.Log("collision detected");
         }
     }
 }
