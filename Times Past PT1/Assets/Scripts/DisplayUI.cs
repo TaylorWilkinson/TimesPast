@@ -11,7 +11,6 @@ public class DisplayUI : MonoBehaviour {
     public float fadeTime; //use to fade text in and out
     private bool displayInfo; //use to determine whether or not to display text
 
-
 	// Use this for initialization
 	void Start () {
 
@@ -24,20 +23,15 @@ public class DisplayUI : MonoBehaviour {
 
         //lock cursor to center of screen
         //Screen.lockCursor = true;
-
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-
         FadeText();
-        /*
-        if (Input.GetKeyDown)
-        */
-		
+        //if (Input.GetKeyDown)
 	}
 
-    void OnMouseOver()
+    void OnMouseEnter()
     {
         //show info when hovering
         displayInfo = true;
@@ -49,12 +43,16 @@ public class DisplayUI : MonoBehaviour {
         displayInfo = false;
     }
 
-    void FadeText() {
-        if (displayInfo) {
+    void FadeText()
+    {
+        if (displayInfo)
+        {
             myText.text = myString;
             myText.color = Color.Lerp(myText.color, Color.white, fadeTime * Time.deltaTime);
             //use Lerp (linear interpolation) to change color from 1st color (clear) to white over given time
-        } else {
+        }
+        else
+        {
             myText.color = Color.Lerp(myText.color, Color.clear, fadeTime * Time.deltaTime);
             //use Lerp to change color from white back to clear
         }

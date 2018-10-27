@@ -389,9 +389,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1306296455352206}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.03, y: -11.93, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 1.22, z: 0}
+  m_LocalScale: {x: -0.1125452, y: 0.112544954, z: 0.11254519}
   m_Children:
   - {fileID: 4384400061004392}
   m_Father: {fileID: 0}
@@ -546,24 +546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RootBone: {fileID: 4384400061004392}
-  m_BoneTransforms:
-  - {fileID: 4384400061004392}
-  - {fileID: 4608300563106552}
-  - {fileID: 4861042937756730}
-  - {fileID: 4363086731671976}
-  - {fileID: 4116854396799114}
-  - {fileID: 4141818261173722}
-  - {fileID: 4160780441910880}
-  - {fileID: 4195050369833752}
-  - {fileID: 4781143507680934}
-  - {fileID: 4174955207237372}
-  - {fileID: 4612995954151450}
-  - {fileID: 4423737098272718}
-  - {fileID: 4824857137460076}
-  - {fileID: 4308246867920372}
-  - {fileID: 4068699921329344}
-  - {fileID: 4855657309563268}
-  - {fileID: 4056839004968838}
+  m_BoneTransforms: []
 --- !u!212 &212455471989335796
 SpriteRenderer:
   m_ObjectHideFlags: 1

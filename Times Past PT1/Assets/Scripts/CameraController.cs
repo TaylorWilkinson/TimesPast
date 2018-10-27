@@ -61,7 +61,7 @@ public class CameraController : MonoBehaviour
 
     void LookAtTarget()
     {
-        targetRotation = Quaternion.LookRotation((target.position + new Vector3(0, 1f, 0)) - transform.position);
+        targetRotation = Quaternion.LookRotation((target.position + new Vector3(0, 3f, 0)) - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
