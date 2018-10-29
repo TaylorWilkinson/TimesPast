@@ -10,7 +10,6 @@ public class SwitchCharacter : MonoBehaviour {
 
     public CameraController cameraController;
 
-
     // Use this for initialization
     void Start () {
         characterSelect = 0;
@@ -37,7 +36,9 @@ public class SwitchCharacter : MonoBehaviour {
             //Enable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
             {
+                //enable movement
                 harriet.GetComponent<MovementClass>().enabled = true;
+                //move camera to Harriet
                 cameraController.target = harriet.transform;
             }
             //Disable Basil's Character Controller
@@ -51,12 +52,15 @@ public class SwitchCharacter : MonoBehaviour {
             //Disable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
             {
+                //disable movement
                 harriet.GetComponent<MovementClass>().enabled = false;
             }
             //Enable Basil's Character Controller
             if (basil.GetComponent<CharacterController>())
             {
+                //enable movement
                 basil.GetComponent<MovementClass>().enabled = true;
+                //move camera to Basil
                 cameraController.target = basil.transform;
             }
         }
