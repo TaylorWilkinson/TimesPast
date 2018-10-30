@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
-public class ClickableObject : MonoBehaviour {
+public class ClickableObject : MonoBehaviour
+{
 
     public string objectName;
     public string objectNameInOtherTime;
 
-    //GameObject basil;
-    GameObject otherObject, canvas, nameText, dialogueText;
+    GameObject harriet, basil, otherObject;
+
+    //Mirror Puzzle Objects
     GameObject rubble, middleLight, rightLight, middleMirror, rightMirror;
     GameObject halfPillarR1, halfPillarR2, fullPillarR1, fullPillarR2, newPillar, newPillar2, newVinesR1, newVinesR2;
     GameObject plateL1, plateL2, plateL3, plateL4, plateR1, plateR2, plateR3, plateR4;
+
+    ////Clickable Dialogue Objects
+    //GameObject canvas1, nameText, dialogueText;
+    ////Dialogue TextMesh Displays
+    //public TextMeshProUGUI nameDisplay;
+    //public TextMeshProUGUI dialogDisplay;
 
     int characterSelect;
     bool harrietActive;
@@ -56,7 +65,14 @@ public class ClickableObject : MonoBehaviour {
     bool correctRotation;
 
 
-    void Start () {
+    void Start()
+    {
+        ////Interactive Dialog
+        //canvas1 = GameObject.Find("Canvas1");
+        ////canvas1.SetActive(false);
+        //canvas1.GetComponent<Canvas>().enabled = false;
+
+        //instantiate game objects
         otherObject = GameObject.Find(objectNameInOtherTime);
 
         middleLight = GameObject.Find("Point Light Middle");
@@ -95,65 +111,55 @@ public class ClickableObject : MonoBehaviour {
         platePositionR3 = new Vector3(8.5f, 2.1f, -11.5f);
         platePositionR4 = new Vector3(8.5f, 2.1f, -8.0f);
 
-
         int posValueL = 0;
         int posValueR = 0;
 
-        /*
-        canvas = GameObject.Find("Canvas");
-        nameText = GameObject.Find("Name");
-        dialogueText = GameObject.Find("Dialogue");
-
-        nameTextInput = nameText.GetComponent<Text>();
-        dialogueTextInput = dialogueText.GetComponent<Text>();
-
-        canvas.SetActive(false);
-        */
-
-        //at start, Dialogue is inactive
-        //dialogueBox.SetActive(false);
-
-        //basil = GameObject.Find("Basil");
-
         offsetCharacter = new Vector3(-20, 10, 0);
 
-        mirrorRotation = new Vector3(0, 90, 0);
-
-        characterSelect = 0;
+        mirrorRotation = new Vector3(0, -45, 0);
 
         correctRotation = false;
     }
 
     // Update is called once per frame
-    void Update () {
-        //determine past or present status on spacebar press
-        if (Input.GetKeyDown("space")) {
+    void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
             //update characterSelect value
-            if (characterSelect == 0) {
+            if (characterSelect == 0)
+            {
                 characterSelect = 1;
             }
-            else if (characterSelect == 1) {
+            else if (characterSelect == 1)
+            {
                 characterSelect = 0;
             }
         }
-
         //set active status based on characterSelect
-        if (characterSelect == 0) {
+        if (characterSelect == 0)
+        {
             harrietActive = true;
             basilActive = false;
         }
-        else if (characterSelect == 1) {
+        else if (characterSelect == 1)
+        {
             harrietActive = false;
             basilActive = true;
         }
+
+        print(characterSelect);
+        //print("H:" + harrietActive);
+        //print("B" + basilActive);
 
         /*
         print(posValueL);
         print(posValueR);
         */
         //PLATE WIN STATES
-        if ((harrietActive == true) && (posValueL == 2) && (posValueR == 3)) {
-            print("good job");
+        if ((harrietActive == true) && (posValueL == 2) && (posValueR == 3))
+        {
+            print("YOU'VE SOLVED MY TABLE RIDDLE");
         }
 
         //interactions on mouse click
@@ -167,12 +173,15 @@ public class ClickableObject : MonoBehaviour {
             //Ray rayBasil = Camera.main.ScreenPointToRay(Input.mousePosition);
 
 
-            if (Physics.Raycast(ray, out hit, 100.0f)) {
-                if (hit.transform != null) {
+            if (Physics.Raycast(ray, out hit, 100.0f))
+            {
+                if (hit.transform != null)
+                {
                     //PrintName(hit.transform.gameObject);
 
                     CapsuleCollider cc;
-                    if (cc = hit.transform.GetComponent<CapsuleCollider>()) {
+                    if (cc = hit.transform.GetComponent<CapsuleCollider>())
+                    {
                         /*
                         if (gameObject.name == "Sprout")
                         {
@@ -211,61 +220,40 @@ public class ClickableObject : MonoBehaviour {
                             Destroy(bc.gameObject);
                         }
 
+                        //testing active characters within OnMouseDown
+                        /*
+                        print("Harriet Active:" + harrietActive);
+                        print("Basil Active:" + basilActive);
+                        */
 
-                        //Click mirrors to rotate them 90 degrees
-                        if (harrietActive == true)
-                        {
-                            //Harriet can't move the mirrors, so this will prompt dialogue
+                        //Click mirrors
+                        //Basil can rotate the mirrors
+                        if (basilActive == true) {
                             if (bc.name == "MirrorMiddle")
                             {
-                                //start dialogue
-                                /*
-                                canvas.SetActive(true);
-                                nameTextInput.text = "Harriet";
-                                dialogueTextInput.text = "This looks like it should move, but I’m just too small to do it!";
-                                */
+                                //print(bc.gameObject);
+                                //bc.transform.Rotate(mirrorRotation);
+                                rotateMiddleMirror(bc);
                             }
                             else if (bc.name == "MirrorRight")
                             {
-                                //start dialogue
-                                /*
-                                canvas.SetActive(true);
-                                nameTextInput.text = "Harriet";
-                                dialogueTextInput.text = "This looks like it should move, but I’m just too small to do it!";
-                                */
-                            }
-                        }
-                        else if (basilActive == true)
-                        {
-                            if (bc.name == "MirrorMiddle")
-                            {
                                 //print(bc.gameObject);
                                 //bc.transform.Rotate(mirrorRotation);
-
-                                //test updated rotation
-                                //print("middle rotation value: " + bc.transform.rotation);
-                                //print("Middle eulerAngle Y: " + bc.transform.eulerAngles);
-                                //above returns 3 eulerAngles each click. This won't work.
-
-                                rotateMiddleMirror(bc);
-                            }
-                            else if (bc.name == "MirrorRight") {
-                                //print(bc.gameObject);
-                                //bc.transform.Rotate(mirrorRotation);
-
                                 rotateRightMirror(bc);
                                 //print("RIGHT WINNING FACE: " + bc.GetComponent<ClickableObject>().winningFaceCount);
 
                                 //print("CORRECT ROTATION: " + bc.GetComponent<ClickableObject>().correctRotation);
                             }
-                        }
+                        }//end basil rotation mirrors check
+
                     }//box colider end
                 } //hit isn't null
             }//end raycast
         } // end mouse button click
 
         //If both rotation values are correct, remove the rubble and fix the pillars
-        if (((middleMirror.GetComponent<ClickableObject>().middleRotateCount) == 3) && ((rightMirror.GetComponent<ClickableObject>().rightRotateCount) == 1)) {
+        if (((middleMirror.GetComponent<ClickableObject>().middleRotateCount) == 3) && ((rightMirror.GetComponent<ClickableObject>().rightRotateCount) == 1))
+        {
             //print("READY");
             rightMirror.GetComponent<ClickableObject>().mirrorLight.enabled = true;
             Destroy(rubble);
@@ -277,48 +265,62 @@ public class ClickableObject : MonoBehaviour {
             newPillar2.GetComponent<MeshRenderer>().enabled = true;
             newVinesR1.GetComponentInChildren<MeshRenderer>().enabled = true;
             newVinesR2.GetComponentInChildren<MeshRenderer>().enabled = true;
-        }
+        }//end mirror puzzle check
 
     }//end update
 
 
-    private void DestroyOtherObject(GameObject go) {
-        if (objectNameInOtherTime != "") {
+    private void DestroyOtherObject(GameObject go)
+    {
+        if (objectNameInOtherTime != "")
+        {
             Destroy(otherObject.gameObject);
             //otherObject.transform.position = new Vector3(41, -6, 28);
         }
     }
 
-    private void PrintName(GameObject go) {
+    private void PrintName(GameObject go)
+    {
         print(go.name);
     }
 
-    private void LeftPlateRotation() {
+    private void LeftPlateRotation()
+    {
         posValueL++;
 
-        if (posValueL == 0) {
+        if (posValueL == 0)
+        {
             plateL1.transform.position = platePosition1;
             plateL2.transform.position = platePosition2;
             plateL3.transform.position = platePosition3;
-        } else if (posValueL == 1) {
+        }
+        else if (posValueL == 1)
+        {
             plateL1.transform.position = platePosition2;
             plateL2.transform.position = platePosition3;
             plateL3.transform.position = platePosition4;
-        } else if (posValueL == 2) {
+        }
+        else if (posValueL == 2)
+        {
             plateL1.transform.position = platePosition3;
             plateL2.transform.position = platePosition4;
             plateL3.transform.position = platePosition1;
-        } else if (posValueL == 3) {
+        }
+        else if (posValueL == 3)
+        {
             plateL1.transform.position = platePosition4;
             plateL2.transform.position = platePosition1;
             plateL3.transform.position = platePosition2;
-        } else if (posValueL == 4) {
+        }
+        else if (posValueL == 4)
+        {
             plateL1.transform.position = platePosition1;
             plateL2.transform.position = platePosition2;
             plateL3.transform.position = platePosition3;
         }
 
-        if (posValueL >= 4) {
+        if (posValueL >= 4)
+        {
             posValueL = 0;
         }
     }
@@ -358,7 +360,8 @@ public class ClickableObject : MonoBehaviour {
             plateR3.transform.position = platePositionR3;
         }
 
-        if (posValueR >= 4){
+        if (posValueR >= 4)
+        {
             posValueR = 0;
         }
     }
@@ -370,31 +373,39 @@ public class ClickableObject : MonoBehaviour {
 
         if (middleRotateCount > 3) { middleRotateCount = 0; }
 
-        if (middleRotateCount == winningFaceCount) {
+        if (middleRotateCount == winningFaceCount)
+        {
             //print("Correct mirror orientation");
             correctRotation = true;
-        } else {
+        }
+        else
+        {
             correctRotation = false;
         }
 
         bool lightOn = false;
 
-        for (int i = 0; i < reflectiveValues.Length; i++) {
-            if (middleRotateCount == reflectiveValues[i]) {
+        for (int i = 0; i < reflectiveValues.Length; i++)
+        {
+            if (middleRotateCount == reflectiveValues[i])
+            {
                 lightOn = true;
             }
-            if (lightOn) {
+            if (lightOn)
+            {
                 mirrorLight.enabled = true;
-            } else {
+            }
+            else
+            {
                 mirrorLight.enabled = false;
             }
         }
     }
-    private void rotateRightMirror(BoxCollider bc)
-    {
+    private void rotateRightMirror(BoxCollider bc) {
         bc.transform.Rotate(mirrorRotation);
         rightRotateCount++;
         rightRotateCount = rightRotateCount % totalRotate;
+       
 
         if (rightRotateCount > 3) { rightRotateCount = 0; }
 
