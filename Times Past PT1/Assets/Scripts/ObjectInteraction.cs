@@ -5,12 +5,16 @@ using TMPro;
 
 public class ObjectInteraction : MonoBehaviour {
 
+    //character switch control
+    GameObject characterSwitchControl;
+    bool harrietActive;
+    bool basilActive;
+
     public int characterSelect;
     GameObject harriet, basil;
 
     public string objectName;
     public string objectNameInOtherTime;
-
 
     // Below from ClickableObject.cs
     //
@@ -19,6 +23,7 @@ public class ObjectInteraction : MonoBehaviour {
     GameObject rubble, middleLight, rightLight, middleMirror, rightMirror;
     GameObject halfPillarR1, halfPillarR2, fullPillarR1, fullPillarR2, newPillar, newPillar2, newVinesR1, newVinesR2;
     GameObject plateL1, plateL2, plateL3, plateL4, plateR1, plateR2, plateR3, plateR4;
+    GameObject inscriptionL, inscriptionR, inscriptionLCorrect, inscriptionRCorrect;
 
     //Clickable Dialogue Objects
     GameObject canvas1, nameText, dialogueText;
@@ -60,8 +65,12 @@ public class ObjectInteraction : MonoBehaviour {
     private int rightRotateCount = 0;
     bool correctRotation;
 
+    bool correctMirrors;
+    bool correctPlates;
+
     // Use this for initialization
-    void Start () {
+    void Start() {
+        characterSwitchControl = GameObject.Find("CharacterSwitchControl");
         characterSelect = 0;
         harriet = GameObject.Find("Harriet");
         basil = GameObject.Find("Basil");
@@ -116,22 +125,61 @@ public class ObjectInteraction : MonoBehaviour {
 
         offsetCharacter = new Vector3(-20, 10, 0);
 
-        mirrorRotation = new Vector3(0, (45/2), 0);
+        mirrorRotation = new Vector3(0, 90, 0);
 
         correctRotation = false;
 
+        //glowing inscriptions
+        inscriptionL = GameObject.Find("inscription left language");
+        inscriptionLCorrect = GameObject.Find("inscription left language correct");
+        inscriptionR = GameObject.Find("inscription right language");
+        inscriptionRCorrect = GameObject.Find("inscription right language correct");
+
+        //set up inscription SpriteRenderer states
+        inscriptionL.GetComponent<SpriteRenderer>().enabled = true;
+        inscriptionLCorrect.GetComponent<SpriteRenderer>().enabled = false;
+        inscriptionR.GetComponent<SpriteRenderer>().enabled = true;
+        inscriptionRCorrect.GetComponent<SpriteRenderer>().enabled = false;
+
+        correctMirrors = false;
+        correctPlates = false;
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
+        /*
+        //old movement 
         characterSwitchUpdate();
 
-        if (characterSelect == 0) {
+        if (characterSelect == 0)
+        {
             HarrietInteractions();
-        } else if (characterSelect == 1) {
+        }
+        else if (characterSelect == 1)
+        {
             BasilInteractions();
         }
+        */
 
+        //Debug.Log(characterSwitchControl.GetComponent<SwitchCharacter>().characterSelect);
+
+        if ((characterSwitchControl.GetComponent<SwitchCharacter>().characterSelect) == 0)
+        {
+            HarrietInteractions();
+            harrietActive = true;
+            basilActive = false;
+            //print("HARRIET ACTIVE");
+        }
+        else if ((characterSwitchControl.GetComponent<SwitchCharacter>().characterSelect) == 1)
+        {
+            BasilInteractions();
+            basilActive = true;
+            harrietActive = false;
+            //print("BASIL ACTIVE WOWOWOOW");
+        }
+
+        /*
         //If both rotation values are correct, remove the rubble and fix the pillars
         if (((middleMirror.GetComponent<ObjectInteraction>().middleRotateCount) == 3) && ((rightMirror.GetComponent<ObjectInteraction>().rightRotateCount) == 1))
         {
@@ -156,9 +204,57 @@ public class ObjectInteraction : MonoBehaviour {
         {
             print("YOU'VE SOLVED MY TABLE RIDDLE");
         }
-    }
+        */
+        //SOLVING MIRROR PUZZLE
+        //If both rotation values are correct, remove the rubble and fix the pillars
+        if (((middleMirror.GetComponent<ObjectInteraction>().middleRotateCount) == 3) && ((rightMirror.GetComponent<ObjectInteraction>().rightRotateCount) == 1))
+        {
+            //print("READY");
+            rightMirror.GetComponent<ObjectInteraction>().mirrorLight.enabled = true;
+            Destroy(rubble);
 
-    void characterSwitchUpdate() {
+            //remove half pillars, and make them full
+            Destroy(halfPillarR1);
+            Destroy(halfPillarR2);
+            newPillar.GetComponent<MeshRenderer>().enabled = true;
+            newPillar2.GetComponent<MeshRenderer>().enabled = true;
+            newVinesR1.GetComponentInChildren<MeshRenderer>().enabled = true;
+            newVinesR2.GetComponentInChildren<MeshRenderer>().enabled = true;
+
+            correctMirrors = true;
+        }
+
+        //print(posValueR);
+
+
+        //SOLVING PLATE PUZZLE
+        //Make engraving glow when arranged correctly
+        if (posValueL == 2)
+        {
+            //Debug.Log("Correct Left Plates");
+            inscriptionL.GetComponent<SpriteRenderer>().enabled = false;
+            inscriptionLCorrect.GetComponent<SpriteRenderer>().enabled = true;
+        }
+
+        if (posValueR == 3)
+        {
+            //Debug.Log("Correct Right Plates");
+            inscriptionR.GetComponent<SpriteRenderer>().enabled = false;
+            inscriptionRCorrect.GetComponent<SpriteRenderer>().enabled = true;
+        }
+
+        //Check for correct table arrangements
+        if ((characterSelect == 0) && (posValueL == 2) && (posValueR == 3))
+        {
+            print("YOU'VE SOLVED MY TABLE RIDDLE");
+            //tell player they got correct orientation
+
+            correctPlates = true;
+        }
+    } //end update
+
+    void characterSwitchUpdate()
+    {
         //change character when pressing space bar
         if (Input.GetKeyDown("space"))
         {
@@ -176,7 +272,8 @@ public class ObjectInteraction : MonoBehaviour {
     }
 
 
-    void HarrietInteractions() {
+    void HarrietInteractions()
+    {
         //print("HARRIET IN CONTROL");
         if (Input.GetMouseButtonDown(0))
         {
@@ -203,17 +300,45 @@ public class ObjectInteraction : MonoBehaviour {
                         //MIRROR TESTS
                         if (bc.name == "MirrorMiddle")
                         {
+                            /*
                             canvas1.GetComponent<Canvas>().enabled = true;
                             nameDisplay.text = "Harriet";
                             dialogDisplay.text = "This looks like it should move, but I’m just too small to do it!";
                             //print("Harriet can't rotate!");
+                            */
+                            if (correctMirrors == false)
+                            {
+                                canvas1.GetComponent<Canvas>().enabled = true;
+                                nameDisplay.text = "Harriet";
+                                dialogDisplay.text = "This looks like it should move, but I’m just too small to do it!";
+                            }
+                            else if (correctMirrors == true)
+                            {
+                                canvas1.GetComponent<Canvas>().enabled = true;
+                                nameDisplay.text = "Harriet";
+                                dialogDisplay.text = "Good job Basil! The light has made plants grow, and now the cave-in never happened!";
+                            }
                         }
                         if (bc.name == "MirrorRight")
                         {
+                            /*
                             canvas1.GetComponent<Canvas>().enabled = true;
                             nameDisplay.text = "Harriet";
                             dialogDisplay.text = "This looks like it should move, but I’m just too small to do it!";
                             //print("Harriet can't rotate!");
+                            */
+                            if (correctMirrors == false)
+                            {
+                                canvas1.GetComponent<Canvas>().enabled = true;
+                                nameDisplay.text = "Harriet";
+                                dialogDisplay.text = "This looks like it should move, but I’m just too small to do it!";
+                            }
+                            else if (correctMirrors == true)
+                            {
+                                canvas1.GetComponent<Canvas>().enabled = true;
+                                nameDisplay.text = "Harriet";
+                                dialogDisplay.text = "Good job Basil! The light has made plants grow, and now the cave-in never happened";
+                            }
                         }
 
                         //TABLE TESTS
@@ -249,14 +374,16 @@ public class ObjectInteraction : MonoBehaviour {
 
 
                         //Rubble
-                        if (bc.name == "Caved In Rubble") {
+                        if (bc.name == "Caved In Rubble")
+                        {
                             canvas1.GetComponent<Canvas>().enabled = true;
                             nameDisplay.text = "Harriet";
                             dialogDisplay.text = "Golly, it’ll take months of excavation for me to get past all this! Shame the pillars on this side didn’t hold up.";
                         }
 
                         //Engravings
-                        if (bc.name == "inscription left language") {
+                        if (bc.name == "inscription left language")
+                        {
                             canvas1.GetComponent<Canvas>().enabled = true;
                             nameDisplay.text = "Harriet";
                             dialogDisplay.text = "Wow, I’ve never seen a language like this before. Hey Basil! Can you read this?";
@@ -268,13 +395,28 @@ public class ObjectInteraction : MonoBehaviour {
                             dialogDisplay.text = "I wish I could read this language. It’s so unfair, I feel like Time is playing favourites!";
                         }
 
+                        //Glowing Engravings
+                        //Engravings
+                        if (bc.name == "inscription left language completed")
+                        {
+                            canvas1.GetComponent<Canvas>().enabled = true;
+                            nameDisplay.text = "Harriet";
+                            dialogDisplay.text = "I did it! I feel like Indiana Jones!";
+                        }
+                        if (bc.name == "inscription right language completed")
+                        {
+                            canvas1.GetComponent<Canvas>().enabled = true;
+                            nameDisplay.text = "Harriet";
+                            dialogDisplay.text = "I did it! I feel like Indiana Jones!";
+                        }
                     }
                 }
             }
         }
     }
 
-    void BasilInteractions() {
+    void BasilInteractions()
+    {
         //print("BASIL IN CONTROL");
         if (Input.GetMouseButtonDown(0))
         {
@@ -323,13 +465,27 @@ public class ObjectInteraction : MonoBehaviour {
                         {
                             canvas1.GetComponent<Canvas>().enabled = true;
                             nameDisplay.text = "Basil";
-                            dialogDisplay.text = "I never noticed that this was here! It says: 'May you see that decay and growth, While age-wrought, have their uses both. Now fill with light these spaces here To bring about the turn of gears.' A shame that the veil of night covers the sky for me now, for it seems as though daylight’s golden glow is key for this puzzle.";
+                            dialogDisplay.text = "Fascinating, a clue! It reads: 'Respect the strength of weeded stone To keep upright like splinted bone, For even with these spaces bright, Just know that more is left to right.'";
                         }
                         if (bc.name == "inscription right english")
                         {
                             canvas1.GetComponent<Canvas>().enabled = true;
                             nameDisplay.text = "Basil";
-                            dialogDisplay.text = "Fascinating, another clue! It reads: 'Respect the strength of weeded stone To keep upright like splinted bone, For even with these spaces bright, Just know that more is left to right.'";
+                            dialogDisplay.text = "I never noticed that this was here! It says: 'May you see that decay and growth, While age-wrought, have their uses both. Now fill with light these spaces here To bring about the turn of gears.' A shame that the veil of night covers the sky for me now, for it seems as though daylight’s golden glow is key for this puzzle.";
+                        }
+
+                        //Plate Dialogue
+                        if (bc.name == "Table and Plates Left")
+                        {
+                            canvas1.GetComponent<Canvas>().enabled = true;
+                            nameDisplay.text = "Basil";
+                            dialogDisplay.text = "I would not dare touch the offering plates!";
+                        }
+                        if (bc.name == "Table and Plates Right")
+                        {
+                            canvas1.GetComponent<Canvas>().enabled = true;
+                            nameDisplay.text = "Basil";
+                            dialogDisplay.text = "I would not dare touch the offering plates!";
                         }
 
                     }
@@ -338,10 +494,9 @@ public class ObjectInteraction : MonoBehaviour {
         }
     }
 
-    void RotateMiddleMirror(BoxCollider bc)
-    {
+    void RotateMiddleMirror(BoxCollider bc) {
         //print("direction: " + middleRotateCount);
-
+        /*
         bc.transform.Rotate(mirrorRotation);
         middleRotateCount++;
         middleRotateCount = middleRotateCount % totalRotate;
@@ -375,12 +530,51 @@ public class ObjectInteraction : MonoBehaviour {
                 mirrorLight.enabled = false;
             }
         }
+        */
+
+        if (correctMirrors == false)
+        {
+            //print("direction: " + middleRotateCount);
+
+            bc.transform.Rotate(mirrorRotation);
+            middleRotateCount++;
+            middleRotateCount = middleRotateCount % totalRotate;
+
+            if (middleRotateCount > 3) { middleRotateCount = 0; }
+
+            if (middleRotateCount == winningFaceCount)
+            {
+                //print("Correct mirror orientation");
+                correctRotation = true;
+            }
+            else
+            {
+                correctRotation = false;
+            }
+
+            bool lightOn = false;
+
+            for (int i = 0; i < reflectiveValues.Length; i++)
+            {
+                if (middleRotateCount == reflectiveValues[i])
+                {
+                    lightOn = true;
+                }
+                if (lightOn)
+                {
+                    mirrorLight.enabled = true;
+                }
+                else
+                {
+                    mirrorLight.enabled = false;
+                }
+            }
+        }
     }
 
-    void RotateRightMirror(BoxCollider bc)
-    {
+    void RotateRightMirror(BoxCollider bc) {
         //print("direction: " + rightRotateCount);
-
+        /*
         bc.transform.Rotate(mirrorRotation);
         rightRotateCount++;
         rightRotateCount = rightRotateCount % totalRotate;
@@ -412,6 +606,43 @@ public class ObjectInteraction : MonoBehaviour {
             else
             {
                 mirrorLight.enabled = false;
+            }
+        }
+        */
+        if (correctMirrors == false)
+        {
+            bc.transform.Rotate(mirrorRotation);
+            rightRotateCount++;
+            rightRotateCount = rightRotateCount % totalRotate;
+
+            if (rightRotateCount > 3) { rightRotateCount = 0; }
+
+            if (rightRotateCount == winningFaceCount)
+            {
+                //print("Correct mirror orientation");
+                correctRotation = true;
+            }
+            else
+            {
+                correctRotation = false;
+            }
+
+            bool lightOn = false;
+
+            for (int i = 0; i < reflectiveValues.Length; i++)
+            {
+                if (rightRotateCount == reflectiveValues[i])
+                {
+                    lightOn = true;
+                }
+                if (lightOn)
+                {
+                    mirrorLight.enabled = true;
+                }
+                else
+                {
+                    mirrorLight.enabled = false;
+                }
             }
         }
     }
