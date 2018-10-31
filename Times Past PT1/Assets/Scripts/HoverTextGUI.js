@@ -4,10 +4,13 @@
 /* GUI STYLE */
 
 var titleText = "PUT TEXT HERE";
+var descText = "DESC TEXT HERE";
 var actionText = "ACTION TEXT HERE";
 
 private var currentToolTipText = "";
 private var secondToolTipText = "";
+private var thirdToolTipText = "";
+
 
 private var guiStyleFore : GUIStyle;
 private var guiStyleBack : GUIStyle;
@@ -15,10 +18,14 @@ private var guiStyleBack : GUIStyle;
 private var guiStyleSecondFore : GUIStyle;
 private var guiStyleSecondBack : GUIStyle;
 
+private var guiStyleThirdFore : GUIStyle;
+private var guiStyleThirdBack : GUIStyle;
+
 //var customGUIStyle : GUIStyle;
 
  function Start()
  {
+     //title text info
      guiStyleFore = new GUIStyle();
      guiStyleFore.fontSize = 15;
      guiStyleFore.normal.textColor = Color.white;
@@ -31,29 +38,44 @@ private var guiStyleSecondBack : GUIStyle;
      guiStyleBack.alignment = TextAnchor.UpperCenter ;
      guiStyleBack.wordWrap = true;
 
-
+     //desc text info
      guiStyleSecondFore = new GUIStyle();
-     guiStyleSecondFore.fontSize = 10;
+     guiStyleSecondFore.fontSize = 13;
      guiStyleSecondFore.normal.textColor = Color.white;
      guiStyleSecondFore.alignment = TextAnchor.UpperCenter ;
      guiStyleSecondFore.wordWrap = true;
 
      guiStyleSecondBack = new GUIStyle();
-     guiStyleSecondBack.fontSize = 10;
+     guiStyleSecondBack.fontSize = 13;
      guiStyleSecondBack.normal.textColor = Color.black;
      guiStyleSecondBack.alignment = TextAnchor.UpperCenter ;
      guiStyleSecondBack.wordWrap = true;
+
+     //action text info
+     guiStyleThirdFore = new GUIStyle();
+     guiStyleThirdFore.fontSize = 13;
+     guiStyleThirdFore.normal.textColor = Color.white;
+     guiStyleThirdFore.alignment = TextAnchor.UpperCenter ;
+     guiStyleThirdFore.wordWrap = true;
+
+     guiStyleThirdBack = new GUIStyle();
+     guiStyleThirdBack.fontSize = 13;
+     guiStyleThirdBack.normal.textColor = Color.black;
+     guiStyleThirdBack.alignment = TextAnchor.UpperCenter ;
+     guiStyleThirdBack.wordWrap = true;
  }
 
  function OnMouseEnter ()
  {
      currentToolTipText = titleText;
-     secondToolTipText = actionText;
+     secondToolTipText = descText;
+     thirdToolTipText = actionText;
  }
 
  function OnMouseExit () {
      currentToolTipText = "";
      secondToolTipText = "";
+     thirdToolTipText = "";
  }
 
  function OnGUI()
@@ -67,8 +89,12 @@ private var guiStyleSecondBack : GUIStyle;
          GUI.Label (Rect (x-148,y+40,300,60), currentToolTipText, guiStyleBack);
          GUI.Label (Rect (x-150,y+40,300,60), currentToolTipText, guiStyleFore);
 
-         //action text
+         //desc text
          GUI.Label (Rect (x-148,y+60,300,60), secondToolTipText, guiStyleSecondBack);
          GUI.Label (Rect (x-150,y+60,300,60), secondToolTipText, guiStyleSecondFore);
+
+         //action text
+         GUI.Label (Rect (x-148,y+90,300,60), thirdToolTipText, guiStyleThirdBack);
+         GUI.Label (Rect (x-150,y+90,300,60), thirdToolTipText, guiStyleThirdFore);
      }
  }
