@@ -2720,7 +2720,6 @@ GameObject:
   - component: {fileID: 329225383}
   - component: {fileID: 329225385}
   - component: {fileID: 329225384}
-  - component: {fileID: 329225386}
   - component: {fileID: 329225388}
   - component: {fileID: 329225387}
   m_Layer: 0
@@ -2785,20 +2784,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 329225382}
   m_Mesh: {fileID: 4300000, guid: dc940b0e4c1a9f644a443556980ba27a, type: 3}
---- !u!114 &329225386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 329225382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Viney Pillars
-  descText: DESC TEXT HERE
-  actionText: Plants cover this pillar of stone
 --- !u!114 &329225387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6862,7 +6847,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1056896821}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6dd3595ce702443592fb473ccd50c74, type: 3}
   m_Name: 
