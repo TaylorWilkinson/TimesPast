@@ -4,13 +4,21 @@
 /* GUI STYLE */
 
 var titleText = "PUT TEXT HERE";
-var descText = "DESC TEXT HERE";
+private var descText = "DESC TEXT HERE";
 var actionText = "ACTION TEXT HERE";
+
+//var activeCharacter = "";
+
+var harrietActionText = "Harriet's Action Text";
+var basilActionText = "Basil's Action Text";
+var basilAlternateText = "Basil's Text After A Prompt";
 
 private var currentToolTipText = "";
 private var secondToolTipText = "";
 private var thirdToolTipText = "";
 
+private var harrietToolTipText = "";
+private var basilToolTipText = "";
 
 private var guiStyleFore : GUIStyle;
 private var guiStyleBack : GUIStyle;
@@ -21,10 +29,23 @@ private var guiStyleSecondBack : GUIStyle;
 private var guiStyleThirdFore : GUIStyle;
 private var guiStyleThirdBack : GUIStyle;
 
+
+private var guiStyleHarrietFore : GUIStyle;
+private var guiStyleHarrietBack : GUIStyle;
+
+private var guiStyleBasilFore : GUIStyle;
+private var guiStyleBasilBack : GUIStyle;
+
 //var customGUIStyle : GUIStyle;
 
- function Start()
- {
+
+var characterSwitchControl;
+var harrietActive = false;
+var basilActive = false;
+
+var interactionChecker;
+
+ function Start() {
      //title text info
      guiStyleFore = new GUIStyle();
      guiStyleFore.fontSize = 15;
@@ -63,6 +84,57 @@ private var guiStyleThirdBack : GUIStyle;
      guiStyleThirdBack.normal.textColor = Color.black;
      guiStyleThirdBack.alignment = TextAnchor.UpperCenter ;
      guiStyleThirdBack.wordWrap = true;
+
+    //harriet text info
+     guiStyleHarrietFore = new GUIStyle();
+     guiStyleHarrietFore.fontSize = 13;
+     guiStyleHarrietFore.normal.textColor = Color.white;
+     guiStyleHarrietFore.alignment = TextAnchor.UpperCenter ;
+     guiStyleHarrietFore.wordWrap = true;
+
+     guiStyleHarrietBack = new GUIStyle();
+     guiStyleHarrietBack.fontSize = 13;
+     guiStyleHarrietBack.normal.textColor = Color.black;
+     guiStyleHarrietBack.alignment = TextAnchor.UpperCenter ;
+     guiStyleHarrietBack.wordWrap = true;
+
+    //basil text info
+     guiStyleBasilFore = new GUIStyle();
+     guiStyleBasilFore.fontSize = 13;
+     guiStyleBasilFore.normal.textColor = Color.white;
+     guiStyleBasilFore.alignment = TextAnchor.UpperCenter ;
+     guiStyleBasilFore.wordWrap = true;
+
+     guiStyleBasilBack = new GUIStyle();
+     guiStyleBasilBack.fontSize = 13;
+     guiStyleBasilBack.normal.textColor = Color.black;
+     guiStyleBasilBack.alignment = TextAnchor.UpperCenter ;
+     guiStyleBasilBack.wordWrap = true;
+ }
+
+ function Update() {
+    //character check
+    var characterSwitchControl : GameObject = GameObject.Find("CharacterSwitchControl");
+    //print(characterSwitchControl.GetComponent("SwitchCharacter").characterSelect);
+
+    if ((characterSwitchControl.GetComponent("SwitchCharacter").characterSelect) == 0){
+        //print("harriet active");
+        actionText = harrietActionText;
+    } else if ((characterSwitchControl.GetComponent("SwitchCharacter").characterSelect) == 1) {
+        //print("basil active");
+        //actionText = basilActionText;
+
+        //check if Basil's action text must change
+        var interactionChecker : GameObject = GameObject.Find("Win State Controller");
+
+        if (interactionChecker.GetComponent("InteractionTrigger").basilDialogueChange == false) {
+            //print("basil action text");
+            actionText = basilActionText;
+        } else {
+            //print("basil alt text");
+            actionText = basilAlternateText;
+        }
+    }
  }
 
  function OnMouseEnter ()
@@ -80,8 +152,7 @@ private var guiStyleThirdBack : GUIStyle;
 
  function OnGUI()
  {
-     if (currentToolTipText != "")
-     {
+     if (currentToolTipText != "") {
          var x = Event.current.mousePosition.x;
          var y = Event.current.mousePosition.y;
 
@@ -90,11 +161,21 @@ private var guiStyleThirdBack : GUIStyle;
          GUI.Label (Rect (x-150,y+40,300,60), currentToolTipText, guiStyleFore);
 
          //desc text
-         GUI.Label (Rect (x-148,y+60,300,60), secondToolTipText, guiStyleSecondBack);
-         GUI.Label (Rect (x-150,y+60,300,60), secondToolTipText, guiStyleSecondFore);
+         //GUI.Label (Rect (x-148,y+60,300,60), secondToolTipText, guiStyleSecondBack);
+         //GUI.Label (Rect (x-150,y+60,300,60), secondToolTipText, guiStyleSecondFore);
 
          //action text
-         GUI.Label (Rect (x-148,y+90,300,60), thirdToolTipText, guiStyleThirdBack);
-         GUI.Label (Rect (x-150,y+90,300,60), thirdToolTipText, guiStyleThirdFore);
+         //GUI.Label (Rect (x-148,y+90,300,60), thirdToolTipText, guiStyleThirdBack);
+         //GUI.Label (Rect (x-150,y+90,300,60), thirdToolTipText, guiStyleThirdFore);
+         GUI.Label (Rect (x-148,y+60,300,60), thirdToolTipText, guiStyleThirdBack);
+         GUI.Label (Rect (x-150,y+60,300,60), thirdToolTipText, guiStyleThirdFore);
+
+
+        //GUI.Label (Rect (x-148,y+60,300,60), harrietToolTipText, guiStyleHarrietBack);
+        //GUI.Label (Rect (x-150,y+60,300,60), harrietToolTipText, guiStyleHarrietFore);
+
+        //GUI.Label (Rect (x-148,y+60,300,60), basilToolTipText, guiStyleBasilBack);
+        //GUI.Label (Rect (x-150,y+60,300,60), basilToolTipText, guiStyleBasilFore);
+
      }
  }

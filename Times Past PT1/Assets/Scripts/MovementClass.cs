@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovementClass : MonoBehaviour
 {
-    Animator anim;
 
     public float speed = 5f;
     private Vector3 movement;
@@ -18,9 +17,7 @@ public class MovementClass : MonoBehaviour
     // Use this for initialization
     void Start() {
 
-        anim = GetComponent<Animator>();
         //GetComponent<Rigidbody2D>().velocity = movement;
-
 
         cam = Camera.main.transform;
     }
@@ -33,6 +30,7 @@ public class MovementClass : MonoBehaviour
         movement = new Vector3(inputX, 0, inputY);
 
         transform.Translate(movement * speed * Time.deltaTime);
+
         CalculateDirection();
         Rotate();
     }
@@ -43,15 +41,13 @@ public class MovementClass : MonoBehaviour
         input.y = Input.GetAxisRaw("Vertical");
     }
 
-    void CalculateDirection()
-    {
+    void CalculateDirection() {
         angle = Mathf.Atan2(input.x, input.y);
         angle = Mathf.Rad2Deg * angle;
         angle += cam.eulerAngles.y;
     }
 
-    void Rotate()
-    {
+    void Rotate() {
         targetRotation = Quaternion.Euler(0, angle, 0);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }

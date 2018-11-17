@@ -35,13 +35,13 @@ public class CameraController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && !smoothRotating)
         {
             //left rotation
-            StartCoroutine("RotateAroundTarget", 45);
+            StartCoroutine("RotateAroundTarget", -45);
         }
 
         if (Input.GetKeyDown(KeyCode.E) && !smoothRotating)
         {
             //right rotation
-            StartCoroutine("RotateAroundTarget", -45);
+            StartCoroutine("RotateAroundTarget", 45);
         }
 
         if ((transform.position - target.position).magnitude > maxDistance)
@@ -73,7 +73,7 @@ public class CameraController : MonoBehaviour
 
         smoothRotating = true;
 
-        while (dist > 0.02f)
+        while (dist > 10f)
         {
             offsetPos = Vector3.SmoothDamp(offsetPos, targetOffsetPos, ref vel, smoothSpeed);
             dist = Vector3.Distance(offsetPos, targetOffsetPos);
@@ -96,3 +96,4 @@ public class CameraController : MonoBehaviour
         }
     }
 }
+

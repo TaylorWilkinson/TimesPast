@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/LowPolyNature/Scenes/Demo.unity
-    guid: 098a34d9c68692342943067d2876f441
-  - enabled: 0
-    path: Assets/LowPolyNature/Scenes/Simple.unity
-    guid: 55a0b71e85d58e34ea55f5f65a929097
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Prototype1_Scene.unity
-    guid: 261cef0d52d7b458ca0b94659a00577b
+    path: Assets/Scenes/TutorialLevel.unity
+    guid: f4dfeea7f7c3b43729cc253684b73e86
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: aea22d087805f4122b6634ba333cb36f
+  - enabled: 1
+    path: Assets/Scenes/GardenLevel.unity
+    guid: 38b72629adb08489095b6a0abc8b2ce5
   m_configObjects: {}

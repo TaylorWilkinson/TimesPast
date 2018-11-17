@@ -3,43 +3,78 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RotateOnClick : MonoBehaviour, IActionOnClick {
-    [SerializeField]
-    private int totalRotate = 4;
-    [SerializeField]
-    private int rotateCount = 0;
-    [SerializeField]
-    private int winningFaceCount = 2;
+
+    //[SerializeField]
+    public int totalRotate;
+
+    //[SerializeField]
+    public int rotateCount = 0;
+
+    //[SerializeField]
+    //private int winningFaceCount = 2;
+
+    public int winningFaceCount = 1;
+
+    //[SerializeField]
+    //private Light mirrorLight;
+    public Light mirrorLight;
 
     [SerializeField]
-    private Light mirrorLight;
+    public int[] reflectiveValues;
 
+    //character switch control
     [SerializeField]
-    private int[] reflectiveValues;
+    public GameObject requiredCharacter;
+
+    GameObject characterSwitchControl;
+    bool harrietActive;
+    bool basilActive;
 
     public void OnObjectClick() {
-        //do the rotate logic here
-        transform.Rotate(0, 90, 0);
-        rotateCount++;
-        rotateCount = rotateCount % totalRotate;
-
-        if (rotateCount == winningFaceCount)
+        //determine active character
+        characterSwitchControl = GameObject.Find("CharacterSwitchControl");
+        if ((characterSwitchControl.GetComponent<SwitchCharacter>().characterSelect) == 0)
         {
-            Debug.Log("Correct mirror orientation");
+            harrietActive = true;
+            basilActive = false;
+        }
+        else if ((characterSwitchControl.GetComponent<SwitchCharacter>().characterSelect) == 1)
+        {
+            basilActive = true;
+            harrietActive = false;
         }
 
-        bool lightOn = false;
+        //if requiredCharacter is Basil, and he's active
+        if ((requiredCharacter.name == "Basil") && (basilActive == true)) {
+            //do the rotate logic here
+            transform.Rotate(0, 90, 0);
+            rotateCount++;
+            rotateCount = rotateCount % totalRotate;
 
-        for (int i = 0; i < reflectiveValues.Length; i++)
-        {
-            if (rotateCount == reflectiveValues[i])
+            //print(rotateCount);
+
+            if (rotateCount == winningFaceCount)
             {
-                lightOn = true;
+                //Debug.Log(gameObject.name + "Correct mirror orientation");
             }
-            if (lightOn) {
-                mirrorLight.enabled = true;
-            } else {
-                mirrorLight.enabled = false;
+
+            bool lightOn = false;
+
+            for (int i = 0; i < reflectiveValues.Length; i++)
+            {
+                if (rotateCount == reflectiveValues[i])
+                {
+                    lightOn = true;
+                }
+                if (lightOn)
+                {
+                    mirrorLight.enabled = true;
+                }
+                else
+                {
+                    mirrorLight.enabled = false;
+                }
             }
-        }
+        } //end basil check
     }
 }

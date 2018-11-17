@@ -232,24 +232,24 @@ public class ObjectInteraction : MonoBehaviour {
         if (posValueL == 2)
         {
             //Debug.Log("Correct Left Plates");
-            inscriptionL.GetComponent<SpriteRenderer>().enabled = false;
-            inscriptionLCorrect.GetComponent<SpriteRenderer>().enabled = true;
+            //inscriptionL.GetComponent<SpriteRenderer>().enabled = false;
+            //inscriptionLCorrect.GetComponent<SpriteRenderer>().enabled = true;
         }
 
         if (posValueR == 3)
         {
             //Debug.Log("Correct Right Plates");
-            inscriptionR.GetComponent<SpriteRenderer>().enabled = false;
-            inscriptionRCorrect.GetComponent<SpriteRenderer>().enabled = true;
+            //inscriptionR.GetComponent<SpriteRenderer>().enabled = false;
+            //inscriptionRCorrect.GetComponent<SpriteRenderer>().enabled = true;
         }
 
         //Check for correct table arrangements
         if ((characterSelect == 0) && (posValueL == 2) && (posValueR == 3))
         {
-            print("YOU'VE SOLVED MY TABLE RIDDLE");
+            //print("YOU'VE SOLVED MY TABLE RIDDLE");
             //tell player they got correct orientation
 
-            correctPlates = true;
+            //correctPlates = true;
         }
     } //end update
 
@@ -381,6 +381,7 @@ public class ObjectInteraction : MonoBehaviour {
                             dialogDisplay.text = "Golly, it’ll take months of excavation for me to get past all this! Shame the pillars on this side didn’t hold up.";
                         }
 
+
                         //Engravings
                         if (bc.name == "inscription left language")
                         {
@@ -441,6 +442,7 @@ public class ObjectInteraction : MonoBehaviour {
                     if (bc = hit.transform.GetComponent<BoxCollider>())
                     {
                         //MIRROR TESTS
+                        /*
                         if (bc.name == "MirrorMiddle")
                         {
                             RotateMiddleMirror(bc);
@@ -449,8 +451,10 @@ public class ObjectInteraction : MonoBehaviour {
                         {
                             RotateRightMirror(bc);
                         }
+                        */
 
                         //Tapestries (click to remove)
+                        /*
                         if (bc.name == "Tapestry_Kah")
                         {
                             Destroy(bc.gameObject);
@@ -459,6 +463,7 @@ public class ObjectInteraction : MonoBehaviour {
                         {
                             Destroy(bc.gameObject);
                         }
+                        */
 
                         //Engravings
                         if (bc.name == "inscription left english")
@@ -495,43 +500,6 @@ public class ObjectInteraction : MonoBehaviour {
     }
 
     void RotateMiddleMirror(BoxCollider bc) {
-        //print("direction: " + middleRotateCount);
-        /*
-        bc.transform.Rotate(mirrorRotation);
-        middleRotateCount++;
-        middleRotateCount = middleRotateCount % totalRotate;
-
-        if (middleRotateCount > 3) { middleRotateCount = 0; }
-
-        if (middleRotateCount == winningFaceCount)
-        {
-            //print("Correct mirror orientation");
-            correctRotation = true;
-        }
-        else
-        {
-            correctRotation = false;
-        }
-
-        bool lightOn = false;
-
-        for (int i = 0; i < reflectiveValues.Length; i++)
-        {
-            if (middleRotateCount == reflectiveValues[i])
-            {
-                lightOn = true;
-            }
-            if (lightOn)
-            {
-                mirrorLight.enabled = true;
-            }
-            else
-            {
-                mirrorLight.enabled = false;
-            }
-        }
-        */
-
         if (correctMirrors == false)
         {
             //print("direction: " + middleRotateCount);
@@ -573,42 +541,6 @@ public class ObjectInteraction : MonoBehaviour {
     }
 
     void RotateRightMirror(BoxCollider bc) {
-        //print("direction: " + rightRotateCount);
-        /*
-        bc.transform.Rotate(mirrorRotation);
-        rightRotateCount++;
-        rightRotateCount = rightRotateCount % totalRotate;
-
-        if (rightRotateCount > 3) { rightRotateCount = 0; }
-
-        if (rightRotateCount == winningFaceCount)
-        {
-            //print("Correct mirror orientation");
-            correctRotation = true;
-        }
-        else
-        {
-            correctRotation = false;
-        }
-
-        bool lightOn = false;
-
-        for (int i = 0; i < reflectiveValues.Length; i++)
-        {
-            if (rightRotateCount == reflectiveValues[i])
-            {
-                lightOn = true;
-            }
-            if (lightOn)
-            {
-                mirrorLight.enabled = true;
-            }
-            else
-            {
-                mirrorLight.enabled = false;
-            }
-        }
-        */
         if (correctMirrors == false)
         {
             bc.transform.Rotate(mirrorRotation);
