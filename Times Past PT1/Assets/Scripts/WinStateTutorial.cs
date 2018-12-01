@@ -51,8 +51,7 @@ public class WinStateTutorial : MonoBehaviour {
             //The tree is now gone, let Harriet access the keyhole
             keyhole.SetActive(true);
 
-            if (Input.GetMouseButtonDown(0))
-            {
+            if (Input.GetMouseButtonDown(0)) {
                 RaycastHit hit;
                 //turn screenpoint into ray, from the camera into mouse position
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -61,7 +60,7 @@ public class WinStateTutorial : MonoBehaviour {
                 {
                     if (hit.transform != null)
                     {
-                        //print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
+                        print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
 
                         BoxCollider bc;
                         if (bc = hit.transform.GetComponent<BoxCollider>())
@@ -70,7 +69,7 @@ public class WinStateTutorial : MonoBehaviour {
                             {
                                 //check if object being clicked is equal to the "this" object the script is attached to.
                                 if (harrietActive == true) {
-                                    StartCoroutine(GoToLevel1());
+                                    StartCoroutine(Lvl2Cutscene());
                                 }
                             }
                         }
@@ -80,8 +79,8 @@ public class WinStateTutorial : MonoBehaviour {
         }
     }
 
-    IEnumerator GoToLevel1() {
+    IEnumerator Lvl2Cutscene() {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(4);
     }
 }

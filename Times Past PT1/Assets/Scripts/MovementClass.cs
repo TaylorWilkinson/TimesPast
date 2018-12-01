@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementClass : MonoBehaviour
 {
 
-    public float speed = 5f;
+    public float speed = 7f;
     private Vector3 movement;
 
     public float turnSpeed = 10;
@@ -31,20 +31,21 @@ public class MovementClass : MonoBehaviour
 
         transform.Translate(movement * speed * Time.deltaTime);
 
+
         CalculateDirection();
         Rotate();
     }
 
-    void GetInput()
-    {
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
-    }
+    //void GetInput()
+    //{
+    //    input.x = Input.GetAxisRaw("Horizontal");
+    //    input.y = Input.GetAxisRaw("Vertical");
+    //}
 
     void CalculateDirection() {
-        angle = Mathf.Atan2(input.x, input.y);
-        angle = Mathf.Rad2Deg * angle;
-        angle += cam.eulerAngles.y;
+        //angle = Mathf.Atan2(input.x, input.y);
+        //angle = Mathf.Rad2Deg * angle;
+        angle = cam.eulerAngles.y;
     }
 
     void Rotate() {

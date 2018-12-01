@@ -10,7 +10,7 @@ public class SwitchCharacter : MonoBehaviour {
 
     public CameraController cameraController;
 
-    GameObject hFront, hBack, hLeft, hRight, bFront, bBack, bLeft, bRight;
+    GameObject hFront, hBack, hLeft, hRight, bFront, bBack, bLeft, bRight, kFront, kBack, kLeft, kRight;
 
     // Use this for initialization
     void Start () {
@@ -24,10 +24,16 @@ public class SwitchCharacter : MonoBehaviour {
         hBack = GameObject.Find("Harriet_Back");
         hLeft = GameObject.Find("Harriet_Left");
         hRight = GameObject.Find("Harriet_Right");
+
         bFront = GameObject.Find("Basil_Front");
         bBack = GameObject.Find("Basil_Back");
         bLeft = GameObject.Find("Basil_Left");
         bRight = GameObject.Find("Basil_Right");
+
+        kFront = GameObject.Find("Kah_Front");
+        kBack = GameObject.Find("Kah_Back");
+        kLeft = GameObject.Find("Kah_Left");
+        kRight = GameObject.Find("Kah_Right");
     }
 	
 	// Update is called once per frame
@@ -58,6 +64,12 @@ public class SwitchCharacter : MonoBehaviour {
                 hBack.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
                 hLeft.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
                 hRight.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+
+                //make Kah active and visible
+                kFront.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                kBack.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                kLeft.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                kRight.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
             }
             //Disable Basil's Character Controller
             if (basil.GetComponent<CharacterController>())
@@ -84,6 +96,12 @@ public class SwitchCharacter : MonoBehaviour {
                 hBack.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
                 hLeft.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
                 hRight.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
+
+                //make Kah invisible
+                kFront.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.20f);
+                kBack.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.20f);
+                kLeft.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.20f);
+                kRight.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.20f);
             }
             //Enable Basil's Character Controller
             if (basil.GetComponent<CharacterController>())

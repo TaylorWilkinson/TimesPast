@@ -27,7 +27,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &1229788978339384
 GameObject:
@@ -401,8 +401,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Pillar
-  descText: 
   actionText: 
+  harrietActionText: Harriet's Action Text
+  basilActionText: Basil's Action Text
+  basilAlternateText: Basil's Text After A Prompt
+  harrietActive: 0
+  basilActive: 0
 --- !u!114 &114482663399519524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,5 +419,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Pillar
-  descText: 
   actionText: 
+  harrietActionText: Harriet's Action Text
+  basilActionText: Basil's Action Text
+  basilAlternateText: Basil's Text After A Prompt
+  harrietActive: 0
+  basilActive: 0

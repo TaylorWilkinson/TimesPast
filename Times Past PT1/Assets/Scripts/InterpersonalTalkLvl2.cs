@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InterpersonalTalkTutorial : MonoBehaviour {
+public class InterpersonalTalkLvl2 : MonoBehaviour {
     //character switch control
     GameObject characterSwitchControl;
     bool harrietActive;
@@ -42,39 +42,20 @@ public class InterpersonalTalkTutorial : MonoBehaviour {
             harrietActive = false;
         }
 
-        //click on character
-        if (harrietActive == true) {
-            hoverOnH.enabled = false;
-            if (Input.GetMouseButtonDown(0))
-            {
-                RaycastHit hit;
-                //turn screenpoint into ray, from the camera into mouse position
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out hit, 100.0f))
-                {
-                    if (hit.transform != null)
-                    {
-                        print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
-
-                        CapsuleCollider cc;
-                        if (cc = hit.transform.GetComponent<CapsuleCollider>())
-                        {
-                            if (hit.transform.gameObject == this.transform.gameObject)
-                            {
-                                if (harrietActive == true)
-                                {
-                                    //load dialogue with Basil
-                                    SceneManager.LoadScene(7, LoadSceneMode.Additive);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        } else if (basilActive == true)
+        if (harrietActive)
         {
+            hoverOnH.enabled = false;
+            hoverOnB.enabled = true;
+        }
+        else if (basilActive)
+        {
+            hoverOnH.enabled = true;
             hoverOnB.enabled = false;
+        }
+
+        //Click on Basil as Harriet
+        if (harrietActive == true)
+        {
             if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit hit;
@@ -85,23 +66,46 @@ public class InterpersonalTalkTutorial : MonoBehaviour {
                 {
                     if (hit.transform != null)
                     {
-                        print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
+                        //print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
 
                         CapsuleCollider cc;
                         if (cc = hit.transform.GetComponent<CapsuleCollider>())
                         {
-                            if (hit.transform.gameObject == this.transform.gameObject)
+                            if (hit.transform.gameObject.name == "Basil")
                             {
-                                if (harrietActive == true)
-                                {
-                                    //load dialogue with Harriet
-                                    SceneManager.LoadScene(8);
-                                }
+                                SceneManager.LoadScene(9);
                             }
                         }
                     }
                 }
             }
-        }        
+        }
+        //Click on Harriet as Basil
+        else if (basilActive == true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                RaycastHit hit;
+                //turn screenpoint into ray, from the camera into mouse position
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit, 100.0f))
+                {
+                    if (hit.transform != null)
+                    {
+                        //print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
+
+                        CapsuleCollider cc;
+                        if (cc = hit.transform.GetComponent<CapsuleCollider>())
+                        {
+                            if (hit.transform.gameObject.name == "Harriet")
+                            {
+                                SceneManager.LoadScene(10);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

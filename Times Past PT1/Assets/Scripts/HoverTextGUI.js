@@ -10,6 +10,7 @@ var actionText = "ACTION TEXT HERE";
 //var activeCharacter = "";
 
 var harrietActionText = "Harriet's Action Text";
+var harrietAlternateText = "";
 var basilActionText = "Basil's Action Text";
 var basilAlternateText = "Basil's Text After A Prompt";
 
@@ -43,7 +44,8 @@ var characterSwitchControl;
 var harrietActive = false;
 var basilActive = false;
 
-var interactionChecker;
+var interactionCheckerH;
+var interactionCheckerB;
 
  function Start() {
      //title text info
@@ -119,15 +121,26 @@ var interactionChecker;
 
     if ((characterSwitchControl.GetComponent("SwitchCharacter").characterSelect) == 0){
         //print("harriet active");
-        actionText = harrietActionText;
+        //actionText = harrietActionText;
+
+        //check if Harriet's action text must change
+        var interactionCheckerH : GameObject = GameObject.Find("Win State Controller");
+
+        if (interactionCheckerH.GetComponent("InteractionTrigger").harrietDialogueChange == false) {
+            actionText = harrietActionText;
+        } else {
+            actionText = harrietAlternateText;
+        }
+
+
     } else if ((characterSwitchControl.GetComponent("SwitchCharacter").characterSelect) == 1) {
         //print("basil active");
         //actionText = basilActionText;
 
         //check if Basil's action text must change
-        var interactionChecker : GameObject = GameObject.Find("Win State Controller");
+        var interactionCheckerB : GameObject = GameObject.Find("Win State Controller");
 
-        if (interactionChecker.GetComponent("InteractionTrigger").basilDialogueChange == false) {
+        if (interactionCheckerB.GetComponent("InteractionTrigger").basilDialogueChange == false) {
             //print("basil action text");
             actionText = basilActionText;
         } else {

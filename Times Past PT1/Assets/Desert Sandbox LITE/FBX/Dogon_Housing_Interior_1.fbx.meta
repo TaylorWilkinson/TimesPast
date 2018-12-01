@@ -133,7 +133,17 @@ ModelImporter:
     6400040: Cube_026
     7400000: Default Take
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__Dogon_Housing_1_png
+    second: {fileID: 2100000, guid: fbccf6d50f505a34d9b11cb1705dd114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__Wood_Supply_1_png
+    second: {fileID: 2100000, guid: a5f4a4d21926a3140b4a9488322948cd, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -172,7 +182,7 @@ ModelImporter:
     importCameras: 0
     importLights: 0
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -185,7 +195,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 0
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
