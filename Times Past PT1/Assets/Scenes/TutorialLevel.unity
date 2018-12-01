@@ -601,11 +601,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueHarriet: {fileID: 1584387398}
-  dialogueAltHarriet: {fileID: 0}
+  dialogueAltHarriet: {fileID: 1584387398}
   dialogueBasil: {fileID: 825736039}
   dialogueAltBasil: {fileID: 437434799}
   harrietDialogDisplay: {fileID: 2000905931}
-  altHarrietDialogDisplay: {fileID: 0}
+  altHarrietDialogDisplay: {fileID: 2000905931}
   basilDialogDisplay: {fileID: 1694198029}
   altDialogDisplay: {fileID: 800870219}
   harrietDialogue: "A gem! Now I\u2019m a real archaeologist, like Indiana Jones!"
@@ -673,11 +673,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueHarriet: {fileID: 1584387398}
-  dialogueAltHarriet: {fileID: 0}
+  dialogueAltHarriet: {fileID: 1584387398}
   dialogueBasil: {fileID: 825736039}
   dialogueAltBasil: {fileID: 437434799}
   harrietDialogDisplay: {fileID: 2000905931}
-  altHarrietDialogDisplay: {fileID: 0}
+  altHarrietDialogDisplay: {fileID: 2000905931}
   basilDialogDisplay: {fileID: 1694198029}
   altDialogDisplay: {fileID: 800870219}
   harrietDialogue: I bet this fountain was real pretty once!
@@ -4710,11 +4710,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueHarriet: {fileID: 1584387398}
-  dialogueAltHarriet: {fileID: 0}
+  dialogueAltHarriet: {fileID: 1584387398}
   dialogueBasil: {fileID: 825736039}
   dialogueAltBasil: {fileID: 437434799}
   harrietDialogDisplay: {fileID: 2000905931}
-  altHarrietDialogDisplay: {fileID: 0}
+  altHarrietDialogDisplay: {fileID: 2000905931}
   basilDialogDisplay: {fileID: 1694198029}
   altDialogDisplay: {fileID: 800870219}
   harrietDialogue: I bet this fountain was real pretty once!
@@ -7708,11 +7708,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueHarriet: {fileID: 1584387398}
-  dialogueAltHarriet: {fileID: 0}
+  dialogueAltHarriet: {fileID: 1584387398}
   dialogueBasil: {fileID: 825736039}
   dialogueAltBasil: {fileID: 437434799}
   harrietDialogDisplay: {fileID: 2000905931}
-  altHarrietDialogDisplay: {fileID: 0}
+  altHarrietDialogDisplay: {fileID: 2000905931}
   basilDialogDisplay: {fileID: 1694198029}
   altDialogDisplay: {fileID: 800870219}
   harrietDialogue: 
@@ -9147,11 +9147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueHarriet: {fileID: 1584387398}
-  dialogueAltHarriet: {fileID: 0}
+  dialogueAltHarriet: {fileID: 1584387398}
   dialogueBasil: {fileID: 825736039}
   dialogueAltBasil: {fileID: 437434799}
   harrietDialogDisplay: {fileID: 2000905931}
-  altHarrietDialogDisplay: {fileID: 0}
+  altHarrietDialogDisplay: {fileID: 2000905931}
   basilDialogDisplay: {fileID: 1694198029}
   altDialogDisplay: {fileID: 800870219}
   harrietDialogue: "This big ol\u2019 tree is blocking the door!"
@@ -11994,11 +11994,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueHarriet: {fileID: 1584387398}
-  dialogueAltHarriet: {fileID: 0}
+  dialogueAltHarriet: {fileID: 1584387398}
   dialogueBasil: {fileID: 825736039}
   dialogueAltBasil: {fileID: 437434799}
   harrietDialogDisplay: {fileID: 2000905931}
-  altHarrietDialogDisplay: {fileID: 0}
+  altHarrietDialogDisplay: {fileID: 2000905931}
   basilDialogDisplay: {fileID: 1694198029}
   altDialogDisplay: {fileID: 800870219}
   harrietDialogue: "A gem! Now I\u2019m a real archaeologist, like Indiana Jones!"
@@ -19296,11 +19296,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueHarriet: {fileID: 1584387398}
-  dialogueAltHarriet: {fileID: 0}
+  dialogueAltHarriet: {fileID: 1584387398}
   dialogueBasil: {fileID: 825736039}
   dialogueAltBasil: {fileID: 437434799}
   harrietDialogDisplay: {fileID: 2000905931}
-  altHarrietDialogDisplay: {fileID: 0}
+  altHarrietDialogDisplay: {fileID: 2000905931}
   basilDialogDisplay: {fileID: 1694198029}
   altDialogDisplay: {fileID: 800870219}
   harrietDialogue: On to the next!

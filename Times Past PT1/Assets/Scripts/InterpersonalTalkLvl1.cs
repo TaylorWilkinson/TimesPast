@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Fungus;
+
 public class InterpersonalTalkLvl1 : MonoBehaviour
 {
     //character switch control
