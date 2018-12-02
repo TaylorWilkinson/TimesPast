@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Past
   - Present
+  - Glow
+  - Enemy
+  - Laser
+  - Gem
   layers:
   - Default
   - TransparentFX
@@ -15,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - PrePostProcess
-  - 
+  - Wall
+  - PostProcessing
   - 
   - 
   - 

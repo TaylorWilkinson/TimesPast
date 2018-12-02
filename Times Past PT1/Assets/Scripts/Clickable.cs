@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 public class Clickable : MonoBehaviour {
-    public event Action<GameObject> OnObjectCLick;
+    public event Action<GameObject> OnObjectClick;
 
     private void OnMouseDown()
     {

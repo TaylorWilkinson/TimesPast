@@ -5,13 +5,46 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/LowPolyNature/Scenes/Demo.unity
-    guid: 098a34d9c68692342943067d2876f441
-  - enabled: 0
-    path: Assets/LowPolyNature/Scenes/Simple.unity
-    guid: 55a0b71e85d58e34ea55f5f65a929097
   - enabled: 1
-    path: Assets/Prototype1_Scene.unity
-    guid: 261cef0d52d7b458ca0b94659a00577b
+    path: Assets/Scenes/Cutscenes and Dialogue/BeginningCutscene.unity
+    guid: e4b517aaab1494bada9965512f436688
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes and Dialogue/Tutorial Level/TutorialCutscene.unity
+    guid: a1b91193d9e594ac894280140bfcbff4
+  - enabled: 1
+    path: Assets/Scenes/TutorialLevel.unity
+    guid: f4dfeea7f7c3b43729cc253684b73e86
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes and Dialogue/Level 1/Level1Cutscene.unity
+    guid: b378134a582d84834bdbad7f333c81a6
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: aea22d087805f4122b6634ba333cb36f
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes and Dialogue/Garden Level/GardenLevelCutscene.unity
+    guid: 34d875a02223a4fbe84c7de8f8f9f8f5
+  - enabled: 1
+    path: Assets/Scenes/GardenLevel.unity
+    guid: 38b72629adb08489095b6a0abc8b2ce5
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes and Dialogue/FinalCutscene.unity
+    guid: 23801f4372ac14e3fb026d7baa39f799
+  - enabled: 0
+    path: Assets/Scenes/Cutscenes and Dialogue/Tutorial Level/TutorialBasilDialogue.unity
+    guid: b409f99b263ac481194929d35574f65a
+  - enabled: 0
+    path: Assets/Scenes/Cutscenes and Dialogue/Tutorial Level/TutorialHarrietDialogue.unity
+    guid: 54525bed00ea3455f8639a5496fce5cf
+  - enabled: 0
+    path: Assets/Scenes/Cutscenes and Dialogue/Level 1/Level1BasilDialogue.unity
+    guid: 14dd863a9e15a4029beaed30746ea58e
+  - enabled: 0
+    path: Assets/Scenes/Cutscenes and Dialogue/Level 1/Level1HarrietDialogue.unity
+    guid: 0a4303ee9404e4434bc6630a64678749
+  - enabled: 0
+    path: Assets/Scenes/Cutscenes and Dialogue/Garden Level/GardenLevelBasilDialogue.unity
+    guid: 0567e16cacb314a7b84c34075003fd0b
+  - enabled: 0
+    path: Assets/Scenes/Cutscenes and Dialogue/Garden Level/GardenLevelHarrietDialogue.unity
+    guid: fce4d1abf1d4a4afba271f1370e686d1
   m_configObjects: {}
