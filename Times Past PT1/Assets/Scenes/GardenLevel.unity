@@ -3395,9 +3395,9 @@ MonoBehaviour:
   basilDialogDisplay: {fileID: 760978053}
   altDialogDisplay: {fileID: 1572516182}
   harrietDialogue: "Such an odd design\u2026"
-  harrietAltDialogue: 
+  harrietAltDialogue: "Such an odd design\u2026"
   basilDialogue: The skylight!
-  basilAltDialogue: 
+  basilAltDialogue: The skylight!
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
@@ -6407,6 +6407,19 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
+--- !u!114 &407431057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 407431055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a853b393003d4dc8a9e7a5db4c5ef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 1205314159599890, guid: b5868dd0bba7a46058670b7508cef644, type: 2}
+  randomGemTotal: 0
 --- !u!1 &410187881
 GameObject:
   m_ObjectHideFlags: 0
@@ -8453,7 +8466,7 @@ Camera:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519047746}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -9389,6 +9402,19 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
+--- !u!114 &597564099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597564097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a853b393003d4dc8a9e7a5db4c5ef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 1205314159599890, guid: b5868dd0bba7a46058670b7508cef644, type: 2}
+  randomGemTotal: 0
 --- !u!1 &597939771
 GameObject:
   m_ObjectHideFlags: 0
@@ -16174,7 +16200,7 @@ GameObject:
   - component: {fileID: 978040145}
   - component: {fileID: 978040120}
   m_Layer: 0
-  m_Name: FlowchartHarriet
+  m_Name: FlowchartHarriet3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16579,7 +16605,7 @@ MonoBehaviour:
   - {fileID: 978040120}
 --- !u!114 &978040120
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 978040102}
@@ -17571,7 +17597,7 @@ GameObject:
   - component: {fileID: 1026838488}
   - component: {fileID: 1026838446}
   m_Layer: 0
-  m_Name: FlowchartBasil
+  m_Name: FlowchartBasil3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17617,7 +17643,7 @@ MonoBehaviour:
     booleanVal: 0
 --- !u!114 &1026838446
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1026838443}
@@ -18575,7 +18601,7 @@ MonoBehaviour:
   - {fileID: 1026838478}
 --- !u!114 &1026838488
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1026838443}
@@ -24321,6 +24347,19 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
+--- !u!114 &1295288317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295288315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a853b393003d4dc8a9e7a5db4c5ef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 1205314159599890, guid: b5868dd0bba7a46058670b7508cef644, type: 2}
+  randomGemTotal: 0
 --- !u!1 &1295580774
 GameObject:
   m_ObjectHideFlags: 0
@@ -26026,6 +26065,91 @@ Transform:
   m_Father: {fileID: 1351003059}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1425032810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425032811}
+  - component: {fileID: 1425032814}
+  - component: {fileID: 1425032813}
+  - component: {fileID: 1425032812}
+  m_Layer: 0
+  m_Name: Water (2)
+  m_TagString: Present
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1425032811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425032810}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50.8, y: -17.2, z: 0}
+  m_LocalScale: {x: 78.94877, y: 17.962, z: 74.90403}
+  m_Children: []
+  m_Father: {fileID: 1661418871}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1425032812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425032810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1425032813
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425032810}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 0bb2010b8496d4185a92505206967f67, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1425032814
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425032810}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1429195198
 GameObject:
   m_ObjectHideFlags: 0
@@ -29579,7 +29703,7 @@ Camera:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1653922062}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -29811,6 +29935,7 @@ Transform:
   - {fileID: 1076844117}
   - {fileID: 1748298601}
   - {fileID: 871450451}
+  - {fileID: 1425032811}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32395,7 +32520,9 @@ GameObject:
   - component: {fileID: 1820574545}
   - component: {fileID: 1820574553}
   - component: {fileID: 1820574554}
-  m_Layer: 0
+  - component: {fileID: 1820574556}
+  - component: {fileID: 1820574555}
+  m_Layer: 9
   m_Name: CameraTarget
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -32478,8 +32605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d5b564ff7bd4b94be6bc609603d476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1683618416}
-  offsetPos: {x: -8, y: 5, z: 0}
+  target: {fileID: 2083296006}
+  offsetPos: {x: 8, y: 5, z: -0.000002191636}
   moveSpeed: 7
   turnSpeed: 10
   smoothSpeed: 0.5
@@ -32548,7 +32675,7 @@ Camera:
   m_HDR: 0
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
+  m_ForceIntoRT: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -32599,6 +32726,81 @@ MonoBehaviour:
   blurIterations: 5
   glowIntensityInner: 0.4
   samples: 2
+--- !u!114 &1820574555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1820574544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 2439c3d9687dd4f77a0c0cf69555ff1e, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &1820574556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1820574544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1820574552}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &1820847613
 GameObject:
   m_ObjectHideFlags: 0
@@ -38582,6 +38784,19 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
+--- !u!114 &2136909808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136909806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a853b393003d4dc8a9e7a5db4c5ef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 1205314159599890, guid: b5868dd0bba7a46058670b7508cef644, type: 2}
+  randomGemTotal: 0
 --- !u!1 &2141426705
 GameObject:
   m_ObjectHideFlags: 0

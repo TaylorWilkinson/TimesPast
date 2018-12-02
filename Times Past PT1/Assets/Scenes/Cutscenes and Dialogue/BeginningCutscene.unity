@@ -182,8 +182,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5316442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.24489, y: -216, z: 0}
-  m_LocalScale: {x: 1.13265, y: 1.13265, z: 1.13265}
+  m_LocalPosition: {x: -15.51, y: -216.2, z: 0}
+  m_LocalScale: {x: 1.912253, y: 1.912253, z: 1.912253}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 5
@@ -254,7 +254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4291787802932514, guid: 537d9c8554d78442e9d3ff7a1f32a443, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 537d9c8554d78442e9d3ff7a1f32a443, type: 2}
@@ -356,8 +356,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 148592621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.752, y: -169.51001, z: 0}
-  m_LocalScale: {x: 1.13265, y: 1.13265, z: 1.13265}
+  m_LocalPosition: {x: -14.7, y: -159.3, z: 0}
+  m_LocalScale: {x: 1.3732249, y: 1.3732249, z: 1.3732249}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 3
@@ -459,8 +459,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 221900677}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.881002, y: -311.74002, z: 0}
-  m_LocalScale: {x: 0.73911536, y: 0.7391155, z: 0.7391155}
+  m_LocalPosition: {x: -17.89, y: -311.29, z: 0}
+  m_LocalScale: {x: 0.49007532, y: 0.49007544, z: 0.49007544}
   m_Children:
   - {fileID: 977557491}
   m_Father: {fileID: 758563276}
@@ -585,13 +585,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 362483718}
-  m_LocalRotation: {x: -0, y: -0, z: 0.031970173, w: 0.99948883}
-  m_LocalPosition: {x: -14.3, y: -312.2, z: 0}
-  m_LocalScale: {x: 0.87658197, y: 0.87658197, z: 0.87658197}
+  m_LocalRotation: {x: -0, y: -0, z: 0.10954083, w: 0.9939823}
+  m_LocalPosition: {x: -13.2, y: -310.29, z: 0}
+  m_LocalScale: {x: 0.5812234, y: 0.5812234, z: 0.5812234}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.6640003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12.578001}
 --- !u!212 &362483720
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -782,8 +782,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 414327653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.6072, y: -192.437, z: 0}
-  m_LocalScale: {x: 1.13265, y: 1.13265, z: 1.13265}
+  m_LocalPosition: {x: -16.3, y: -186.3, z: 0}
+  m_LocalScale: {x: 1.543802, y: 1.543802, z: 1.543802}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 4
@@ -859,57 +859,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 417403461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4, y: 69.8, z: -10}
+  m_LocalPosition: {x: -4, y: 77.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &427934783
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 427934785}
-  - component: {fileID: 427934784}
-  m_Layer: 0
-  m_Name: View3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &427934784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 427934783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c387d3e32404bcc91c60318d766bb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewSize: 3.7666366
-  primaryAspectRatio: {x: 4, y: 3}
-  secondaryAspectRatio: {x: 2, y: 1}
---- !u!4 &427934785
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 427934783}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3, y: 48.22, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &507040910
 GameObject:
@@ -1008,8 +962,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 548520384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.7, y: -270.6, z: 0}
-  m_LocalScale: {x: 1.88775, y: 1.5102, z: 1.88775}
+  m_LocalPosition: {x: -15.6, y: -280, z: 0}
+  m_LocalScale: {x: 1.8656032, y: 1.2067326, z: 1.5386418}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 1
@@ -1238,8 +1192,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 655421230}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8, y: -238.9, z: 0}
-  m_LocalScale: {x: 1.13265, y: 1.13265, z: 1.13265}
+  m_LocalPosition: {x: -14.93, y: -247.4, z: 0}
+  m_LocalScale: {x: 1.7003342, y: 1.7003342, z: 1.7003342}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 6
@@ -1630,7 +1584,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &680702023
 GameObject:
@@ -1916,7 +1870,7 @@ Transform:
   m_GameObject: {fileID: 697395128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -14, y: -255, z: 0}
-  m_LocalScale: {x: 4.0095434, y: 3.0370948, z: 2.3585548}
+  m_LocalScale: {x: 4.0095434, y: 3.264877, z: 2.3585548}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 0
@@ -1943,7 +1897,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 758563275}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.8658, y: 149, z: 0}
+  m_LocalPosition: {x: 2.8658, y: 149, z: -5}
   m_LocalScale: {x: 0.4638502, y: 0.4638502, z: 0.4638502}
   m_Children:
   - {fileID: 697395130}
@@ -1957,7 +1911,7 @@ Transform:
   - {fileID: 221900680}
   - {fileID: 362483719}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854762132
 GameObject:
@@ -2049,52 +2003,6 @@ Transform:
   m_Father: {fileID: 977557491}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1178841979
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1178841981}
-  - component: {fileID: 1178841980}
-  m_Layer: 0
-  m_Name: View5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1178841980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1178841979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c387d3e32404bcc91c60318d766bb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewSize: 4.530768
-  primaryAspectRatio: {x: 4, y: 3}
-  secondaryAspectRatio: {x: 2, y: 1}
---- !u!4 &1178841981
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1178841979}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3, y: 25.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227329305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,7 +2032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c387d3e32404bcc91c60318d766bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewSize: 3.7666366
+  viewSize: 6.5355043
   primaryAspectRatio: {x: 4, y: 3}
   secondaryAspectRatio: {x: 2, y: 1}
 --- !u!4 &1227329307
@@ -2135,7 +2043,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1227329305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.58, y: 58.97, z: 0}
+  m_LocalPosition: {x: -4.369765, y: 5, z: -15.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2227,52 +2135,6 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
---- !u!1 &1444448196
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1444448198}
-  - component: {fileID: 1444448197}
-  m_Layer: 0
-  m_Name: View6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1444448197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1444448196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c387d3e32404bcc91c60318d766bb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewSize: 6.600479
-  primaryAspectRatio: {x: 4, y: 3}
-  secondaryAspectRatio: {x: 2, y: 1}
---- !u!4 &1444448198
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1444448196}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.9, y: 5.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485377040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,8 +2204,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1485377040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.6623, y: -263, z: 0}
-  m_LocalScale: {x: 1.4909073, y: 1.4909073, z: 1.4909073}
+  m_LocalPosition: {x: -15.1, y: -276, z: 0}
+  m_LocalScale: {x: 1.9634414, y: 1.9634414, z: 1.9634414}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 7
@@ -2387,7 +2249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1640859969
 GameObject:
@@ -2590,7 +2452,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1720918845
 GameObject:
@@ -2619,52 +2481,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 26813625}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1842530870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1842530872}
-  - component: {fileID: 1842530871}
-  m_Layer: 0
-  m_Name: View4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1842530871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1842530870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c387d3e32404bcc91c60318d766bb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewSize: 3.7666366
-  primaryAspectRatio: {x: 4, y: 3}
-  secondaryAspectRatio: {x: 2, y: 1}
---- !u!4 &1842530872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e0d427add844a4d9faf970a3afa07583,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1842530870}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 37.52507, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868671451
 GameObject:
@@ -2736,21 +2552,12 @@ GameObject:
   - component: {fileID: 2074552665}
   - component: {fileID: 2074552667}
   - component: {fileID: 2074552668}
-  - component: {fileID: 2074552673}
-  - component: {fileID: 2074552671}
   - component: {fileID: 2074552666}
-  - component: {fileID: 2074552670}
-  - component: {fileID: 2074552680}
-  - component: {fileID: 2074552679}
-  - component: {fileID: 2074552678}
-  - component: {fileID: 2074552677}
-  - component: {fileID: 2074552676}
-  - component: {fileID: 2074552675}
-  - component: {fileID: 2074552674}
   - component: {fileID: 2074552672}
   - component: {fileID: 2074552681}
   - component: {fileID: 2074552683}
   - component: {fileID: 2074552682}
+  - component: {fileID: 2074552670}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2784,7 +2591,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2074552667}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2074552666}
   variables: []
   description: 
   stepPause: 0
@@ -2809,7 +2617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  duration: 1
+  duration: 94
   targetView: {fileID: 1227329306}
   waitUntilFinished: 1
   targetCamera: {fileID: 417403463}
@@ -2838,17 +2646,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 2074552668}
   commandList:
-  - {fileID: 2074552673}
-  - {fileID: 2074552666}
-  - {fileID: 2074552671}
   - {fileID: 2074552670}
-  - {fileID: 2074552680}
-  - {fileID: 2074552679}
-  - {fileID: 2074552678}
-  - {fileID: 2074552677}
-  - {fileID: 2074552676}
-  - {fileID: 2074552675}
-  - {fileID: 2074552674}
+  - {fileID: 2074552666}
   - {fileID: 2074552672}
 --- !u!114 &2074552668
 MonoBehaviour:
@@ -2880,50 +2679,20 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2074552670
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2074552664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c952ea1ad444e479b570fa242679c5, type: 3}
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 7
+  itemId: 21
   indentLevel: 0
-  duration: 1
-  targetView: {fileID: 427934784}
-  waitUntilFinished: 1
-  targetCamera: {fileID: 417403463}
---- !u!114 &2074552671
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074552664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 4
-  indentLevel: 0
-  storyText: "\u201CBring the day and night,\u201D Kah said to Time. \u201CSo that
-    the world may settle into a rhythm, and so that all things may age.\u201D From
-    this bedlam, one god arose, seeking order amidst chaos: Kah. They plucked a single
-    hair from their milk-white head, and from it, they wove Time.\n\n"
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 9c46e4b6b2b374733b02cf922f21c753, type: 3}
+  volume: 1
+  waitUntilFinished: 0
 --- !u!114 &2074552672
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2948,202 +2717,6 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
---- !u!114 &2074552673
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074552664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  storyText: 'Long ago, gods walked the earth. They raised mountains and breathed
-    clouds, carved valleys and wept seas, battled, loved, lived and died, and then
-    they lived again.
-
-'
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &2074552674
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074552664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 14
-  indentLevel: 0
-  storyText: Hundreds of years later, a bird finds a key in the sand.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &2074552675
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074552664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c952ea1ad444e479b570fa242679c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 13
-  indentLevel: 0
-  duration: 1
-  targetView: {fileID: 1444448197}
-  waitUntilFinished: 1
-  targetCamera: {fileID: 417403463}
---- !u!114 &2074552676
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074552664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 12
-  indentLevel: 0
-  storyText: "But one day, Kah found a single white hair on Basil\u2019s dark head,
-    and flew into a panic. Possessed with fear for their lover\u2019s mortality, Kah
-    flew to Time, and tried to freeze her in place. But Time had grown too powerful
-    even for Kah, and the god disappeared in a flash."
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &2074552677
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074552664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c952ea1ad444e479b570fa242679c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 11
-  indentLevel: 0
-  duration: 1
-  targetView: {fileID: 1178841980}
-  waitUntilFinished: 1
-  targetCamera: {fileID: 417403463}
---- !u!114 &2074552678
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074552664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 10
-  indentLevel: 0
-  storyText: But then Kah fell in love with a mortal. Basil was quiet and kind, with
-    dark eyes and a gentle soul. Kah brought him to their temple, and showed him Time,
-    and together they lived happily for many years.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &2074552679
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074552664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c952ea1ad444e479b570fa242679c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 9
-  indentLevel: 0
-  duration: 1
-  targetView: {fileID: 1842530871}
-  waitUntilFinished: 1
-  targetCamera: {fileID: 417403463}
---- !u!114 &2074552680
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074552664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 8
-  indentLevel: 0
-  storyText: 'One by one, the gods left the earth, repelled by the impermanence that
-    Time brought as she wore away their creations. Only Kah remained, hidden away
-    in their temple with Time, guarding her jealousy so that none may disrupt her
-    workings.
-
-
-'
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &2074552681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3226,7 +2799,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2136064693}
   m_LocalRotation: {x: 0, y: 0, z: 0.4269738, w: 0.90426403}
-  m_LocalPosition: {x: 1.4148371, y: 2.945821, z: 0}
+  m_LocalPosition: {x: 1.16703, y: 2.9653978, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 854762133}

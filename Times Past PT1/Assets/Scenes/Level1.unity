@@ -294,6 +294,19 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
+--- !u!114 &29197492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29197490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a853b393003d4dc8a9e7a5db4c5ef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 1205314159599890, guid: b5868dd0bba7a46058670b7508cef644, type: 2}
+  randomGemTotal: 0
 --- !u!1001 &32638851
 Prefab:
   m_ObjectHideFlags: 0
@@ -1784,7 +1797,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141579061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.349, y: 0.71, z: -0.04}
+  m_LocalPosition: {x: 17.349, y: 0.71, z: -1.69}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 256069694}
@@ -2448,7 +2461,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &184390134
 GameObject:
@@ -2563,7 +2576,7 @@ Transform:
   - {fileID: 1171956980}
   - {fileID: 652585942}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206375397
 GameObject:
@@ -4815,7 +4828,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &388617007
 GameObject:
@@ -4989,7 +5002,7 @@ Camera:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 395548425}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -8109,6 +8122,19 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
+--- !u!114 &706913750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706913748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a853b393003d4dc8a9e7a5db4c5ef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 1205314159599890, guid: b5868dd0bba7a46058670b7508cef644, type: 2}
+  randomGemTotal: 0
 --- !u!1 &721665522
 GameObject:
   m_ObjectHideFlags: 0
@@ -9950,7 +9976,7 @@ Transform:
   m_LocalScale: {x: 0.9051514, y: 0.90515, z: 1.2136272}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &847143201
 MonoBehaviour:
@@ -12013,7 +12039,7 @@ Transform:
   - {fileID: 1115918460}
   - {fileID: 121684240}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1003097548
 Prefab:
@@ -12296,7 +12322,7 @@ Transform:
   m_Children:
   - {fileID: 611886096}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 2.9280002, y: 89.596, z: 0}
 --- !u!1 &1020129843
 GameObject:
@@ -13363,7 +13389,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4054113343916404, guid: 1d0e9b13943ac43ca9caa9790033dc82, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d0e9b13943ac43ca9caa9790033dc82, type: 2}
@@ -13668,7 +13694,7 @@ GameObject:
   - component: {fileID: 1115918500}
   - component: {fileID: 1115918462}
   m_Layer: 0
-  m_Name: FlowchartBasil
+  m_Name: FlowchartBasil2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14673,7 +14699,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4899525378673854, guid: 3084250f6304a417ca791802dac23f65, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3084250f6304a417ca791802dac23f65, type: 2}
@@ -15364,7 +15390,7 @@ GameObject:
   - component: {fileID: 1171956981}
   - component: {fileID: 1171956982}
   m_Layer: 0
-  m_Name: FlowchartHarriet
+  m_Name: FlowchartHarriet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16714,7 +16740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4899525378673854, guid: 3084250f6304a417ca791802dac23f65, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1558907260802256, guid: 3084250f6304a417ca791802dac23f65, type: 2}
       propertyPath: m_Name
@@ -17279,6 +17305,19 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
+--- !u!114 &1233862891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1233862889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a853b393003d4dc8a9e7a5db4c5ef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 1205314159599890, guid: b5868dd0bba7a46058670b7508cef644, type: 2}
+  randomGemTotal: 0
 --- !u!1 &1237928229
 GameObject:
   m_ObjectHideFlags: 0
@@ -17629,7 +17668,9 @@ GameObject:
   - component: {fileID: 1256663015}
   - component: {fileID: 1256663012}
   - component: {fileID: 1256663010}
-  m_Layer: 0
+  - component: {fileID: 1256663018}
+  - component: {fileID: 1256663011}
+  m_Layer: 9
   m_Name: CameraTarget
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -17663,6 +17704,22 @@ MonoBehaviour:
   blurIterations: 5
   glowIntensityInner: 0.4
   samples: 2
+--- !u!114 &1256663011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256663009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 2439c3d9687dd4f77a0c0cf69555ff1e, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!114 &1256663012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17757,7 +17814,7 @@ Camera:
   m_HDR: 0
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
+  m_ForceIntoRT: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -17774,6 +17831,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 2.9280002, y: 89.596, z: 0}
+--- !u!114 &1256663018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256663009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1256663017}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &1259937699
 Prefab:
   m_ObjectHideFlags: 0
@@ -18609,7 +18725,7 @@ Transform:
   - {fileID: 955070519}
   - {fileID: 1603809465}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1347790828
 GameObject:
@@ -20942,6 +21058,19 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
+--- !u!114 &1580679845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580679843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a853b393003d4dc8a9e7a5db4c5ef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 1205314159599890, guid: b5868dd0bba7a46058670b7508cef644, type: 2}
+  randomGemTotal: 0
 --- !u!1 &1586488760
 GameObject:
   m_ObjectHideFlags: 0
@@ -22700,7 +22829,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4899525378673854, guid: 3084250f6304a417ca791802dac23f65, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1558907260802256, guid: 3084250f6304a417ca791802dac23f65, type: 2}
       propertyPath: m_Name
@@ -23886,7 +24015,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4291787802932514, guid: 537d9c8554d78442e9d3ff7a1f32a443, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 537d9c8554d78442e9d3ff7a1f32a443, type: 2}
@@ -25371,7 +25500,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4899525378673854, guid: 3084250f6304a417ca791802dac23f65, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1558907260802256, guid: 3084250f6304a417ca791802dac23f65, type: 2}
       propertyPath: m_Name
@@ -27073,6 +27202,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29eb1f8e44054f0eb6e2a64ad693149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1967546331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1967546332}
+  m_Layer: 0
+  m_Name: Urns
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1967546332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967546331}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.00097, y: 6.2898107, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1969513965
 GameObject:
   m_ObjectHideFlags: 0

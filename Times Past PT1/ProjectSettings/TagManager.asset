@@ -9,6 +9,7 @@ TagManager:
   - Glow
   - Enemy
   - Laser
+  - Gem
   layers:
   - Default
   - TransparentFX

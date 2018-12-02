@@ -8,7 +8,6 @@ public class CameraController : MonoBehaviour
 
     //1. follow on player's X/Z plane
     //2. Smooth rotation around the player in 45 degree increments
-
     Scene scene;
 
     public Transform target;
@@ -24,12 +23,17 @@ public class CameraController : MonoBehaviour
 
     bool smoothRotating = false; //determine if we're trying to move to new rotation
 
-    void Start() {
+    void Start()
+    {
+        //offsetPos = new Vector3(8, 5, 0);
         scene = SceneManager.GetActiveScene();
 
-        if (scene.name == "GardenLevel") {
+        if (scene.name == "GardenLevel")
+        {
             offsetPos = new Vector3(-8, 5, 0);
-        } else {
+        }
+        else
+        {
             offsetPos = new Vector3(8, 5, 0);
         }
 
@@ -38,7 +42,8 @@ public class CameraController : MonoBehaviour
         MoveWithTarget();
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         //Debug.Log((transform.position - target.position).magnitude);
 
         if (didHitWall)
@@ -59,10 +64,11 @@ public class CameraController : MonoBehaviour
         //MoveWithTarget();
     }
 
-    private void Update() {
+    private void Update()
+    {
         LookAtTarget();
 
-        if(didHitWall)
+        if (didHitWall)
         {
             return;
         }
@@ -85,8 +91,8 @@ public class CameraController : MonoBehaviour
     {
         //if (!didHitWall)
         //{
-            targetPos = target.position + offsetPos;
-            transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+        targetPos = target.position + offsetPos;
+        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
         //}
     }
 
@@ -120,7 +126,8 @@ public class CameraController : MonoBehaviour
     {
         //Debug.Log(other.name + ", on Layer: " + other.gameObject.layer);
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Wall")) {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        {
             //Vector3 distanceFromWall = transform.position - other.transform.position;
             //offsetPos.z = -distanceFromWall.z / 3;
             didHitWall = true;
@@ -128,4 +135,3 @@ public class CameraController : MonoBehaviour
         }
     }
 }
-
