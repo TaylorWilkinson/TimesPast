@@ -37,12 +37,27 @@ public class DestroyOnClick : MonoBehaviour, IActionOnClick {
         }
         else if ((requiredCharacter.name == "Basil") && (basilActive == true))
         {
+            if (this.gameObject.name == "Grass_g_01") {
+                //play grass pulling sound
+                this.GetComponent<AudioScript>().PlaySound();
+            } else if (this.gameObject.name == "Tapestry Kah") {
+                //play grass pulling sound
+                this.GetComponent<AudioScript>().PlaySound();
+            }
+
             StartCoroutine(DestroyGameObjects());
         }
     }
 
     IEnumerator DestroyGameObjects() {
-        yield return new WaitForSeconds(2f);
+        if (this.gameObject.name == "Grass_g_01") {
+            gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        } else if (this.gameObject.name == "Tapestry Kah") {
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+
+
+        yield return new WaitForSeconds(1.50f);
         //print(gameObject);
 
         Destroy(gameObject);

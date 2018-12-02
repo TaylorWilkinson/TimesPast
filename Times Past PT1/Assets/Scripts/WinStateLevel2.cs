@@ -83,6 +83,7 @@ public class WinStateLevel2: MonoBehaviour {
         }
 
         if (hatchState == 0) {
+            //hatch opened, light enabled, plants growing
             //hatch.transform.position = hatchPos1;
             animHatch.SetBool("isOpened", true);
 
@@ -92,6 +93,7 @@ public class WinStateLevel2: MonoBehaviour {
                 mr.enabled = true;
             }
         } else if (hatchState == 1) {
+            //hatch closed, light disabled, no plants
             //hatch.transform.position = hatchPos2;
             animHatch.SetBool("isOpened", false);
 
@@ -137,10 +139,12 @@ public class WinStateLevel2: MonoBehaviour {
         if (treeStairsReady == true) {
             keyhole.SetActive(true);
 
+            /*
             if (trees.GetComponent<Clickable>() == null) {
                 trees.AddComponent<Clickable>();
                 trees.AddComponent<ClimbStairsOnClick>();
             }
+            */
 
             //if ((tree1.GetComponent<Clickable>() == null) || (tree2.GetComponent<Clickable>() == null) || (tree3.GetComponent<Clickable>() == null) || (tree4.GetComponent<Clickable>() == null))
             //{
@@ -176,7 +180,8 @@ public class WinStateLevel2: MonoBehaviour {
 
                                 if (harrietActive == true) {
                                     //StartCoroutine(GoToEnd());
-                                    Debug.Log("Win state, Harriet Active, click on the keyhole");
+                                    //Debug.Log("Win state, Harriet Active, click on the keyhole");
+                                    keyhole.GetComponent<AudioScript>().PlaySound();
                                     StartCoroutine(GoToEnd());
                                 }
 
@@ -192,7 +197,7 @@ public class WinStateLevel2: MonoBehaviour {
 
     IEnumerator GoToEnd() {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(7);
     }
 
     void CheckCharacter() {

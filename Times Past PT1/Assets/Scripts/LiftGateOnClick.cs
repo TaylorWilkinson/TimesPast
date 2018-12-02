@@ -70,18 +70,28 @@ public class LiftGateOnClick : MonoBehaviour, IActionOnClick
                 if (heightPosValue == 0) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY1, 10.66f);
                     tree1.transform.position = new Vector3(5.8552f, treeY1, 10.776f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 1) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY2, 10.66f);
                     tree1.transform.position = new Vector3(5.8552f, treeY2, 10.776f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 2) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY3, 10.66f);
                     tree1.transform.position = new Vector3(5.8552f, treeY3, 10.776f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 3) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY4, 10.66f);
                     tree1.transform.position = new Vector3(5.8552f, treeY4, 10.776f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 4) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY1, 10.66f);
                     tree1.transform.position = new Vector3(5.8552f, treeY1, 10.776f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 }
 
                 if (heightPosValue >= 4) {
@@ -95,18 +105,28 @@ public class LiftGateOnClick : MonoBehaviour, IActionOnClick
                 if (heightPosValue == 0) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY1, 3.59f);
                     tree2.transform.position = new Vector3(5.8552f, treeY1, 3.68f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 1) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY2, 3.59f);
                     tree2.transform.position = new Vector3(5.8552f, treeY2, 3.68f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 2) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY3, 3.59f);
                     tree2.transform.position = new Vector3(5.8552f, treeY3, 3.68f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 3) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY4, 3.59f);
                     tree2.transform.position = new Vector3(5.8552f, treeY4, 3.68f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 4) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY1, 3.59f);
                     tree2.transform.position = new Vector3(5.8552f, treeY1, 3.68f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 }
 
                 if (heightPosValue >= 4)
@@ -121,18 +141,28 @@ public class LiftGateOnClick : MonoBehaviour, IActionOnClick
                 if (heightPosValue == 0) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY1, - 3.58f);
                     tree3.transform.position = new Vector3(5.8552f, treeY1, -3.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 1) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY2, -3.58f);
                     tree3.transform.position = new Vector3(5.8552f, treeY2, -3.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 2) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY3, -3.58f);
                     tree3.transform.position = new Vector3(5.8552f, treeY3, -3.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 3) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY4, -3.58f);
                     tree3.transform.position = new Vector3(5.8552f, treeY4, -3.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 4) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY1, -3.58f);
                     tree3.transform.position = new Vector3(5.8552f, treeY1, -3.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 }
 
                 if (heightPosValue >= 4) {
@@ -145,18 +175,28 @@ public class LiftGateOnClick : MonoBehaviour, IActionOnClick
                 if (heightPosValue == 0) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY1, -10.66f);
                     tree4.transform.position = new Vector3(5.8552f, treeY1, -10.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 1) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY2, -10.66f);
                     tree4.transform.position = new Vector3(5.8552f, treeY2, -10.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 2) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY3, -10.66f);
                     tree4.transform.position = new Vector3(5.8552f, treeY3, -10.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 3) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY4, -10.66f);
                     tree4.transform.position = new Vector3(5.8552f, treeY4, -10.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 } else if (heightPosValue == 4) {
                     this.gameObject.transform.position = new Vector3(-11.38f, gateHeightY1, -10.66f);
                     tree4.transform.position = new Vector3(5.8552f, treeY1, -10.58f);
+                    //play sound
+                    this.GetComponent<AudioScript>().PlaySound();
                 }
 
                 if (heightPosValue >= 4) {
@@ -164,5 +204,10 @@ public class LiftGateOnClick : MonoBehaviour, IActionOnClick
                 }
             }
         }
+    }
+
+    IEnumerator PlayWaterSound() {
+        yield return new WaitForSeconds(1f);
+        this.GetComponent<AudioScript>().PlayAlternateSound();
     }
 }

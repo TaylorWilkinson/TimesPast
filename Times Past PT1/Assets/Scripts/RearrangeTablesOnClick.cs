@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RearrangeTablesOnClick : MonoBehaviour, IActionOnClick {
     GameObject plateL1, plateL2, plateL3, plateL4, plateR1, plateR2, plateR3, plateR4;
+    GameObject tableL, tableR;
     Vector3 platePositionL1, platePositionL2, platePositionL3, platePositionL4, platePositionR1, platePositionR2, platePositionR3, platePositionR4;
 
     //character switch control
@@ -31,6 +32,9 @@ public class RearrangeTablesOnClick : MonoBehaviour, IActionOnClick {
         plateR2 = GameObject.Find("PlateR2");
         plateR3 = GameObject.Find("PlateR3");
         plateR4 = GameObject.Find("PlateR4");
+
+        tableL = GameObject.Find("Table and Plates Left");
+        tableR = GameObject.Find("Table and Plates Right");
 
         //determine the set position of plates that clicking will cycle through
         platePositionL1 = new Vector3(-45.1f, 3.123001f, -20.66996f);
@@ -78,6 +82,7 @@ public class RearrangeTablesOnClick : MonoBehaviour, IActionOnClick {
             if (leftPlatesMoving)
             {
                 posValue++;
+                tableL.GetComponent<AudioScript>().PlaySound();
 
                 if (posValue == 0)
                 {
@@ -118,6 +123,8 @@ public class RearrangeTablesOnClick : MonoBehaviour, IActionOnClick {
             else if (rightPlatesMoving)
             {
                 posValue++;
+                tableR.GetComponent<AudioScript>().PlaySound();
+
 
                 if (posValue == 0)
                 {

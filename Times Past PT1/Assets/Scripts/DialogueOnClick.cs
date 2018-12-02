@@ -149,7 +149,7 @@ public class DialogueOnClick : MonoBehaviour {
                             {
                                 harrietHasClicked = true;
 
-                                if ((this.name == "TreeStairs") || (this.name == "square-bush") || (this.name == "square-bush (1)") || (this.name == "square-bush (2)") || (this.name == "square-bush (3)")) {
+                                if ((this.name == "square-bush") || (this.name == "square-bush (1)") || (this.name == "square-bush (2)") || (this.name == "square-bush (3)")) {
                                     //Debug.Log("Clicking the tree stairs");
                                     if (interactionChecker.GetComponent<InteractionTrigger>().harrietDialogueChange == true)
                                     {

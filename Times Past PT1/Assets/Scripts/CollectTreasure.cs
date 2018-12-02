@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CollectTreasure : MonoBehaviour {
+    //character check
+    GameObject characterSwitchControl;
+    bool harrietActive;
+    bool basilActive;
+    GameObject harriet, basil;
+
+    //gem elements
     public GameObject gemPrefab;
 
     GameObject gemScoreCounter;
@@ -15,19 +22,33 @@ public class CollectTreasure : MonoBehaviour {
 
     // Use this for initialization
     public void Start() {
+        harriet = GameObject.Find("Harriet");
+        basil = GameObject.Find("Basil");
+
         gemScoreCounter = GameObject.Find("GemScore");
-
         gemArray = GameObject.FindGameObjectsWithTag("Gem");
-
         randomGemTotal = Random.Range(1, 4);
     }
 	
 	// Update is called once per frame
 	void Update () {
+        //determine active character
+        characterSwitchControl = GameObject.Find("CharacterSwitchControl");
+        if ((characterSwitchControl.GetComponent<SwitchCharacter>().characterSelect) == 0) {
+            harrietActive = true;
+            basilActive = false;
+        } else if ((characterSwitchControl.GetComponent<SwitchCharacter>().characterSelect) == 1) {
+            basilActive = true;
+            harrietActive = false;
+        }
+
+
         //print("This random gemtotal: " + this.randomGemTotal);
         //print("Score: " + gemScoreCounter.GetComponent<GemCounter>().score + ", randomGemTotal: " + randomGemTotal);
 
-        if (Input.GetMouseButtonDown(0)) {
+        //ON CLICK, COLLECT RANDOM GEMS
+        if (Input.GetMouseButtonDown(0))
+        {
             RaycastHit hit;
             //turn screenpoint into ray, from the camera into mouse position
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -39,19 +60,29 @@ public class CollectTreasure : MonoBehaviour {
                     //print(this.transform.position);
 
                     if (hit.transform.gameObject == this.transform.gameObject) {
-                        //print("urn clicked");
-                        for (int i = 0; i < randomGemTotal; i++)
+                        //if harriet is active, collect gems
+                        if (harrietActive == true)
                         {
-                            randomGemPosition = new Vector3(Random.Range((this.transform.position.x - 1f), (this.transform.position.x + 1f)), 2.0f, Random.Range((this.transform.position.z - 1f), (this.transform.position.z + 1f)));
-                            Instantiate(gemPrefab, randomGemPosition, transform.rotation);
+                            //print("urn clicked");
+                            for (int i = 0; i < randomGemTotal; i++) {
+                                randomGemPosition = new Vector3(Random.Range((this.transform.position.x - 0.5f), (this.transform.position.x + 0.5f)), 2.0f, Random.Range((this.transform.position.z - 0.5f), (this.transform.position.z + 0.5f)));
+                                Instantiate(gemPrefab, randomGemPosition, transform.rotation);
+                            }
+
+                            //add score
+                            gemScoreCounter.GetComponent<GemCounter>().score += this.randomGemTotal;
+
+                            //make gems disappear
+                            StartCoroutine(MakeGemsDisappear(GameObject.FindGameObjectsWithTag("Gem")));
+
+                            //this.GetComponent<DialogueOnClick>().enabled = false;
+                            this.GetComponent<CollectTreasure>().enabled = false;
                         }
-
-                        gemScoreCounter.GetComponent<GemCounter>().score += this.randomGemTotal;
-
-                        StartCoroutine(MakeGemsDisappear(GameObject.FindGameObjectsWithTag("Gem")));
-
-                        this.GetComponent<DialogueOnClick>().enabled = false;
-                        this.GetComponent<CollectTreasure>().enabled = false;
+                        else if (basilActive == true)
+                        {
+                            //play sound
+                            this.GetComponent<AudioScript>().PlayAlternateSound();
+                        }
                     }
                 }
             }
@@ -59,7 +90,10 @@ public class CollectTreasure : MonoBehaviour {
     }
 
     IEnumerator MakeGemsDisappear(GameObject[] go) {
-        yield return new WaitForSeconds(2f);
+        //play sound
+        this.GetComponent<AudioScript>().PlaySound();
+
+        yield return new WaitForSeconds(1.5f);
 
         for (var i = 0; i < go.Length; i++)
         {

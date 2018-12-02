@@ -3331,6 +3331,8 @@ GameObject:
   - component: {fileID: 1265994718}
   - component: {fileID: 1265994717}
   - component: {fileID: 1265994721}
+  - component: {fileID: 1265994722}
+  - component: {fileID: 1265994723}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -3365,7 +3367,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1265994709}
   selectedCommands:
-  - {fileID: 1265994721}
+  - {fileID: 1265994722}
   variables: []
   description: 
   stepPause: 0
@@ -3428,6 +3430,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1265994714}
   commandList:
+  - {fileID: 1265994722}
   - {fileID: 1265994713}
   - {fileID: 1265994712}
   - {fileID: 1265994711}
@@ -3438,6 +3441,7 @@ MonoBehaviour:
   - {fileID: 1265994716}
   - {fileID: 1265994718}
   - {fileID: 1265994717}
+  - {fileID: 1265994723}
   - {fileID: 1265994721}
 --- !u!114 &1265994710
 MonoBehaviour:
@@ -3459,7 +3463,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 975305367}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 923c7cebb5ee8414f88172017940fef7, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -3487,7 +3491,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 975305367}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: eff083e5b091849269a3ff5980124d02, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -3595,7 +3599,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 582586597}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 0bfd3c4d846a1454bb0e91f6bc833265, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -3621,7 +3625,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1697422518}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 5b42d29be9f7648319821bc94fcfe41f, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -3647,7 +3651,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1697422518}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 8b7fd363cb4a4417cb1407439bd714ff, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -3710,6 +3714,35 @@ MonoBehaviour:
     stringVal: Level1
   loadingImage: {fileID: 0}
   sceneNameOLD: 
+--- !u!114 &1265994722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265994706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  soundClip: {fileID: 8300000, guid: af411947385f04580b6bb10f188d1628, type: 3}
+  volume: 0.106
+  waitUntilFinished: 0
+--- !u!114 &1265994723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265994706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b359b09a7ba2e4af981f07c07f8af85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
 --- !u!1 &1286849261
 GameObject:
   m_ObjectHideFlags: 0

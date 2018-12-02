@@ -19,6 +19,6 @@ public class GemCounter : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        scoreText.SetText("GEMS: " + score);
+        scoreText.SetText(score.ToString());
     }
 }

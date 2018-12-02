@@ -51,6 +51,8 @@ public class RotateHatchOnClick : MonoBehaviour, IActionOnClick {
             hatchRotationValue++;
             hatchRotationValue = hatchRotationValue % 5;
 
+            this.GetComponent<AudioScript>().PlaySound();
+
             //print(hatchRotationValue);
 
             if (hatchRotationValue == 1) {
@@ -67,6 +69,17 @@ public class RotateHatchOnClick : MonoBehaviour, IActionOnClick {
             else {
                 animProngs.SetInteger("rotateValue", 5);
             }
+
+            if (hatchRotationValue == hatchWinState) {
+                StartCoroutine(PlayHatchSound());
+            } else if (hatchRotationValue == (hatchWinState+1)){
+                StartCoroutine(PlayHatchSound());
+            }
         }
+    }
+
+    IEnumerator PlayHatchSound(){
+        yield return new WaitForSeconds(1f);
+        this.GetComponent<AudioScript>().PlayAlternateSound();
     }
 }

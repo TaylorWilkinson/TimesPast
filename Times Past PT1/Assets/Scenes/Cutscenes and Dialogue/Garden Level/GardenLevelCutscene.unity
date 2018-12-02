@@ -1833,6 +1833,8 @@ GameObject:
   - component: {fileID: 557442561}
   - component: {fileID: 557442563}
   - component: {fileID: 557442564}
+  - component: {fileID: 557442565}
+  - component: {fileID: 557442566}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1858,7 +1860,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1509327629}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: a7bbd4951c1844cf194bd236ba9ee536, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -1884,7 +1886,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1634294638}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 22b5d341789944ef6872e8a4ee69745c, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -1946,7 +1948,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 866616043}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: eee118084c17e4418bcbe07e34c4698e, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -2021,6 +2023,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 557442556}
   commandList:
+  - {fileID: 557442565}
   - {fileID: 557442555}
   - {fileID: 557442560}
   - {fileID: 557442553}
@@ -2031,6 +2034,7 @@ MonoBehaviour:
   - {fileID: 557442561}
   - {fileID: 557442550}
   - {fileID: 557442563}
+  - {fileID: 557442566}
   - {fileID: 557442564}
 --- !u!114 &557442558
 MonoBehaviour:
@@ -2059,7 +2063,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 557442557}
   selectedCommands:
-  - {fileID: 557442564}
+  - {fileID: 557442565}
   variables: []
   description: 
   stepPause: 0
@@ -2165,7 +2169,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1509327629}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: b113d4c7c67b34a59aa70121fdae6028, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -2192,6 +2196,35 @@ MonoBehaviour:
     stringVal: GardenLevel
   loadingImage: {fileID: 0}
   sceneNameOLD: 
+--- !u!114 &557442565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557442549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  soundClip: {fileID: 8300000, guid: af411947385f04580b6bb10f188d1628, type: 3}
+  volume: 0.101
+  waitUntilFinished: 0
+--- !u!114 &557442566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557442549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b359b09a7ba2e4af981f07c07f8af85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
 --- !u!1 &571957626
 GameObject:
   m_ObjectHideFlags: 0

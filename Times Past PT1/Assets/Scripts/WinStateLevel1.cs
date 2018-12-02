@@ -315,6 +315,7 @@ public class WinStateLevel1 : MonoBehaviour {
                                 //check if object being clicked is equal to the "this" object the script is attached to.
                                 if (harrietActive == true)
                                 {
+                                    keyhole.GetComponent<AudioScript>().PlaySound();
                                     StartCoroutine(Lvl3Cutscene());
                                 }
                             }

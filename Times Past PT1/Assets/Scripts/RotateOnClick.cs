@@ -68,6 +68,9 @@ public class RotateOnClick : MonoBehaviour, IActionOnClick {
             rotateCount++;
             rotateCount = rotateCount % totalRotate;
 
+            this.GetComponent<AudioScript>().PlaySound();
+
+
             //print(rotateCount);
 
             if (rotateCount == winningFaceCount)

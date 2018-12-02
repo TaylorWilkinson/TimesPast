@@ -11,7 +11,7 @@ public class WinStateTutorial : MonoBehaviour {
      * 2) After Harriet interacts with the tree, Basil can pluck the sprout on the ground
     */
 
-    GameObject tree, sprout, keyhole;
+    GameObject tree, sprout, keyhole, winSound;
 
     bool harrietClickedTree;
     bool basilPulledSprout;
@@ -30,6 +30,7 @@ public class WinStateTutorial : MonoBehaviour {
         tree = GameObject.Find("DeadTree");
         sprout = GameObject.Find("Grass_g_01");
         keyhole = GameObject.Find("keyhole");
+        winSound = GameObject.Find("LevelCompleteSound");
 
         keyhole.SetActive(false);
     }
@@ -50,7 +51,8 @@ public class WinStateTutorial : MonoBehaviour {
 
             //The tree is now gone, let Harriet access the keyhole
             keyhole.SetActive(true);
-
+            winSound.GetComponent<AudioScript>().PlaySound();
+       
             if (Input.GetMouseButtonDown(0)) {
                 RaycastHit hit;
                 //turn screenpoint into ray, from the camera into mouse position
@@ -69,6 +71,8 @@ public class WinStateTutorial : MonoBehaviour {
                             {
                                 //check if object being clicked is equal to the "this" object the script is attached to.
                                 if (harrietActive == true) {
+                                    //play unlocking sound
+                                    keyhole.GetComponent<AudioScript>().PlayAlternateSound();
                                     StartCoroutine(Lvl2Cutscene());
                                 }
                             }
@@ -81,6 +85,6 @@ public class WinStateTutorial : MonoBehaviour {
 
     IEnumerator Lvl2Cutscene() {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 }
