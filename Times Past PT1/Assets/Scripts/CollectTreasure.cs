@@ -65,12 +65,18 @@ public class CollectTreasure : MonoBehaviour {
                         {
                             //print("urn clicked");
                             for (int i = 0; i < randomGemTotal; i++) {
-                                randomGemPosition = new Vector3(Random.Range((this.transform.position.x - 0.5f), (this.transform.position.x + 0.5f)), 2.0f, Random.Range((this.transform.position.z - 0.5f), (this.transform.position.z + 0.5f)));
+                                /*randomGemPosition = new Vector3(Random.Range((this.transform.position.x - 0.5f), (this.transform.position.x + 0.5f)),
+                                                                2.0f,
+                                                                Random.Range((this.transform.position.z - 0.5f), (this.transform.position.z + 0.5f)));*/
+                                randomGemPosition = new Vector3(Random.Range((this.transform.position.x - 0.5f), (this.transform.position.x + 0.5f)),
+                                                                Random.Range((this.transform.position.y + 2.0f), (this.transform.position.x + 4.0f)),
+                                                                Random.Range((this.transform.position.z - 0.5f), (this.transform.position.z + 0.5f)));
                                 Instantiate(gemPrefab, randomGemPosition, transform.rotation);
                             }
 
                             //add score
                             gemScoreCounter.GetComponent<GemCounter>().score += this.randomGemTotal;
+                            StartCoroutine(gemScoreCounter.GetComponent<GemCounter>().showGemScore());
 
                             //make gems disappear
                             StartCoroutine(MakeGemsDisappear(GameObject.FindGameObjectsWithTag("Gem")));
@@ -93,7 +99,7 @@ public class CollectTreasure : MonoBehaviour {
         //play sound
         this.GetComponent<AudioScript>().PlaySound();
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
 
         for (var i = 0; i < go.Length; i++)
         {

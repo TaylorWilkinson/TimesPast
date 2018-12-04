@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchCharacter : MonoBehaviour {
+public class SwitchCharacter : MonoBehaviour
+{
 
     GameObject harriet, basil;
 
@@ -13,7 +14,8 @@ public class SwitchCharacter : MonoBehaviour {
     GameObject hFront, hBack, hLeft, hRight, bFront, bBack, bLeft, bRight, kFront, kBack, kLeft, kRight;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         characterSelect = 0;
 
         harriet = GameObject.Find("Harriet");
@@ -35,21 +37,25 @@ public class SwitchCharacter : MonoBehaviour {
         kLeft = GameObject.Find("Kah_Left");
         kRight = GameObject.Find("Kah_Right");
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         //change character when pressing space bar
         if (Input.GetKeyDown("space"))
         {
             //update characterSelect value
-            if (characterSelect == 0) {
+            if (characterSelect == 0)
+            {
                 characterSelect = 1;
-            } else if (characterSelect == 1) {
+            }
+            else if (characterSelect == 1)
+            {
                 characterSelect = 0;
             }
         }
 
-        if (characterSelect == 0) 
+        if (characterSelect == 0)
         {
             //Enable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
@@ -84,7 +90,8 @@ public class SwitchCharacter : MonoBehaviour {
                 bRight.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
             }
         }
-        else if (characterSelect == 1) {
+        else if (characterSelect == 1)
+        {
             //Disable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
             {

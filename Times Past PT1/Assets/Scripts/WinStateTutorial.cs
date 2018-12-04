@@ -13,13 +13,14 @@ public class WinStateTutorial : MonoBehaviour {
 
     GameObject tree, sprout, keyhole, winSound;
 
-    bool harrietClickedTree;
-    bool basilPulledSprout;
-
     //character switch control
     GameObject characterSwitchControl;
     bool harrietActive;
     bool basilActive;
+
+    //puzzle solved objects
+    GameObject levelCompleteSound;
+    public bool puzzleSolved;
 
     // Use this for initialization
     void Start() {
@@ -33,6 +34,9 @@ public class WinStateTutorial : MonoBehaviour {
         winSound = GameObject.Find("LevelCompleteSound");
 
         keyhole.SetActive(false);
+
+        levelCompleteSound = GameObject.Find("LevelCompleteSound");
+        puzzleSolved = false;
     }
 
     // Update is called once per frame
@@ -51,8 +55,12 @@ public class WinStateTutorial : MonoBehaviour {
 
             //The tree is now gone, let Harriet access the keyhole
             keyhole.SetActive(true);
-            winSound.GetComponent<AudioScript>().PlaySound();
-       
+
+            //Puzzle Solved: Play Sound!
+            StartCoroutine(PlayWinSound());
+            puzzleSolved = true;
+
+
             if (Input.GetMouseButtonDown(0)) {
                 RaycastHit hit;
                 //turn screenpoint into ray, from the camera into mouse position
@@ -62,7 +70,7 @@ public class WinStateTutorial : MonoBehaviour {
                 {
                     if (hit.transform != null)
                     {
-                        print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
+                        //print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
 
                         BoxCollider bc;
                         if (bc = hit.transform.GetComponent<BoxCollider>())
@@ -80,6 +88,15 @@ public class WinStateTutorial : MonoBehaviour {
                     }
                 }
             }
+        }
+    }
+
+    IEnumerator PlayWinSound() {
+        while (puzzleSolved == false) {
+            levelCompleteSound.GetComponent<AudioScript>().PlaySound();
+            //print("DOO DOO DOO DOO DOO DOO DOO!");
+            yield return new WaitForSeconds(0.5f);
+            //puzzleSolved = true;
         }
     }
 

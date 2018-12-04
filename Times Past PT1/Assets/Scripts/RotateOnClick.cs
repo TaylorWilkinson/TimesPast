@@ -33,6 +33,8 @@ public class RotateOnClick : MonoBehaviour, IActionOnClick {
     GameObject mirrorBack, mirrorMiddle, mirrorFar, mirrorTopBack, mirrorTopMiddle, mirrorTopFar;
     Animator animMirrorBack, animMirrorMiddle, animMirrorFar;
 
+    public AudioClip basilRotateClip;
+
     void Start() {
         mirrorBack = GameObject.Find("Mirror Top L Back");
         mirrorMiddle = GameObject.Find("Mirror Top L Middle");
@@ -69,7 +71,6 @@ public class RotateOnClick : MonoBehaviour, IActionOnClick {
             rotateCount = rotateCount % totalRotate;
 
             this.GetComponent<AudioScript>().PlaySound();
-
 
             //print(rotateCount);
 

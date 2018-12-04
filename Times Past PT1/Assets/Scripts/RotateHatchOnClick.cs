@@ -46,11 +46,14 @@ public class RotateHatchOnClick : MonoBehaviour, IActionOnClick {
         }
 
         if ((requiredCharacter.name == "Basil") && (basilActive == true)) {
+            this.GetComponent<AudioTalkScript>().enabled = false;
+
             //rotate skylight fixture as Basil
             //ceilingProngs.transform.Rotate(0, rotateDegrees, 0, Space.Self);
             hatchRotationValue++;
             hatchRotationValue = hatchRotationValue % 5;
 
+            //play button click
             this.GetComponent<AudioScript>().PlaySound();
 
             //print(hatchRotationValue);
@@ -69,17 +72,16 @@ public class RotateHatchOnClick : MonoBehaviour, IActionOnClick {
             else {
                 animProngs.SetInteger("rotateValue", 5);
             }
-
-            if (hatchRotationValue == hatchWinState) {
-                StartCoroutine(PlayHatchSound());
-            } else if (hatchRotationValue == (hatchWinState+1)){
-                StartCoroutine(PlayHatchSound());
-            }
+        } else if (harrietActive == true) {
+            this.GetComponent<AudioTalkScript>().enabled = true;
         }
-    }
 
-    IEnumerator PlayHatchSound(){
-        yield return new WaitForSeconds(1f);
-        this.GetComponent<AudioScript>().PlayAlternateSound();
+        if (hatchRotationValue == hatchWinState) {
+            //play hatch moving sound
+            this.GetComponent<AudioScript>().PlayAlternateSound();
+        }
+        if (hatchRotationValue == hatchWinState+1) {
+            this.GetComponent<AudioScript>().PlayAlternateSound();
+        }
     }
 }

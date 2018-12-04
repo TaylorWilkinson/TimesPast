@@ -9,7 +9,7 @@ public class InteractionTrigger : MonoBehaviour {
 
     GameObject sprout, tree;
     GameObject tapestry, languageEngraving, englishEngraving, mirror1, mirror2, mirror3, vinePillar1, vinePillar2;
-    GameObject bushes, gardenEngraving, gardenEngravingEnglish, shrub1, shrub2, shrub3, shrub4, gate1, gate2, gate3, gate4, treeStairs;
+    GameObject bushes, gardenEngraving, gardenEngravingEnglish, shrub1, shrub2, shrub3, shrub4, gate1, gate2, gate3, gate4;
 
     public bool basilDialogueChange, basilDialogueChange2, harrietDialogueChange, treeStairsReady;
 
@@ -42,7 +42,6 @@ public class InteractionTrigger : MonoBehaviour {
         gate2 = GameObject.Find("gate2");
         gate3 = GameObject.Find("gate3");
         gate4 = GameObject.Find("gate4");
-        treeStairs = GameObject.Find("TreeStairs");
 
         /*
         basilDialogueChange = false;

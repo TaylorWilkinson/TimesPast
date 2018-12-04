@@ -25,6 +25,10 @@ public class WinStateLevel2: MonoBehaviour {
     GameObject characterSwitchControl;
     bool harrietActive, basilActive;
 
+    //puzzle solved objects
+    GameObject levelCompleteSound;
+    public bool skylightPuzzleSolved, stairsPuzzleSolved;
+
     // Use this for initialization
     void Start () {
         //buttonLeft = GameObject.Find("ButtonLeft");
@@ -64,6 +68,10 @@ public class WinStateLevel2: MonoBehaviour {
         keyhole.SetActive(false);
 
         animHatch = hatch.GetComponent<Animator>();
+
+        levelCompleteSound = GameObject.Find("LevelCompleteSound");
+        skylightPuzzleSolved = false;
+        stairsPuzzleSolved = false;
     }
 	
 	// Update is called once per frame
@@ -108,6 +116,10 @@ public class WinStateLevel2: MonoBehaviour {
         if (buttonRight.GetComponent<RotateHatchOnClick>().hatchRotationValue == buttonRight.GetComponent<RotateHatchOnClick>().hatchWinState) {
             //Win state: Close the skylight, remove the plants for Harriet, remove the spotlight
             hatchState = 0;
+
+            //Skylight Puzzle Solved: Play Sound!
+            StartCoroutine(playSkylightWinSound());
+            skylightPuzzleSolved = true;
         } else if (buttonRight.GetComponent<RotateHatchOnClick>().hatchRotationValue != buttonRight.GetComponent<RotateHatchOnClick>().hatchWinState) {
             hatchState = 1;
         }
@@ -139,12 +151,15 @@ public class WinStateLevel2: MonoBehaviour {
         if (treeStairsReady == true) {
             keyhole.SetActive(true);
 
-            /*
-            if (trees.GetComponent<Clickable>() == null) {
-                trees.AddComponent<Clickable>();
-                trees.AddComponent<ClimbStairsOnClick>();
-            }
-            */
+            //Tree Stairs Puzzle Solved: Play Sound!
+            StartCoroutine(playStairsWinSound());
+            stairsPuzzleSolved = true;
+
+            //if (trees.GetComponent<Clickable>() == null) {
+            //    trees.AddComponent<Clickable>();
+            //    trees.AddComponent<ClimbStairsOnClick>();
+            //}
+
 
             //if ((tree1.GetComponent<Clickable>() == null) || (tree2.GetComponent<Clickable>() == null) || (tree3.GetComponent<Clickable>() == null) || (tree4.GetComponent<Clickable>() == null))
             //{
@@ -192,6 +207,23 @@ public class WinStateLevel2: MonoBehaviour {
             }
         } else if (treeStairsReady == false) {
             keyhole.SetActive(false);
+        }
+    }
+
+    IEnumerator playSkylightWinSound() {
+        while (skylightPuzzleSolved == false) {
+            yield return new WaitForSeconds(1f);
+            levelCompleteSound.GetComponent<AudioScript>().PlaySound();
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    IEnumerator playStairsWinSound()
+    {
+        while (stairsPuzzleSolved == false)
+        {
+            levelCompleteSound.GetComponent<AudioScript>().PlaySound();
+            yield return new WaitForSeconds(0.5f);
         }
     }
 

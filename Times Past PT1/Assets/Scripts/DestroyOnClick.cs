@@ -40,6 +40,7 @@ public class DestroyOnClick : MonoBehaviour, IActionOnClick {
             if (this.gameObject.name == "Grass_g_01") {
                 //play grass pulling sound
                 this.GetComponent<AudioScript>().PlaySound();
+                this.GetComponent<AudioScript>().soundSource.Stop();
             } else if (this.gameObject.name == "Tapestry Kah") {
                 //play grass pulling sound
                 this.GetComponent<AudioScript>().PlaySound();
@@ -55,7 +56,6 @@ public class DestroyOnClick : MonoBehaviour, IActionOnClick {
         } else if (this.gameObject.name == "Tapestry Kah") {
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
-
 
         yield return new WaitForSeconds(1.50f);
         //print(gameObject);

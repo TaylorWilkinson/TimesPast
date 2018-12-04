@@ -6,7 +6,8 @@ public class MovementClass : MonoBehaviour
 {
 
     public float speed = 7f;
-    private Vector3 movement;
+    //private Vector3 movement;
+    public Vector3 movement;
 
     public float turnSpeed = 10;
     Vector2 input;
@@ -30,7 +31,6 @@ public class MovementClass : MonoBehaviour
         movement = new Vector3(inputX, 0, inputY);
 
         transform.Translate(movement * speed * Time.deltaTime);
-
 
         CalculateDirection();
         Rotate();
