@@ -10,9 +10,9 @@ public class ClimbStairsOnClick : MonoBehaviour, IActionOnClick {
     GameObject harriet, basil, trees;
     GameObject gate1, gate2, gate3, gate4;
 
-    int stairsPos, treeStairsPos;
+    int stairsPos,treeStairsPos;
 
-    bool treeStairs1, treeStairs2;
+    public bool treeStairs1, treeStairs2;
 
     void Start()
     {
@@ -33,8 +33,7 @@ public class ClimbStairsOnClick : MonoBehaviour, IActionOnClick {
         treeStairs2 = false;
     }
 
-    public void OnObjectClick()
-    {
+    public void OnObjectClick() {
         //determine active character
         characterSwitchControl = GameObject.Find("CharacterSwitchControl");
         if ((characterSwitchControl.GetComponent<SwitchCharacter>().characterSelect) == 0)
@@ -91,11 +90,16 @@ public class ClimbStairsOnClick : MonoBehaviour, IActionOnClick {
                 treeStairs2 = false;
             }
 
+            /*
             if (treeStairs1 == true) {
                 harriet.transform.position = new Vector3(10.82954f, 10.79798f, -10.23493f);
+                this.GetComponent<AudioScript>().PlaySound();
+
             } else if (treeStairs2 == true) {
                 harriet.transform.position = new Vector3(10.88005f, 10.79798f, 10.86571f);
+                this.GetComponent<AudioScript>().PlaySound();
             }
+            */
 
             //print("treeStairs1: " + treeStairs1 + ", treeStairs2: " + treeStairs2);
 

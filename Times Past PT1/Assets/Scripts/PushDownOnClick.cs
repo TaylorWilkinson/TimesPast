@@ -59,9 +59,8 @@ public class PushDownOnClick : MonoBehaviour {
                         {
                             if (basilActive == true)
                             {
-                                this.transform.position = new Vector3(0, -7f, 0);
-                                //play sound
                                 this.GetComponent<AudioScript>().PlaySound();
+                                this.transform.position = new Vector3(0, -7f, 0);
                             }
                         }
                     }

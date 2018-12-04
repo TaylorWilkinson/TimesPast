@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
     public float moveSpeed = 7;
     public float turnSpeed = 10;
     public float smoothSpeed = 0.5f;
-    public float maxDistance = 5;
+    public float maxDistance;
 
     Quaternion targetRotation;
     Vector3 targetPos;
@@ -28,14 +28,13 @@ public class CameraController : MonoBehaviour
         //offsetPos = new Vector3(8, 5, 0);
         scene = SceneManager.GetActiveScene();
 
-        if (scene.name == "GardenLevel")
-        {
+        if (scene.name == "GardenLevel") {
             offsetPos = new Vector3(-8, 5, 0);
-        }
-        else
-        {
+        } else {
             offsetPos = new Vector3(8, 5, 0);
         }
+
+        maxDistance = 10.0f;
 
         var cameraCollider = gameObject.GetComponent<CapsuleCollider>();
         cameraCollider.isTrigger = true;
@@ -122,12 +121,10 @@ public class CameraController : MonoBehaviour
         offsetPos = targetOffsetPos;
     }
 
-    void OnTriggerStay(Collider other)
-    {
+    void OnTriggerStay(Collider other) {
         //Debug.Log(other.name + ", on Layer: " + other.gameObject.layer);
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
-        {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Wall")) {
             //Vector3 distanceFromWall = transform.position - other.transform.position;
             //offsetPos.z = -distanceFromWall.z / 3;
             didHitWall = true;

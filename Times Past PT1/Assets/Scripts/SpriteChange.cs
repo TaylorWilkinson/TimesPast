@@ -21,7 +21,8 @@ public class SpriteChange : MonoBehaviour {
     bool basilActive;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         //find the Sprite objects
         hFront = GameObject.Find("Harriet_Front");
         hBack = GameObject.Find("Harriet_Back");
@@ -73,9 +74,10 @@ public class SpriteChange : MonoBehaviour {
 
         isWalking = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputY = Input.GetAxisRaw("Vertical");
 
@@ -95,23 +97,30 @@ public class SpriteChange : MonoBehaviour {
         }
 
 
-        if (characterSelect == 0) {
+        if (characterSelect == 0)
+        {
             harrietActive = true;
             basilActive = false;
-        } else if (characterSelect == 1) {
+        }
+        else if (characterSelect == 1)
+        {
             harrietActive = false;
             basilActive = true;
         }
 
         //left/right/up/down movement
-        if (movement.z == 1) {
+        if (movement.z == 1)
+        {
             //up
-            if (harrietActive == true) {
+            if (harrietActive == true)
+            {
                 hBack.GetComponent<SpriteRenderer>().enabled = true;
                 hFront.GetComponent<SpriteRenderer>().enabled = false;
                 hLeft.GetComponent<SpriteRenderer>().enabled = false;
                 hRight.GetComponent<SpriteRenderer>().enabled = false;
-            } else if (basilActive == true) {
+            }
+            else if (basilActive == true)
+            {
                 bBack.GetComponent<SpriteRenderer>().enabled = true;
                 bFront.GetComponent<SpriteRenderer>().enabled = false;
                 bLeft.GetComponent<SpriteRenderer>().enabled = false;
@@ -123,14 +132,18 @@ public class SpriteChange : MonoBehaviour {
                 kRight.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
-        if (movement.z == -1) {
+        if (movement.z == -1)
+        {
             //down
-            if (harrietActive == true) {
+            if (harrietActive == true)
+            {
                 hFront.GetComponent<SpriteRenderer>().enabled = true;
                 hBack.GetComponent<SpriteRenderer>().enabled = false;
                 hLeft.GetComponent<SpriteRenderer>().enabled = false;
                 hRight.GetComponent<SpriteRenderer>().enabled = false;
-            } else if (basilActive == true) {
+            }
+            else if (basilActive == true)
+            {
                 bFront.GetComponent<SpriteRenderer>().enabled = true;
                 bBack.GetComponent<SpriteRenderer>().enabled = false;
                 bLeft.GetComponent<SpriteRenderer>().enabled = false;
@@ -142,15 +155,18 @@ public class SpriteChange : MonoBehaviour {
                 kRight.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
-        if (movement.x == -1) {
+        if (movement.x == -1)
+        {
             //left
-            if (harrietActive == true) {
+            if (harrietActive == true)
+            {
                 hLeft.GetComponent<SpriteRenderer>().enabled = true;
                 hFront.GetComponent<SpriteRenderer>().enabled = false;
                 hBack.GetComponent<SpriteRenderer>().enabled = false;
                 hRight.GetComponent<SpriteRenderer>().enabled = false;
             }
-            else if (basilActive == true) {
+            else if (basilActive == true)
+            {
                 bLeft.GetComponent<SpriteRenderer>().enabled = true;
                 bBack.GetComponent<SpriteRenderer>().enabled = false;
                 bFront.GetComponent<SpriteRenderer>().enabled = false;
@@ -162,15 +178,18 @@ public class SpriteChange : MonoBehaviour {
                 kRight.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
-        if (movement.x == 1) {
+        if (movement.x == 1)
+        {
             //right
-            if (harrietActive == true) {
+            if (harrietActive == true)
+            {
                 hRight.GetComponent<SpriteRenderer>().enabled = true;
                 hFront.GetComponent<SpriteRenderer>().enabled = false;
                 hBack.GetComponent<SpriteRenderer>().enabled = false;
                 hLeft.GetComponent<SpriteRenderer>().enabled = false;
             }
-            else if (basilActive == true) {
+            else if (basilActive == true)
+            {
                 bRight.GetComponent<SpriteRenderer>().enabled = true;
                 bBack.GetComponent<SpriteRenderer>().enabled = false;
                 bFront.GetComponent<SpriteRenderer>().enabled = false;
@@ -185,28 +204,37 @@ public class SpriteChange : MonoBehaviour {
 
         //update Animator
         //up
-        if (Input.GetKeyDown("w") || Input.GetKeyDown("up")) {
-            if(harrietActive == true) {
+        if (Input.GetKeyDown("w") || Input.GetKeyDown("up"))
+        {
+            if (harrietActive == true)
+            {
                 animHBack.SetBool("isWalking", true);
-            } else if (basilActive == true) {
+            }
+            else if (basilActive == true)
+            {
                 animBBack.SetBool("isWalking", true);
                 animKBack.SetBool("isWalking", true);
             }
         }
-        if (Input.GetKeyUp("w") || Input.GetKeyUp("up")) {
-            if(harrietActive == true) {
+        if (Input.GetKeyUp("w") || Input.GetKeyUp("up"))
+        {
+            if (harrietActive == true)
+            {
                 animHBack.SetBool("isWalking", false);
-            } else if (basilActive == true) {
+            }
+            else if (basilActive == true)
+            {
                 animBBack.SetBool("isWalking", false);
                 animKBack.SetBool("isWalking", false);
             }
         }
 
         //down
-        if (Input.GetKeyDown("s") || Input.GetKeyDown("down")) {
+        if (Input.GetKeyDown("s") || Input.GetKeyDown("down"))
+        {
             if (harrietActive == true)
             {
-                animHFront.SetBool("isWalking", true); 
+                animHFront.SetBool("isWalking", true);
             }
             else if (basilActive == true)
             {
@@ -214,7 +242,8 @@ public class SpriteChange : MonoBehaviour {
                 animKFront.SetBool("isWalking", true);
             }
         }
-        if (Input.GetKeyUp("s") || Input.GetKeyUp("down")){
+        if (Input.GetKeyUp("s") || Input.GetKeyUp("down"))
+        {
             if (harrietActive == true)
             {
                 animHFront.SetBool("isWalking", false);
@@ -275,16 +304,5 @@ public class SpriteChange : MonoBehaviour {
                 animKRight.SetBool("isWalking", false);
             }
         }
-
-        /*
-        if (isWalking == true) {
-            animHFront.SetBool("isWalking", true);
-        } else {
-            animHFront.SetBool("isWalking", false);
-        }
-        */
-
-        //print(animHFront.GetBool("isWalking"));
-
     }
 }
