@@ -69,7 +69,7 @@ public class CollectTreasure : MonoBehaviour {
                                                                 2.0f,
                                                                 Random.Range((this.transform.position.z - 0.5f), (this.transform.position.z + 0.5f)));*/
                                 randomGemPosition = new Vector3(Random.Range((this.transform.position.x - 0.5f), (this.transform.position.x + 0.5f)),
-                                                                Random.Range((this.transform.position.y + 2.0f), (this.transform.position.x + 4.0f)),
+                                                                Random.Range((this.transform.localPosition.y + 1.5f), (this.transform.localPosition.y + 2.5f)),
                                                                 Random.Range((this.transform.position.z - 0.5f), (this.transform.position.z + 0.5f)));
                                 Instantiate(gemPrefab, randomGemPosition, transform.rotation);
                             }

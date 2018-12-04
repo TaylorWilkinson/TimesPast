@@ -6,8 +6,8 @@ public class MovementClass : MonoBehaviour
 {
 
     public float speed = 7f;
-    //private Vector3 movement;
-    public Vector3 movement;
+
+    private Vector3 movement;
 
     public float turnSpeed = 10;
     Vector2 input;

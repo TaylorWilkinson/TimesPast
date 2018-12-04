@@ -11,34 +11,39 @@ Properties {
 	
 }
 
-SubShader {
-	Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="MKGlow"}
-	LOD 200
+Category {
+    Cull Off
 
-CGPROGRAM
-#pragma surface surf Lambert alpha:fade
-#pragma target 2.0
+    SubShader {
+    	Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="MKGlow"}
+    	LOD 200
 
-sampler2D _MainTex;
-fixed4 _Color;
+    CGPROGRAM
+    #pragma surface surf Lambert alpha:fade
+    #pragma target 2.0
 
-sampler2D _MKGlowTex;
-half _MKGlowTexStrength;
-fixed4 _MKGlowTexColor;
+    sampler2D _MainTex;
+    fixed4 _Color;
 
-struct Input {
-	float2 uv_MainTex;
-	float2 uv_MKGlowTex;
-};
+    sampler2D _MKGlowTex;
+    half _MKGlowTexStrength;
+    fixed4 _MKGlowTexColor;
 
-void surf (Input IN, inout SurfaceOutput o) {
-	fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
-	fixed3 d = tex2D(_MKGlowTex, IN.uv_MKGlowTex) * _MKGlowTexColor;
-	c.rgb += (d.rgb * _MKGlowTexStrength);
-	o.Albedo = c.rgb;
-	o.Alpha = c.a;
-}
-ENDCG
+    struct Input {
+    	float2 uv_MainTex;
+    	float2 uv_MKGlowTex;
+    };
+
+    void surf (Input IN, inout SurfaceOutput o) {
+    	fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
+    	fixed3 d = tex2D(_MKGlowTex, IN.uv_MKGlowTex) * _MKGlowTexColor;
+    	c.rgb += (d.rgb * _MKGlowTexStrength);
+    	o.Albedo = c.rgb;
+    	o.Alpha = c.a;
+    }
+
+    ENDCG
+    }
 }
 
 Fallback "Legacy Shaders/Transparent/VertexLit"

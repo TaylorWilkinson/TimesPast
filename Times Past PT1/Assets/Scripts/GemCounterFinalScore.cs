@@ -13,6 +13,8 @@ public class GemCounterFinalScore : MonoBehaviour {
     public void Start() {
         gemScoreCounter = GameObject.Find("GemScore");
         score = gemScoreCounter.GetComponent<GemCounter>().score;
+
+        flowchart.SetIntegerVariable("FinalScore", score);
     }
 
     public void FinalScore() {
