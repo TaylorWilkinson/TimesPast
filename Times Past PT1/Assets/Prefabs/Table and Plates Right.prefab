@@ -40,7 +40,6 @@ GameObject:
   - component: {fileID: 23496466965824992}
   - component: {fileID: 65828250849405184}
   - component: {fileID: 114734435008479956}
-  - component: {fileID: 114597731858781964}
   m_Layer: 0
   m_Name: Table and Plates Right
   m_TagString: Untagged
@@ -638,27 +637,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000002, y: 0.8582874, z: 0.6900002}
   m_Center: {x: -6.6332393e-22, y: 0.4291437, z: 0.0000004721704}
---- !u!114 &114597731858781964
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1415908919797418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 110c20ad674d54545a44808199c1e8cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterSelect: 0
-  objectName: 
-  objectNameInOtherTime: 
-  nameDisplay: {fileID: 0}
-  dialogDisplay: {fileID: 0}
-  totalRotate: 4
-  rotateCount: 0
-  winningFaceCount: 1
-  mirrorLight: {fileID: 0}
-  reflectiveValues: 00000000
 --- !u!114 &114734435008479956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -671,5 +649,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Table with Disks
-  descText: These disks seem to serve some ritual purpose!
   actionText: CLICK TO INTERACT
+  harrietActionText: Harriet's Action Text
+  harrietAlternateText: 
+  basilActionText: Basil's Action Text
+  basilAlternateText: Basil's Text After A Prompt
+  harrietActive: 0
+  basilActive: 0

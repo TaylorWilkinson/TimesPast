@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17993695, g: 0.24830866, b: 0.28029764, a: 1}
+  m_IndirectSpecularColor: {r: 0.17993718, g: 0.24830905, b: 0.28029823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -182,8 +182,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5316442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.51, y: -215.6, z: 0}
-  m_LocalScale: {x: 1.912253, y: 1.912253, z: 1.912253}
+  m_LocalPosition: {x: -15.493, y: -216.04, z: 0}
+  m_LocalScale: {x: 1.8324739, y: 1.8324739, z: 1.8324739}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 5
@@ -356,8 +356,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 148592621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.7, y: -159.3, z: 0}
-  m_LocalScale: {x: 1.3732249, y: 1.3732249, z: 1.3732249}
+  m_LocalPosition: {x: -14.717, y: -162.09, z: 0}
+  m_LocalScale: {x: 1.315934, y: 1.315934, z: 1.315934}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 3
@@ -674,7 +674,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0.0000076294, y: 158}
-  m_SizeDelta: {x: 609.8, y: 0}
+  m_SizeDelta: {x: 609.8, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372714842
 MonoBehaviour:
@@ -782,8 +782,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 414327653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.3, y: -186.3, z: 0}
-  m_LocalScale: {x: 1.543802, y: 1.543802, z: 1.543802}
+  m_LocalPosition: {x: -16.25, y: -187.97, z: 0}
+  m_LocalScale: {x: 1.4793947, y: 1.4793947, z: 1.4793947}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 4
@@ -1192,8 +1192,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 655421230}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.93, y: -247.4, z: 0}
-  m_LocalScale: {x: 1.7003342, y: 1.7003342, z: 1.7003342}
+  m_LocalPosition: {x: -14.938, y: -246.52, z: 0}
+  m_LocalScale: {x: 1.6293963, y: 1.6293963, z: 1.6293963}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 6
@@ -1696,10 +1696,10 @@ RectTransform:
   m_Father: {fileID: 372714841}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 304.9, y: -50}
+  m_SizeDelta: {x: 609.8, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682413925
 MonoBehaviour:
@@ -2119,8 +2119,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1356584040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.52, y: -301.5, z: 0}
-  m_LocalScale: {x: 2.0740888, y: 2.678184, z: 1.3381218}
+  m_LocalPosition: {x: -15.503, y: -301.3, z: 0}
+  m_LocalScale: {x: 1.8203248, y: 2.3505092, z: 1.1744031}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 10
@@ -2280,8 +2280,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1485377040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.1, y: -276, z: 0}
-  m_LocalScale: {x: 1.9634414, y: 1.9634414, z: 1.9634414}
+  m_LocalPosition: {x: -15.3, y: -273.92, z: 0}
+  m_LocalScale: {x: 1.8815267, y: 1.8815267, z: 1.8815267}
   m_Children: []
   m_Father: {fileID: 758563276}
   m_RootOrder: 7
@@ -2669,10 +2669,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 2074552667}
-  selectedCommands:
-  - {fileID: 2074552666}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -2697,7 +2695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  duration: 10
+  duration: 94
   targetView: {fileID: 1227329306}
   waitUntilFinished: 1
   targetCamera: {fileID: 417403463}

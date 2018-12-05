@@ -114,7 +114,9 @@ var interactionCheckerB;
      guiStyleBasilBack.wordWrap = true;
  }
 
- function Update() {
+function Update() {
+    //print(this.transform.position.x);
+
     //character check
     var characterSwitchControl : GameObject = GameObject.Find("CharacterSwitchControl");
     //print(characterSwitchControl.GetComponent("SwitchCharacter").characterSelect);

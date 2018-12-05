@@ -1023,7 +1023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 101155979}
   - component: {fileID: 101155977}
-  - component: {fileID: 101155976}
+  - component: {fileID: 101155982}
   - component: {fileID: 101155974}
   - component: {fileID: 101155978}
   - component: {fileID: 101155980}
@@ -1076,26 +1076,6 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: c2dc76a13fc1c452fb6249321a036ba8, type: 3}
   altSoundClip: {fileID: 8300000, guid: 07f5fe4173bd14006b50f6eeb3c1e4e3, type: 3}
   soundSource: {fileID: 101155980}
---- !u!114 &101155976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 101155973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Urns
-  actionText: 
-  harrietActionText: Search
-  harrietAlternateText: 
-  basilActionText: Inspect
-  basilAlternateText: 
-  harrietActive: 0
-  basilActive: 0
 --- !u!65 &101155977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1248,6 +1228,26 @@ MonoBehaviour:
   harrietClip: {fileID: 8300000, guid: 0bfd3c4d846a1454bb0e91f6bc833265, type: 3}
   basilClip: {fileID: 8300000, guid: e98042c4cdb7b4192996d9a7ce7eaae5, type: 3}
   talkSource: {fileID: 101155980}
+--- !u!114 &101155982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101155973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Urns
+  actionText: 
+  harrietActionText: Search
+  harrietAlternateText: 
+  basilActionText: Inspect
+  basilAlternateText: 
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!4 &102885012
 Transform:
   m_ObjectHideFlags: 0
@@ -1294,7 +1294,7 @@ GameObject:
   - component: {fileID: 105234886}
   - component: {fileID: 105234885}
   - component: {fileID: 105234884}
-  - component: {fileID: 105234883}
+  - component: {fileID: 105234889}
   - component: {fileID: 105234882}
   - component: {fileID: 105234888}
   - component: {fileID: 105234887}
@@ -1332,25 +1332,6 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
---- !u!114 &105234883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 105234881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Fountain
-  actionText: 
-  harrietActionText: Inspect
-  harrietAlternateText: 
-  basilActionText: Inspect
-  basilAlternateText: 
-  harrietActive: 0
-  basilActive: 0
 --- !u!65 &105234884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1516,6 +1497,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &105234889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 105234881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Fountain
+  actionText: 
+  harrietActionText: Inspect
+  harrietAlternateText: 
+  basilActionText: Inspect
+  basilAlternateText: Inspect
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!1 &110429684
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,7 +4308,7 @@ RectTransform:
   - {fileID: 1477017848}
   - {fileID: 1137740835}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6866,7 +6867,7 @@ GameObject:
   - component: {fileID: 480762271}
   - component: {fileID: 480762270}
   - component: {fileID: 480762269}
-  - component: {fileID: 480762268}
+  - component: {fileID: 480762274}
   - component: {fileID: 480762267}
   - component: {fileID: 480762273}
   - component: {fileID: 480762272}
@@ -6904,25 +6905,6 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
---- !u!114 &480762268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480762266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Fountain
-  actionText: 
-  harrietActionText: Inspect
-  harrietAlternateText: 
-  basilActionText: Inspect
-  basilAlternateText: 
-  harrietActive: 0
-  basilActive: 0
 --- !u!65 &480762269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7088,6 +7070,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &480762274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480762266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Fountain
+  actionText: 
+  harrietActionText: Inspect
+  harrietAlternateText: 
+  basilActionText: Inspect
+  basilAlternateText: Inspect
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!1001 &481316953
 Prefab:
   m_ObjectHideFlags: 0
@@ -11128,7 +11130,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 145.125, y: -205.384, z: -3.3519897}
 --- !u!1 &798205844
 GameObject:
@@ -11141,7 +11143,7 @@ GameObject:
   - component: {fileID: 798205848}
   - component: {fileID: 798205847}
   - component: {fileID: 798205849}
-  - component: {fileID: 798205851}
+  - component: {fileID: 798205853}
   - component: {fileID: 798205850}
   - component: {fileID: 798205846}
   - component: {fileID: 798205845}
@@ -11297,7 +11299,7 @@ Transform:
   m_Children:
   - {fileID: 2041742947}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &798205849
 CapsuleCollider:
@@ -11339,25 +11341,6 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
---- !u!114 &798205851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 798205844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Sprout
-  actionText: 
-  harrietActionText: 
-  harrietAlternateText: 
-  basilActionText: Inspect
-  basilAlternateText: Pull
-  harrietActive: 0
-  basilActive: 0
 --- !u!114 &798205852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11372,6 +11355,26 @@ MonoBehaviour:
   harrietClip: {fileID: 0}
   basilClip: {fileID: 8300000, guid: 22b5d341789944ef6872e8a4ee69745c, type: 3}
   talkSource: {fileID: 798205846}
+--- !u!114 &798205853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 798205844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Sprout
+  actionText: 
+  harrietActionText: 
+  harrietAlternateText: 
+  basilActionText: Inspect
+  basilAlternateText: Pull
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!1 &800870217
 GameObject:
   m_ObjectHideFlags: 0
@@ -12873,7 +12876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906937823}
   - component: {fileID: 906937821}
-  - component: {fileID: 906937822}
+  - component: {fileID: 906937826}
   - component: {fileID: 906937820}
   - component: {fileID: 906937825}
   - component: {fileID: 906937824}
@@ -12922,25 +12925,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.049272183, y: 0.2961696, z: 0.08166971}
   m_Center: {x: -0.011262915, y: 0.10239044, z: 0.003664501}
---- !u!114 &906937822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 906937819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Tree
-  actionText: 
-  harrietActionText: Inspect
-  harrietAlternateText: 
-  basilActionText: 
-  basilAlternateText: 
-  harrietActive: 0
-  basilActive: 0
 --- !u!4 &906937823
 Transform:
   m_ObjectHideFlags: 0
@@ -12962,7 +12946,7 @@ Transform:
   - {fileID: 2032549136}
   - {fileID: 850700243}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &906937824
 MonoBehaviour:
@@ -13073,6 +13057,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &906937826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906937819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Tree
+  actionText: 
+  harrietActionText: Inspect
+  harrietAlternateText: 
+  basilActionText: 
+  basilAlternateText: 
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!4 &909009805
 Transform:
   m_ObjectHideFlags: 0
@@ -14763,7 +14767,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1166510316
 MonoBehaviour:
@@ -16162,7 +16166,7 @@ GameObject:
   - component: {fileID: 1364656563}
   - component: {fileID: 1364656562}
   - component: {fileID: 1364656561}
-  - component: {fileID: 1364656569}
+  - component: {fileID: 1364656568}
   m_Layer: 0
   m_Name: Basil
   m_TagString: Player
@@ -16278,9 +16282,9 @@ Transform:
   - {fileID: 622528085}
   - {fileID: 535791659}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1364656569
+--- !u!114 &1364656568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16288,7 +16292,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1364656560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Talk with Basil
@@ -16297,6 +16301,7 @@ MonoBehaviour:
   harrietAlternateText: 
   basilActionText: 
   basilAlternateText: 
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
   harrietActive: 0
   basilActive: 0
 --- !u!1 &1371484030
@@ -16484,7 +16489,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 138, y: -176.32, z: -7.140991}
 --- !u!1 &1412743909
 GameObject:
@@ -16496,7 +16501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1412743913}
   - component: {fileID: 1412743912}
-  - component: {fileID: 1412743911}
+  - component: {fileID: 1412743918}
   - component: {fileID: 1412743910}
   - component: {fileID: 1412743914}
   - component: {fileID: 1412743916}
@@ -16535,26 +16540,6 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
---- !u!114 &1412743911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1412743909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Urns
-  actionText: 
-  harrietActionText: Search
-  harrietAlternateText: 
-  basilActionText: Inspect
-  basilAlternateText: 
-  harrietActive: 0
-  basilActive: 0
 --- !u!65 &1412743912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16721,6 +16706,26 @@ MonoBehaviour:
   harrietClip: {fileID: 8300000, guid: 0bfd3c4d846a1454bb0e91f6bc833265, type: 3}
   basilClip: {fileID: 8300000, guid: e98042c4cdb7b4192996d9a7ce7eaae5, type: 3}
   talkSource: {fileID: 1412743916}
+--- !u!114 &1412743918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1412743909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Urns
+  actionText: 
+  harrietActionText: Search
+  harrietAlternateText: 
+  basilActionText: Inspect
+  basilAlternateText: 
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!1 &1418147268
 GameObject:
   m_ObjectHideFlags: 0
@@ -17801,7 +17806,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1528739466
 GameObject:
@@ -18049,7 +18054,7 @@ GameObject:
   - component: {fileID: 1548779228}
   - component: {fileID: 1548779227}
   - component: {fileID: 1548779226}
-  - component: {fileID: 1548779232}
+  - component: {fileID: 1548779233}
   m_Layer: 0
   m_Name: Harriet
   m_TagString: Player
@@ -18075,7 +18080,7 @@ Transform:
   - {fileID: 171198871}
   - {fileID: 446276242}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1548779226
 MonoBehaviour:
@@ -18166,7 +18171,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1548779232
+--- !u!114 &1548779233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18174,7 +18179,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1548779224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Talk with Harriet
@@ -18183,6 +18188,7 @@ MonoBehaviour:
   harrietAlternateText: 
   basilActionText: 
   basilAlternateText: 
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
   harrietActive: 0
   basilActive: 0
 --- !u!1 &1549485693
@@ -18895,7 +18901,7 @@ Transform:
   m_Children:
   - {fileID: 397749788}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1586872887
 MonoBehaviour:
@@ -19157,7 +19163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648468885}
   - component: {fileID: 1648468884}
-  - component: {fileID: 1648468883}
+  - component: {fileID: 1648468888}
   - component: {fileID: 1648468882}
   - component: {fileID: 1648468887}
   - component: {fileID: 1648468886}
@@ -19194,25 +19200,6 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
---- !u!114 &1648468883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1648468881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Plants
-  actionText: 
-  harrietActionText: Inspect
-  harrietAlternateText: 
-  basilActionText: Basil's Action Text
-  basilAlternateText: Basil's Text After A Prompt
-  harrietActive: 0
-  basilActive: 0
 --- !u!65 &1648468884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19239,7 +19226,7 @@ Transform:
   - {fileID: 1151168487}
   - {fileID: 856192350}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1648468886
 MonoBehaviour:
@@ -19350,6 +19337,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1648468888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1648468881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Plants
+  actionText: 
+  harrietActionText: Inspect
+  harrietAlternateText: 
+  basilActionText: 
+  basilAlternateText: 
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!1 &1650420995
 GameObject:
   m_ObjectHideFlags: 0
@@ -22740,7 +22747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1851816585}
   - component: {fileID: 1851816584}
-  - component: {fileID: 1851816583}
+  - component: {fileID: 1851816588}
   - component: {fileID: 1851816582}
   - component: {fileID: 1851816587}
   - component: {fileID: 1851816586}
@@ -22777,25 +22784,6 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
---- !u!114 &1851816583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1851816581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Plants
-  actionText: 
-  harrietActionText: Inspect
-  harrietAlternateText: 
-  basilActionText: Basil's Action Text
-  basilAlternateText: Basil's Text After A Prompt
-  harrietActive: 0
-  basilActive: 0
 --- !u!65 &1851816584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22822,7 +22810,7 @@ Transform:
   - {fileID: 515413983}
   - {fileID: 2140132564}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1851816586
 MonoBehaviour:
@@ -22933,6 +22921,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1851816588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1851816581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Plants
+  actionText: 
+  harrietActionText: Inspect
+  harrietAlternateText: 
+  basilActionText: 
+  basilAlternateText: 
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!1 &1857966657
 GameObject:
   m_ObjectHideFlags: 0
@@ -23344,7 +23352,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868204452
 GameObject:
@@ -25848,7 +25856,7 @@ Transform:
   - {fileID: 825736040}
   - {fileID: 437434800}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2044646508
 Transform:
@@ -26361,7 +26369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085854958}
   - component: {fileID: 2085854957}
-  - component: {fileID: 2085854956}
+  - component: {fileID: 2085854961}
   - component: {fileID: 2085854955}
   - component: {fileID: 2085854960}
   - component: {fileID: 2085854959}
@@ -26398,25 +26406,6 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
---- !u!114 &2085854956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2085854954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Plants
-  actionText: 
-  harrietActionText: Inspect
-  harrietAlternateText: 
-  basilActionText: 
-  basilAlternateText: 
-  harrietActive: 0
-  basilActive: 0
 --- !u!65 &2085854957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26443,7 +26432,7 @@ Transform:
   - {fileID: 1293648151}
   - {fileID: 1794121118}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2085854959
 MonoBehaviour:
@@ -26554,6 +26543,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2085854961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2085854954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Plants
+  actionText: 
+  harrietActionText: Inspect
+  harrietAlternateText: 
+  basilActionText: 
+  basilAlternateText: 
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!1 &2088851778
 GameObject:
   m_ObjectHideFlags: 0
@@ -26633,6 +26642,7 @@ GameObject:
   - component: {fileID: 2094336215}
   - component: {fileID: 2094336217}
   - component: {fileID: 2094336216}
+  - component: {fileID: 2094336208}
   m_Layer: 9
   m_Name: CameraTarget
   m_TagString: MainCamera
@@ -26640,6 +26650,43 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!108 &2094336208
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2094336206}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!114 &2094336209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26749,7 +26796,7 @@ Transform:
   m_LocalScale: {x: 2.915918, y: 1.4808263, z: 1.801875}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2094336215
 MonoBehaviour:
@@ -26764,7 +26811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showMainBehavior: 1
   showInnerGlowBehavior: 0
-  rtFormat: 0
+  rtFormat: 2
   blurShader: {fileID: 4800000, guid: 1855d9636fad3914bacc4a543165c974, type: 3}
   compositeShader: {fileID: 4800000, guid: e384de4389ba527479054baf0ddb1d3e, type: 3}
   selectiveRenderShader: {fileID: 4800000, guid: c04b7cae8accdfb4e9c2648823ff39d7,
@@ -27346,7 +27393,7 @@ GameObject:
   - component: {fileID: 2129121011}
   - component: {fileID: 2129121012}
   - component: {fileID: 2129121015}
-  - component: {fileID: 2129121014}
+  - component: {fileID: 2129121020}
   - component: {fileID: 2129121013}
   - component: {fileID: 2129121016}
   - component: {fileID: 2129121018}
@@ -27444,25 +27491,6 @@ MonoBehaviour:
   harrietHasClicked: 0
   basilHasClicked: 0
   basilHasClicked2: 0
---- !u!114 &2129121014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2129121010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79eb1493f306f452da22e3cb5871363d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: Keyhole
-  actionText: 
-  harrietActionText: Unlock
-  harrietAlternateText: 
-  basilActionText: Inspect
-  basilAlternateText: 
-  harrietActive: 1
-  basilActive: 0
 --- !u!65 &2129121015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27616,6 +27644,26 @@ MonoBehaviour:
   harrietClip: {fileID: 8300000, guid: b4d7c59ec565d46e58ce0bbd57d3b39d, type: 3}
   basilClip: {fileID: 8300000, guid: 5b42d29be9f7648319821bc94fcfe41f, type: 3}
   talkSource: {fileID: 2129121018}
+--- !u!114 &2129121020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2129121010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b25e4af00f4c6d8d53257a39e99b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: Keyhole
+  actionText: 
+  harrietActionText: Unlock
+  harrietAlternateText: 
+  basilActionText: Inspect
+  basilAlternateText: 
+  hoverFont: {fileID: 12800000, guid: 43bce127d27b74a66a29b68d0de90ddb, type: 3}
+  harrietActive: 0
+  basilActive: 0
 --- !u!1 &2129391724
 GameObject:
   m_ObjectHideFlags: 0

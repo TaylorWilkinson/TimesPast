@@ -253,7 +253,6 @@ GameObject:
   - component: {fileID: 4334391777645688}
   - component: {fileID: 65805575199729694}
   - component: {fileID: 114286790784173610}
-  - component: {fileID: 114797041757111854}
   m_Layer: 0
   m_Name: Caved In Rubble
   m_TagString: Present
@@ -944,26 +943,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Rubble
-  descText: A caved-in section of the room
   actionText: CLICK TO INSPECT
---- !u!114 &114797041757111854
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1607243204365768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 110c20ad674d54545a44808199c1e8cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterSelect: 0
-  objectName: 
-  objectNameInOtherTime: 
-  nameDisplay: {fileID: 0}
-  dialogDisplay: {fileID: 0}
-  totalRotate: 4
-  rotateCount: 0
-  winningFaceCount: 2
-  mirrorLight: {fileID: 0}
-  reflectiveValues: 
+  harrietActionText: Harriet's Action Text
+  harrietAlternateText: 
+  basilActionText: Basil's Action Text
+  basilAlternateText: Basil's Text After A Prompt
+  harrietActive: 0
+  basilActive: 0

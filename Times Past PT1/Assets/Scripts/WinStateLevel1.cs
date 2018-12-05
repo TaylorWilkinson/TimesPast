@@ -473,7 +473,7 @@ public class WinStateLevel1 : MonoBehaviour {
                 {
                     if (hit.transform != null)
                     {
-                        print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
+                        //print("hit: " + hit.transform.gameObject + ", this: " + this.transform.gameObject);
 
                         BoxCollider bc;
                         if (bc = hit.transform.GetComponent<BoxCollider>())

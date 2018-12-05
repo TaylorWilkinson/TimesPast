@@ -26,10 +26,12 @@ public class InterpersonalTalkLvl2 : MonoBehaviour {
         harrietActive = true;
         basilActive = false;
         harriet = GameObject.Find("Harriet");
-        hoverOnH = harriet.GetComponent("HoverTextGUI") as MonoBehaviour;
+        //hoverOnH = harriet.GetComponent("HoverTextGUI") as MonoBehaviour;
+        hoverOnH = harriet.GetComponent("HoverTextUI") as MonoBehaviour;
         hoverOnH.enabled = true;
         basil = GameObject.Find("Basil");
-        hoverOnB = basil.GetComponent("HoverTextGUI") as MonoBehaviour;
+        //hoverOnB = basil.GetComponent("HoverTextGUI") as MonoBehaviour;
+        hoverOnB = basil.GetComponent("HoverTextUI") as MonoBehaviour;
         hoverOnB.enabled = true;
 
         mainCamera = GameObject.Find("CameraTarget");
