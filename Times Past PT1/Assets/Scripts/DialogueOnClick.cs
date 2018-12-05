@@ -144,6 +144,7 @@ public class DialogueOnClick : MonoBehaviour {
                                         StartCoroutine(CloseDialogueTimer());
                                     }
                                 } else {
+                                    basilHasClicked = true;
                                     //Basil Talks
                                     StartCoroutine(PlayBasilSound());
 
@@ -158,14 +159,14 @@ public class DialogueOnClick : MonoBehaviour {
                     BoxCollider bc;
                     if (bc = hit.transform.GetComponent<BoxCollider>())
                     {
-                        if (hit.transform.gameObject == this.transform.gameObject)
-                        {
+                        if (hit.transform.gameObject == this.transform.gameObject) {
                             //skylight check
                             if (hit.transform.gameObject.name == "pronged-part")
                             {
                                 //Debug.Log("Skylight clicked");
                                 if (harrietActive == true)
                                 {
+                                    harrietHasClicked = true;
                                     //Harriet Talks
                                     StartCoroutine(PlayHarrietSound());
 
@@ -175,6 +176,7 @@ public class DialogueOnClick : MonoBehaviour {
                                 }
                                 else if (basilActive == true)
                                 {
+                                    basilHasClicked = true;
                                     //Basil Talks
                                     StartCoroutine(PlayBasilSound());
 
@@ -245,6 +247,7 @@ public class DialogueOnClick : MonoBehaviour {
                             //basil is clicking
                             else if (basilActive == true)
                             {
+                                basilHasClicked = true;
                                 if ((this.name == "Tapestry Kah") || (this.name == "Bushes"))
                                 {
                                     //for tapestry check: basilDialogueChange1 = true;

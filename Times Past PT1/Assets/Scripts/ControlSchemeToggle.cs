@@ -28,11 +28,6 @@ public class ControlSchemeToggle : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
-        //if (imageShowing == true) {
-        //    StartCoroutine(FadeOut());
-        //}
-
         Color curColor = this.image.color;
         float alphaDiff = Mathf.Abs(curColor.a - this.targetAlpha);
         if (alphaDiff > 0.0001f)
@@ -40,6 +35,7 @@ public class ControlSchemeToggle : MonoBehaviour {
             curColor.a = Mathf.Lerp(curColor.a, targetAlpha, this.FadeRate * Time.deltaTime);
             this.image.color = curColor;
         }
+
         if (imageBlank == true) {
             StartCoroutine(FadeIn());
             imageBlank = false;
@@ -55,13 +51,13 @@ public class ControlSchemeToggle : MonoBehaviour {
 
     IEnumerator FadeIn()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         this.targetAlpha = desiredAlpha;
         imageShowing = true;
     }
 
     IEnumerator FadeOut() {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         this.targetAlpha = 0.0f;
     }
 }

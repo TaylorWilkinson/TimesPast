@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17993695, g: 0.24830866, b: 0.28029764, a: 1}
+  m_IndirectSpecularColor: {r: 0.17993718, g: 0.24830905, b: 0.28029823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -278,12 +278,22 @@ Prefab:
     - target: {fileID: 65138157758820276, guid: 2fc4ef268e1504bd597019ebf89d282d,
         type: 2}
       propertyPath: m_Center.x
-      value: 0.14047875
+      value: 0.14047879
       objectReference: {fileID: 0}
     - target: {fileID: 65138157758820276, guid: 2fc4ef268e1504bd597019ebf89d282d,
         type: 2}
       propertyPath: m_Center.z
-      value: -0.24883464
+      value: -0.24883462
+      objectReference: {fileID: 0}
+    - target: {fileID: 65138157758820276, guid: 2fc4ef268e1504bd597019ebf89d282d,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.3627516
+      objectReference: {fileID: 0}
+    - target: {fileID: 65138157758820276, guid: 2fc4ef268e1504bd597019ebf89d282d,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0.28909907
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fc4ef268e1504bd597019ebf89d282d, type: 2}
@@ -2925,6 +2935,16 @@ Prefab:
       propertyPath: m_Center.z
       value: 0.061206818
       objectReference: {fileID: 0}
+    - target: {fileID: 65132836708927534, guid: 9bfabf5bb35bf4dfa80261203719b56c,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 2.8582373
+      objectReference: {fileID: 0}
+    - target: {fileID: 65132836708927534, guid: 9bfabf5bb35bf4dfa80261203719b56c,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0.87843084
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bfabf5bb35bf4dfa80261203719b56c, type: 2}
   m_IsPrefabAsset: 0
@@ -4187,10 +4207,10 @@ RectTransform:
   m_Father: {fileID: 1268676350}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -650}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &209127748
 MonoBehaviour:
@@ -5471,10 +5491,10 @@ RectTransform:
   m_Father: {fileID: 1268676350}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -290}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287624552
 MonoBehaviour:
@@ -6241,9 +6261,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 1200}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6587,6 +6607,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterSelect: 0
   cameraController: {fileID: 1820574548}
+  glowMaterial: {fileID: 0}
+  hBackTexture: {fileID: 0}
+  hFrontTexture: {fileID: 0}
+  hSideTexture: {fileID: 0}
+  bBackTexture: {fileID: 0}
+  bFrontTexture: {fileID: 0}
+  bSideTexture: {fileID: 0}
 --- !u!4 &362793343
 Transform:
   m_ObjectHideFlags: 0
@@ -7289,7 +7316,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4947647135338284, guid: 80ca66a26315f4934ab22e2d9d99f1b9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -125.88541
+      value: -122.36
       objectReference: {fileID: 0}
     - target: {fileID: 4947647135338284, guid: 80ca66a26315f4934ab22e2d9d99f1b9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7343,7 +7370,7 @@ Prefab:
     - target: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
         type: 2}
       propertyPath: basilActionText
-      value: Search
+      value: Inspect
       objectReference: {fileID: 0}
     - target: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
         type: 2}
@@ -7377,10 +7404,10 @@ MonoBehaviour:
   dialogueHarriet: {fileID: 202044642}
   dialogueAltHarriet: {fileID: 1802855019}
   dialogueBasil: {fileID: 209082421}
-  dialogueAltBasil: {fileID: 489444141}
+  dialogueAltBasil: {fileID: 209082421}
   harrietDialogDisplay: {fileID: 820993367}
   altHarrietDialogDisplay: {fileID: 1449252839}
-  basilDialogDisplay: {fileID: 1376850240}
+  basilDialogDisplay: {fileID: 760978053}
   altDialogDisplay: {fileID: 1572516182}
   harrietDialogue: "A gem! Now I\u2019m a real archaeologist, like Indiana Jones!"
   harrietAltDialogue: 
@@ -10628,7 +10655,7 @@ Prefab:
     - target: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
         type: 2}
       propertyPath: basilActionText
-      value: Search
+      value: Inspect
       objectReference: {fileID: 0}
     - target: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
         type: 2}
@@ -10662,10 +10689,10 @@ MonoBehaviour:
   dialogueHarriet: {fileID: 202044642}
   dialogueAltHarriet: {fileID: 1802855019}
   dialogueBasil: {fileID: 209082421}
-  dialogueAltBasil: {fileID: 489444141}
+  dialogueAltBasil: {fileID: 209082421}
   harrietDialogDisplay: {fileID: 820993367}
   altHarrietDialogDisplay: {fileID: 1449252839}
-  basilDialogDisplay: {fileID: 1376850240}
+  basilDialogDisplay: {fileID: 760978053}
   altDialogDisplay: {fileID: 1572516182}
   harrietDialogue: "A gem! Now I\u2019m a real archaeologist, like Indiana Jones!"
   harrietAltDialogue: 
@@ -13591,8 +13618,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dae7c34a4d3da4afb981107cc3a365e6, type: 2}
+  m_sharedMaterial: {fileID: 21840359903501012, guid: dae7c34a4d3da4afb981107cc3a365e6,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14766,8 +14794,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dae7c34a4d3da4afb981107cc3a365e6, type: 2}
+  m_sharedMaterial: {fileID: 21840359903501012, guid: dae7c34a4d3da4afb981107cc3a365e6,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15452,9 +15481,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 1200}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -16653,10 +16682,10 @@ RectTransform:
   m_Father: {fileID: 1852149649}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -530}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &913590408
 MonoBehaviour:
@@ -17082,10 +17111,10 @@ RectTransform:
   m_Father: {fileID: 1268676350}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -50}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932323472
 MonoBehaviour:
@@ -22398,10 +22427,10 @@ RectTransform:
   m_Father: {fileID: 1852149649}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -170}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079037277
 MonoBehaviour:
@@ -22540,6 +22569,16 @@ Prefab:
     - target: {fileID: 4715053837071264, guid: fb71bebfd0b1a47d4996b53222bcb3b3, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 65852728434353374, guid: fb71bebfd0b1a47d4996b53222bcb3b3,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.12233578
+      objectReference: {fileID: 0}
+    - target: {fileID: 65852728434353374, guid: fb71bebfd0b1a47d4996b53222bcb3b3,
+        type: 2}
+      propertyPath: m_Center.x
+      value: -0.00976315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb71bebfd0b1a47d4996b53222bcb3b3, type: 2}
@@ -22797,10 +22836,10 @@ RectTransform:
   m_Father: {fileID: 1268676350}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -410}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091241120
 MonoBehaviour:
@@ -23892,10 +23931,10 @@ RectTransform:
   m_Father: {fileID: 1852149649}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -410}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163033278
 MonoBehaviour:
@@ -24107,10 +24146,10 @@ RectTransform:
   m_Father: {fileID: 1268676350}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -745}
+  m_SizeDelta: {x: 754.9, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1173101814
 MonoBehaviour:
@@ -24600,9 +24639,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 1200}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -26067,7 +26106,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000015259, y: -0.000015259}
-  m_SizeDelta: {x: 754.9, y: 0}
+  m_SizeDelta: {x: 754.9, y: 770}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1268676351
 MonoBehaviour:
@@ -26250,9 +26289,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 1200}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -26660,10 +26699,10 @@ RectTransform:
   m_Father: {fileID: 1852149649}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -745}
+  m_SizeDelta: {x: 754.9, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285300857
 MonoBehaviour:
@@ -27052,7 +27091,7 @@ Prefab:
     - target: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
         type: 2}
       propertyPath: basilActionText
-      value: Search
+      value: Inspect
       objectReference: {fileID: 0}
     - target: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
         type: 2}
@@ -27086,10 +27125,10 @@ MonoBehaviour:
   dialogueHarriet: {fileID: 202044642}
   dialogueAltHarriet: {fileID: 1802855019}
   dialogueBasil: {fileID: 209082421}
-  dialogueAltBasil: {fileID: 489444141}
+  dialogueAltBasil: {fileID: 209082421}
   harrietDialogDisplay: {fileID: 820993367}
   altHarrietDialogDisplay: {fileID: 1449252839}
-  basilDialogDisplay: {fileID: 1376850240}
+  basilDialogDisplay: {fileID: 760978053}
   altDialogDisplay: {fileID: 1572516182}
   harrietDialogue: "A gem! Now I\u2019m a real archaeologist, like Indiana Jones!"
   harrietAltDialogue: 
@@ -27356,10 +27395,10 @@ RectTransform:
   m_Father: {fileID: 1268676350}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -530}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1315941433
 MonoBehaviour:
@@ -28353,10 +28392,10 @@ RectTransform:
   m_Father: {fileID: 1852149649}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -650}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1396560926
 MonoBehaviour:
@@ -29172,8 +29211,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dae7c34a4d3da4afb981107cc3a365e6, type: 2}
+  m_sharedMaterial: {fileID: 21840359903501012, guid: dae7c34a4d3da4afb981107cc3a365e6,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -31227,8 +31267,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dae7c34a4d3da4afb981107cc3a365e6, type: 2}
+  m_sharedMaterial: {fileID: 21840359903501012, guid: dae7c34a4d3da4afb981107cc3a365e6,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -31790,7 +31831,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -32235,7 +32276,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -33645,7 +33686,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1683618409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -116.85, y: 0.73, z: -0.02}
+  m_LocalPosition: {x: -113.8, y: 0.73, z: -0.02}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1404153585}
@@ -34235,7 +34276,7 @@ GameObject:
   - component: {fileID: 1712041167}
   - component: {fileID: 1712041166}
   m_Layer: 0
-  m_Name: Fountain
+  m_Name: Garden Fountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34285,7 +34326,7 @@ MonoBehaviour:
   basilActionText: Inspect
   basilAlternateText: 
   harrietActive: 0
-  basilActive: 1
+  basilActive: 0
 --- !u!65 &1712041162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35932,7 +35973,7 @@ GameObject:
   - component: {fileID: 1812707714}
   - component: {fileID: 1812707713}
   m_Layer: 0
-  m_Name: Fountain (1)
+  m_Name: Garden Fountain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35982,7 +36023,7 @@ MonoBehaviour:
   basilActionText: Inspect
   basilAlternateText: 
   harrietActive: 0
-  basilActive: 1
+  basilActive: 0
 --- !u!65 &1812707709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36344,11 +36385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b2c09e2a95d4aecbca0f4c9e391747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  harriet: {fileID: 0}
-  harrietPivot: {fileID: 0}
-  basil: {fileID: 0}
-  basilPivot: {fileID: 0}
 --- !u!114 &1820574546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36360,31 +36396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 2
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Cinemachine.CinemachineBrain+BrainEvent, Cinemachine, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1820574547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36640,10 +36651,10 @@ RectTransform:
   m_Father: {fileID: 1268676350}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -170}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1820847615
 MonoBehaviour:
@@ -37233,7 +37244,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 754.9, y: 0}
+  m_SizeDelta: {x: 754.9, y: 770}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1852149650
 MonoBehaviour:
@@ -40202,10 +40213,10 @@ RectTransform:
   m_Father: {fileID: 1852149649}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -50}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1995030492
 MonoBehaviour:
@@ -40807,10 +40818,10 @@ RectTransform:
   m_Father: {fileID: 1852149649}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 377.45, y: -290}
+  m_SizeDelta: {x: 754.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021250870
 MonoBehaviour:
@@ -41794,7 +41805,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2083295999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -116.85, y: 0.71, z: 3.42}
+  m_LocalPosition: {x: -113.8, y: 0.71, z: 3.42}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1415709293}
@@ -43139,7 +43150,7 @@ Prefab:
     - target: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
         type: 2}
       propertyPath: basilActionText
-      value: Search
+      value: Inspect
       objectReference: {fileID: 0}
     - target: {fileID: 114475117885775258, guid: 80ca66a26315f4934ab22e2d9d99f1b9,
         type: 2}
@@ -43173,10 +43184,10 @@ MonoBehaviour:
   dialogueHarriet: {fileID: 202044642}
   dialogueAltHarriet: {fileID: 1802855019}
   dialogueBasil: {fileID: 209082421}
-  dialogueAltBasil: {fileID: 489444141}
+  dialogueAltBasil: {fileID: 209082421}
   harrietDialogDisplay: {fileID: 820993367}
   altHarrietDialogDisplay: {fileID: 1449252839}
-  basilDialogDisplay: {fileID: 1376850240}
+  basilDialogDisplay: {fileID: 760978053}
   altDialogDisplay: {fileID: 1572516182}
   harrietDialogue: "A gem! Now I\u2019m a real archaeologist, like Indiana Jones!"
   harrietAltDialogue: 

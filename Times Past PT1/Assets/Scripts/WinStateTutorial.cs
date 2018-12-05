@@ -50,7 +50,7 @@ public class WinStateTutorial : MonoBehaviour {
             harrietActive = false;
         }
 
-        if ((sprout == null) && (tree == null)) {
+        if ((sprout == null)) {
             //Debug.Log("done! open the door!");
 
             //The tree is now gone, let Harriet access the keyhole

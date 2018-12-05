@@ -15,11 +15,9 @@ public class IdleTimer : MonoBehaviour {
     float timerUntilHarrietIdle;
     float timerUntilBasilIdle;
 
-    //public void Awake()
-    //{
-    //    DontDestroyOnLoad(gameObject);
-    //}
-
+    public void Awake() {
+        DontDestroyOnLoad(gameObject);
+    }
 
     // Use this for initialization
     void Start () {
@@ -44,13 +42,15 @@ public class IdleTimer : MonoBehaviour {
 
         //print("Achieved: " + achieved);
 
+        //print("BasilCamera: " + dialogueCameraB.GetComponent<Camera>().enabled + ", HarrietCamera: " + dialogueCameraH.GetComponent<Camera>().enabled);
+
         if (harrietActive)
         {
             if (movement == zeroMovement)
             {
                 if (dialogueCameraB.GetComponent<Camera>().enabled == false) {
-                    if (achieved == false)
-                    {
+                    if (achieved == false) {
+                        StartCoroutine(TimerDelayedStart());
                         //print("HARRIET NOT MOVING");
                         StartCoroutine(HarrietIdleCounter());
                     }
@@ -58,14 +58,11 @@ public class IdleTimer : MonoBehaviour {
             }
         }
 
-        if (basilActive)
-        {
-            if (movement == zeroMovement)
-            {
-                if (dialogueCameraH.GetComponent<Camera>().enabled == false)
-                {
-                    if (achieved == false)
-                    {
+        if (basilActive) {
+            if (movement == zeroMovement) {
+                if (dialogueCameraH.GetComponent<Camera>().enabled == false) {
+                    if (achieved == false) {
+                        StartCoroutine(TimerDelayedStart());
                         //print("BASIL NOT MOVING");
                         StartCoroutine(BasilIdleCounter());
                     }
@@ -100,6 +97,10 @@ public class IdleTimer : MonoBehaviour {
 
 
     public WaitForEndOfFrame WaitFrame = new WaitForEndOfFrame();
+
+    IEnumerator TimerDelayedStart() {
+        yield return new WaitForSeconds(4);
+    }
 
 
     IEnumerator HarrietIdleCounter() {

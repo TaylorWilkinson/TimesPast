@@ -11,12 +11,9 @@ Properties {
 	
 }
 
-Category {
-    Cull Off
-
-    SubShader {
-    	Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="MKGlow"}
-    	LOD 200
+SubShader {
+    Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="MKGlow"}
+    LOD 200
 
     CGPROGRAM
     #pragma surface surf Lambert alpha:fade
@@ -43,7 +40,6 @@ Category {
     }
 
     ENDCG
-    }
 }
 
 Fallback "Legacy Shaders/Transparent/VertexLit"

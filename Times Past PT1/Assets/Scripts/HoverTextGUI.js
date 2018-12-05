@@ -50,13 +50,13 @@ var interactionCheckerB;
  function Start() {
      //title text info
      guiStyleFore = new GUIStyle();
-     guiStyleFore.fontSize = 15;
+     guiStyleFore.fontSize = 30;
      guiStyleFore.normal.textColor = Color.white;
      guiStyleFore.alignment = TextAnchor.UpperCenter ;
      guiStyleFore.wordWrap = true;
 
      guiStyleBack = new GUIStyle();
-     guiStyleBack.fontSize = 15;
+     guiStyleBack.fontSize = 30;
      guiStyleBack.normal.textColor = Color.black;
      guiStyleBack.alignment = TextAnchor.UpperCenter ;
      guiStyleBack.wordWrap = true;
@@ -76,39 +76,39 @@ var interactionCheckerB;
 
      //action text info
      guiStyleThirdFore = new GUIStyle();
-     guiStyleThirdFore.fontSize = 13;
+     guiStyleThirdFore.fontSize = 25;
      guiStyleThirdFore.normal.textColor = Color.white;
      guiStyleThirdFore.alignment = TextAnchor.UpperCenter ;
      guiStyleThirdFore.wordWrap = true;
 
      guiStyleThirdBack = new GUIStyle();
-     guiStyleThirdBack.fontSize = 13;
+     guiStyleThirdBack.fontSize = 25;
      guiStyleThirdBack.normal.textColor = Color.black;
      guiStyleThirdBack.alignment = TextAnchor.UpperCenter ;
      guiStyleThirdBack.wordWrap = true;
 
     //harriet text info
      guiStyleHarrietFore = new GUIStyle();
-     guiStyleHarrietFore.fontSize = 13;
+     guiStyleHarrietFore.fontSize = 25;
      guiStyleHarrietFore.normal.textColor = Color.white;
      guiStyleHarrietFore.alignment = TextAnchor.UpperCenter ;
      guiStyleHarrietFore.wordWrap = true;
 
      guiStyleHarrietBack = new GUIStyle();
-     guiStyleHarrietBack.fontSize = 13;
+     guiStyleHarrietBack.fontSize = 25;
      guiStyleHarrietBack.normal.textColor = Color.black;
      guiStyleHarrietBack.alignment = TextAnchor.UpperCenter ;
      guiStyleHarrietBack.wordWrap = true;
 
     //basil text info
      guiStyleBasilFore = new GUIStyle();
-     guiStyleBasilFore.fontSize = 13;
+     guiStyleBasilFore.fontSize = 25;
      guiStyleBasilFore.normal.textColor = Color.white;
      guiStyleBasilFore.alignment = TextAnchor.UpperCenter ;
      guiStyleBasilFore.wordWrap = true;
 
      guiStyleBasilBack = new GUIStyle();
-     guiStyleBasilBack.fontSize = 13;
+     guiStyleBasilBack.fontSize = 25;
      guiStyleBasilBack.normal.textColor = Color.black;
      guiStyleBasilBack.alignment = TextAnchor.UpperCenter ;
      guiStyleBasilBack.wordWrap = true;
@@ -180,8 +180,8 @@ var interactionCheckerB;
          //action text
          //GUI.Label (Rect (x-148,y+90,300,60), thirdToolTipText, guiStyleThirdBack);
          //GUI.Label (Rect (x-150,y+90,300,60), thirdToolTipText, guiStyleThirdFore);
-         GUI.Label (Rect (x-148,y+60,300,60), thirdToolTipText, guiStyleThirdBack);
-         GUI.Label (Rect (x-150,y+60,300,60), thirdToolTipText, guiStyleThirdFore);
+         GUI.Label (Rect (x-148,y+70,300,60), thirdToolTipText, guiStyleThirdBack);
+         GUI.Label (Rect (x-150,y+70,300,60), thirdToolTipText, guiStyleThirdFore);
 
 
         //GUI.Label (Rect (x-148,y+60,300,60), harrietToolTipText, guiStyleHarrietBack);

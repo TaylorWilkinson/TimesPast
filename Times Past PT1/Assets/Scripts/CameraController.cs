@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CameraController : MonoBehaviour
-{
+public class CameraController : MonoBehaviour {
 
     //1. follow on player's X/Z plane
     //2. Smooth rotation around the player in 45 degree increments
@@ -34,15 +33,14 @@ public class CameraController : MonoBehaviour
             offsetPos = new Vector3(8, 5, 0);
         }
 
-        maxDistance = 10.0f;
+        maxDistance = 9.0f;
 
         var cameraCollider = gameObject.GetComponent<CapsuleCollider>();
         cameraCollider.isTrigger = true;
         MoveWithTarget();
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         //Debug.Log((transform.position - target.position).magnitude);
 
         if (didHitWall)

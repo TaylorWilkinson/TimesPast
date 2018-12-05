@@ -57,7 +57,7 @@ public class DestroyOnClick : MonoBehaviour, IActionOnClick {
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
 
-        yield return new WaitForSeconds(1.50f);
+        yield return new WaitForSeconds(0.25f);
         //print(gameObject);
 
         Destroy(gameObject);

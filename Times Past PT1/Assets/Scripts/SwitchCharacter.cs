@@ -41,24 +41,7 @@ public class SwitchCharacter : MonoBehaviour
         kLeft = GameObject.Find("Kah_Left");
         kRight = GameObject.Find("Kah_Right");
 
-        defaultMat = new Material(Shader.Find("Sprites/Default"));
-
-        //set up material on load
-        //Harriet Default:
-        hFront.GetComponent<SpriteRenderer>().material = defaultMat;
-        hBack.GetComponent<SpriteRenderer>().material = defaultMat;
-        hLeft.GetComponent<SpriteRenderer>().material = defaultMat;
-        hRight.GetComponent<SpriteRenderer>().material = defaultMat;
-        //Basil Glow:
-        bFront.GetComponent<SpriteRenderer>().material = glowMaterial;
-        bBack.GetComponent<SpriteRenderer>().material = glowMaterial;
-        bLeft.GetComponent<SpriteRenderer>().material = glowMaterial;
-        bRight.GetComponent<SpriteRenderer>().material = glowMaterial;
-        //Glow texture:
-        bFront.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", bFrontTexture);
-        bBack.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", bBackTexture);
-        bLeft.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", bSideTexture);
-        bRight.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", bSideTexture);
+        //defaultMat = new Material(Shader.Find("Sprites-Default"));
     }
 
     // Update is called once per frame
@@ -89,11 +72,10 @@ public class SwitchCharacter : MonoBehaviour
                 cameraController.target = harriet.transform;
 
                 //make Harriet active and visible
-                //Harriet:
-                hFront.GetComponent<SpriteRenderer>().material = defaultMat;
-                hBack.GetComponent<SpriteRenderer>().material = defaultMat;
-                hLeft.GetComponent<SpriteRenderer>().material = defaultMat;
-                hRight.GetComponent<SpriteRenderer>().material = defaultMat;
+                hFront.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                hBack.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                hLeft.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                hRight.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
 
                 //make Kah active and visible
                 kFront.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
@@ -107,15 +89,11 @@ public class SwitchCharacter : MonoBehaviour
                 //basil.GetComponent<CharacterController>().enabled = false;
                 basil.GetComponent<MovementClass>().enabled = false;
 
-                //Basil Glow:
-                bFront.GetComponent<SpriteRenderer>().material = glowMaterial;
-                bFront.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", bFrontTexture);
-                bBack.GetComponent<SpriteRenderer>().material = glowMaterial;
-                bBack.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", bBackTexture);
-                bLeft.GetComponent<SpriteRenderer>().material = glowMaterial;
-                bLeft.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", bSideTexture);
-                bRight.GetComponent<SpriteRenderer>().material = glowMaterial;
-                bRight.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", bSideTexture);
+                //make Basil inactive and transparent
+                bFront.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
+                bBack.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
+                bLeft.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
+                bRight.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
             }
         }
         else if (characterSelect == 1)
@@ -127,24 +105,16 @@ public class SwitchCharacter : MonoBehaviour
                 harriet.GetComponent<MovementClass>().enabled = false;
 
                 //make Harriet inactive and transparent
-                //set glow material
-                hFront.GetComponent<SpriteRenderer>().material = glowMaterial;
-                hBack.GetComponent<SpriteRenderer>().material = glowMaterial;
-                hLeft.GetComponent<SpriteRenderer>().material = glowMaterial;
-                hRight.GetComponent<SpriteRenderer>().material = glowMaterial;
-                //set main texture
-                hFront.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", hFrontTexture);
-                hBack.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", hBackTexture);
-                hLeft.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", hSideTexture);
-                hRight.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", hSideTexture);
+                hFront.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
+                hBack.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
+                hLeft.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
+                hRight.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.30f);
 
                 //make Kah invisible
-                /*
                 kFront.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.20f);
                 kBack.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.20f);
                 kLeft.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.20f);
                 kRight.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.20f);
-                */
             }
             //Enable Basil's Character Controller
             if (basil.GetComponent<CharacterController>())
@@ -155,16 +125,11 @@ public class SwitchCharacter : MonoBehaviour
                 cameraController.target = basil.transform;
 
                 //make Basil active and visible
-                //Harriet Default:
-                bFront.GetComponent<SpriteRenderer>().material = defaultMat;
-                bBack.GetComponent<SpriteRenderer>().material = defaultMat;
-                bLeft.GetComponent<SpriteRenderer>().material = defaultMat;
-                bRight.GetComponent<SpriteRenderer>().material = defaultMat;
-
-                bFront.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", hFrontTexture);
-                bBack.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", hBackTexture);
-                bLeft.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", hSideTexture);
-                hRight.GetComponent<SpriteRenderer>().material.SetTexture("_MainTex", hSideTexture);
+                //make Basil inactive and transparent
+                bFront.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                bBack.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                bLeft.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                bRight.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
             }
         }
     }
