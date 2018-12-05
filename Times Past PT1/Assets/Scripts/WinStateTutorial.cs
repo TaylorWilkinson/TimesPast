@@ -22,6 +22,8 @@ public class WinStateTutorial : MonoBehaviour {
     GameObject levelCompleteSound;
     public bool puzzleSolved;
 
+    bool sproutPulled;
+
     // Use this for initialization
     void Start() {
         characterSwitchControl = GameObject.Find("CharacterSwitchControl");
@@ -37,6 +39,8 @@ public class WinStateTutorial : MonoBehaviour {
 
         levelCompleteSound = GameObject.Find("LevelCompleteSound");
         puzzleSolved = false;
+
+        sproutPulled = false;
     }
 
     // Update is called once per frame
@@ -51,6 +55,10 @@ public class WinStateTutorial : MonoBehaviour {
         }
 
         if ((sprout == null)) {
+            if (sproutPulled == false) {
+                AchievementManager.instance.UnlockAchievement(Achievement.A2);
+                sproutPulled = true;
+            }
             //Debug.Log("done! open the door!");
 
             //The tree is now gone, let Harriet access the keyhole
@@ -59,7 +67,6 @@ public class WinStateTutorial : MonoBehaviour {
             //Puzzle Solved: Play Sound!
             StartCoroutine(PlayWinSound());
             puzzleSolved = true;
-
 
             if (Input.GetMouseButtonDown(0)) {
                 RaycastHit hit;

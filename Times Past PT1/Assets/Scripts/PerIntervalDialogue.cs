@@ -30,6 +30,8 @@ public class PerIntervalDialogue : MonoBehaviour {
     bool harrietActive;
     bool basilActive;
 
+    GameObject dialogueCameraH, dialogueCameraB;
+
 
     // Use this for initialization
     void Start () {
@@ -46,6 +48,9 @@ public class PerIntervalDialogue : MonoBehaviour {
         harrietActive = true;
         basilActive = false;
 
+        dialogueCameraH = GameObject.Find("HarrietCamera");
+        dialogueCameraB = GameObject.Find("BasilCamera");
+
         /* SHOW AND HIDE DIALOGUE FOR HARRIET AND BASIL, WHOEVER IS ACTIVE */
         StartCoroutine(HarrietRoutine());
         StartCoroutine(BasilRoutine());
@@ -54,6 +59,8 @@ public class PerIntervalDialogue : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //print("Harriet Timer: " + timerUntilMessageHarriet + ",  Basil Timer: " + timerUntilMessageBasil);
+
         //determine active character
         if ((characterSwitchControl.GetComponent<SwitchCharacter>().characterSelect) == 0)
         {
@@ -65,24 +72,6 @@ public class PerIntervalDialogue : MonoBehaviour {
             basilActive = true;
             harrietActive = false;
         }
-
-        //print("Harriet: " + harrietActive + ", Basil: " + basilActive);
-
-        //if (harrietTalking == false) {
-        //    StartCoroutine(HarrietRoutine());
-        //    harrietTalking = true;
-        //}
-        //if (basilTalking == false)
-        //{
-        //    StartCoroutine(BasilRoutine());
-        //    basilTalking = true;
-        //}
-
-        //StartCoroutine(HarrietRoutine());
-        //StartCoroutine(BasilRoutine());
-
-        //print("Harriet" + timerUntilMessageHarriet + ",  Basil" + timerUntilMessageBasil);
-        //print("harrietJokeVal: " + harrietJokeVal + "    basilJokeVal: " + basilJokeVal);
     }
 
 
@@ -90,12 +79,13 @@ public class PerIntervalDialogue : MonoBehaviour {
 
     /*HARRIET'S COROUTINES*/
     float timerUntilMessageHarriet;
+
     //private IEnumerator HarrietRoutine() {
     IEnumerator HarrietRoutine()
     {
         //Debug.Log("Harriet Routine running");
 
-        timerUntilMessageHarriet = 10.00f;
+        timerUntilMessageHarriet = 30.00f;
         while (true)
         {
 
@@ -105,13 +95,12 @@ public class PerIntervalDialogue : MonoBehaviour {
                 timerUntilMessageHarriet -= Time.deltaTime;
             }
 
-
-            if (timerUntilMessageHarriet < 1.0f) {
+            if (timerUntilMessageHarriet <= 0.0f) {
                 //Debug.Log("H Talks");
                 // Line begins.
                 yield return StartCoroutine(SayLineHarriet());
                 // Line finished.
-                timerUntilMessageHarriet = 10.00f;
+                timerUntilMessageHarriet = 30.00f;
             }
 
             yield return WaitFrame;
@@ -121,28 +110,34 @@ public class PerIntervalDialogue : MonoBehaviour {
     //private IEnumerator SayLineHarriet() {
     IEnumerator SayLineHarriet()
     {
-        // setactive true the canvas
-        harrietJokes.GetComponent<Canvas>().enabled = true;
-        // populate text
-        harrietJokeDisplay.text = harrietSpokenJokes[harrietJokeVal];
+        if (dialogueCameraB.GetComponent<Camera>().enabled == false) {
+            // setactive true the canvas
+            harrietJokes.GetComponent<Canvas>().enabled = true;
+            // populate text
+            harrietJokeDisplay.text = harrietSpokenJokes[harrietJokeVal];
 
-        yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(3f);
 
-        // whipe text to blank
-        harrietJokeDisplay.text = "";
-        // setactive false the canvas
-        harrietJokes.GetComponent<Canvas>().enabled = false;
-        // ++ line index
-        yield return harrietJokeVal += 1;
+            // whipe text to blank
+            harrietJokeDisplay.text = "";
+            // setactive false the canvas
+            harrietJokes.GetComponent<Canvas>().enabled = false;
+            // ++ line index
+            yield return harrietJokeVal += 1;
 
-        if (harrietJokeVal > harrietSpokenJokes.Length-1)
-        {
-            harrietJokeVal = 0;
+            if (harrietJokeVal > harrietSpokenJokes.Length - 1)
+            {
+                harrietJokeVal = 0;
+            }
+
+            //yield return StartCoroutine(RestartTalking());
+
+            yield break;
+
+        } else if (dialogueCameraB.GetComponent<Camera>().enabled == true) {
+            timerUntilMessageHarriet = 30.0f;
+            yield break;
         }
-
-        //yield return StartCoroutine(RestartTalking());
-
-        yield break;
     }
 
     /*BASIL'S COROUTINES*/
@@ -152,7 +147,7 @@ public class PerIntervalDialogue : MonoBehaviour {
     {
         //Debug.Log("Basil Routine running");
 
-        timerUntilMessageBasil = 10.00f;
+        timerUntilMessageBasil = 30.00f;
         while (true)
         {
            
@@ -164,13 +159,13 @@ public class PerIntervalDialogue : MonoBehaviour {
             }
 
 
-            if (timerUntilMessageBasil < 1.0f)
+            if (timerUntilMessageBasil <= 0.0f)
             {
                 //Debug.Log("Basil Talks");
                 // Line begins.
                 yield return StartCoroutine(SayLineBasil());
                 // Line finished.
-                timerUntilMessageBasil = 10.00f;
+                timerUntilMessageBasil = 30.00f;
 
             }
 
@@ -179,26 +174,29 @@ public class PerIntervalDialogue : MonoBehaviour {
     }
 
     //private IEnumerator SayLineBasil()
-    IEnumerator SayLineBasil()
-    {
-        // setactive true the canvas
-        basilJokes.GetComponent<Canvas>().enabled = true;
-        // populate text
-        basilJokeDisplay.text = basilSpokenJokes[basilJokeVal];
+    IEnumerator SayLineBasil() {
+        if (dialogueCameraH.GetComponent<Camera>().enabled == false) {
+            // setactive true the canvas
+            basilJokes.GetComponent<Canvas>().enabled = true;
+            // populate text
+            basilJokeDisplay.text = basilSpokenJokes[basilJokeVal];
 
-        yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(3f);
 
-        // whipe text to blank
-        basilJokeDisplay.text = "";
-        // setactive false the canvas
-        basilJokes.GetComponent<Canvas>().enabled = false;
-        // ++ line index
-        yield return basilJokeVal += 1;
+            // whipe text to blank
+            basilJokeDisplay.text = "";
+            // setactive false the canvas
+            basilJokes.GetComponent<Canvas>().enabled = false;
+            // ++ line index
+            yield return basilJokeVal += 1;
 
-        if (basilJokeVal > basilSpokenJokes.Length-1)
-        {
-            basilJokeVal = 0;
+            if (basilJokeVal > basilSpokenJokes.Length - 1)
+            {
+                basilJokeVal = 0;
+            }
+            yield break;
+        } else if (dialogueCameraH.GetComponent<Camera>().enabled == true) {
+                timerUntilMessageBasil = 30.0f;
         }
-        yield break;
     }
 }

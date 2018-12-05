@@ -81,7 +81,7 @@ public class CollectTreasure : MonoBehaviour {
                             //make gems disappear
                             StartCoroutine(MakeGemsDisappear(GameObject.FindGameObjectsWithTag("Gem")));
 
-                            //this.GetComponent<DialogueOnClick>().enabled = false;
+                            this.GetComponent<DialogueOnClick>().enabled = false;
                             this.GetComponent<CollectTreasure>().enabled = false;
                         }
                         else if (basilActive == true)

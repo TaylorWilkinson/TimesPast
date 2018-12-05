@@ -12,6 +12,7 @@ public class SwitchCharacter : MonoBehaviour
     public CameraController cameraController;
 
     GameObject hFront, hBack, hLeft, hRight, bFront, bBack, bLeft, bRight, kFront, kBack, kLeft, kRight;
+    GameObject hExclamation, bExclamation;
 
     Material defaultMat;
     public Material glowMaterial;
@@ -41,6 +42,12 @@ public class SwitchCharacter : MonoBehaviour
         kLeft = GameObject.Find("Kah_Left");
         kRight = GameObject.Find("Kah_Right");
 
+        hExclamation = GameObject.Find("HarrietExclamation");
+        bExclamation = GameObject.Find("BasilExclamation");
+
+        hExclamation.GetComponent<Canvas>().enabled = false;
+        bExclamation.GetComponent<Canvas>().enabled = true;
+
         //defaultMat = new Material(Shader.Find("Sprites-Default"));
     }
 
@@ -66,6 +73,7 @@ public class SwitchCharacter : MonoBehaviour
             //Enable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
             {
+                hExclamation.GetComponent<Canvas>().enabled = false;
                 //enable movement
                 harriet.GetComponent<MovementClass>().enabled = true;
                 //move camera to Harriet
@@ -86,6 +94,7 @@ public class SwitchCharacter : MonoBehaviour
             //Disable Basil's Character Controller
             if (basil.GetComponent<CharacterController>())
             {
+                bExclamation.GetComponent<Canvas>().enabled = true;
                 //basil.GetComponent<CharacterController>().enabled = false;
                 basil.GetComponent<MovementClass>().enabled = false;
 
@@ -101,6 +110,7 @@ public class SwitchCharacter : MonoBehaviour
             //Disable Harriet's Character Controller
             if (harriet.GetComponent<CharacterController>())
             {
+                hExclamation.GetComponent<Canvas>().enabled = true;
                 //disable movement
                 harriet.GetComponent<MovementClass>().enabled = false;
 
@@ -119,6 +129,7 @@ public class SwitchCharacter : MonoBehaviour
             //Enable Basil's Character Controller
             if (basil.GetComponent<CharacterController>())
             {
+                bExclamation.GetComponent<Canvas>().enabled = false;
                 //enable movement
                 basil.GetComponent<MovementClass>().enabled = true;
                 //move camera to Basil

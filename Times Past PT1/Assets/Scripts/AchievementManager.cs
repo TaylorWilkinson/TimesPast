@@ -59,18 +59,14 @@ public class AchievementManager : MonoBehaviour {
 
 
     private string[] achievementTitle = { "Doing the Most!",
-                                          "Patience, Grasshopper!",
-                                          "Chatty Cathy!",
-                                          "Archaeolo-GEE WHIZ!",
-                                          "Fountain-Fascinated!",
-                                          "Indiana Jonesin’!"};
+                                          "Pulling Weeds",
+                                          "The Red Button",
+                                          "Fountain-Fascinated!"};
 
     private string[] achievementDesc = { "You got into the treasure room!",
-                                         "You’ve done… nothing… for a while?",
-                                         "You’ve read all the dialogue!",
-                                         "You’ve clicked on every object!",
-                                         "You’ve clicked on every fountain, you weirdo!",
-                                         "You’ve plundered every urn!"};
+                                         "Kid, you've got a promising future in horticulture.",
+                                         "You're just gonna press it?! You're playing with fire!",
+                                         "You thoroughly inspected both fountains. Good...job?"};
         
     public int[] unlocked;
 
@@ -117,17 +113,13 @@ public enum Achievement
     A1 = 0,
     A2 = 1,
     A3 = 2,
-    A4 = 3,
-    A5 = 4,
-    A6 = 5
+    A4 = 3
 }
 
 /*
  * Achievements:
  * 1) Getting Harriet into the treasure room in the mirror level
- * 2) 30 seconds of inactivity
- * 3) Read all dialogue
- * 4) Click every object
- * 5) Click every fountain
- * 6) Click every urn
+ * 2) Pulling the Sprout
+ * 3) Pressing the red button
+ * 4) Click both of the fountains in LVL1
 */

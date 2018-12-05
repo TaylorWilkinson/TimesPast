@@ -25,9 +25,13 @@ public class RotateHatchOnClick : MonoBehaviour, IActionOnClick {
     GameObject skylightProngs;
     Animator animProngs;
 
+    bool buttonPressed;
+
     void Start() {
         skylightProngs = GameObject.Find("pSphere8");
         animProngs = skylightProngs.GetComponent<Animator>();
+
+        buttonPressed = false;
     }
 
 
@@ -46,6 +50,11 @@ public class RotateHatchOnClick : MonoBehaviour, IActionOnClick {
         }
 
         if ((requiredCharacter.name == "Basil") && (basilActive == true)) {
+            if(buttonPressed == false) {
+                AchievementManager.instance.UnlockAchievement(Achievement.A3);
+                buttonPressed = true;
+            }
+
             this.GetComponent<AudioTalkScript>().enabled = false;
 
             //rotate skylight fixture as Basil
